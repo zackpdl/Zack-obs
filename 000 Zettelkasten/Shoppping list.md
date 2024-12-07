@@ -1,0 +1,1 @@
+https://shopee.co.th/1-2-Pcs-Adjustable-Couple-Bracelet-Chinese-Style-Retro-Tai-Chi-Alloy-Accessories-Hand-Woven-Rope-Best-Friend-Friendship-Jewelry-i.104595878.7075354100?sp_atk=78aff625-c38e-44b0-b515-87e05489aa13&xptdk=78aff625-c38e-44b0-b515-87e05489aa13

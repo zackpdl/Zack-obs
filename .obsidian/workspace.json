@@ -1,0 +1,291 @@
+{
+  "main": {
+    "id": "6e8587a449d3f912",
+    "type": "split",
+    "children": [
+      {
+        "id": "c1fb2133378c3cfc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94f6aae1c3e35d93",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "5943f2128a7721ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Personal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Personal"
+            }
+          },
+          {
+            "id": "1c3c514ab4841759",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
+          },
+          {
+            "id": "cebf6930b5b48cbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001 Projects/HalalHub.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HalalHub"
+            }
+          },
+          {
+            "id": "322064dc02057c48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001 Projects/Tower defense.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tower defense"
+            }
+          },
+          {
+            "id": "7aef395f733a7397",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bookmarks/2024-12-03-the-machine.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2024-12-03-the-machine"
+            }
+          },
+          {
+            "id": "a10d40559b65e41a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meal Plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Meal Plan"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "45c0268042c85649",
+    "type": "split",
+    "children": [
+      {
+        "id": "0267a7b333a2dbdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6de3109bf9562dd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5a132867c9737ecb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fb36fb6ff0e52a16",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7b341addf9dc0474",
+    "type": "split",
+    "children": [
+      {
+        "id": "75b627f22497d62f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e6cfbff39b844ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2af335288fcfdcaf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "867e3f3acc9db858",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "eb6a17394cae7974",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-media-db-plugin:Add new Media DB entry": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "a10d40559b65e41a",
+  "lastOpenFiles": [
+    "000 Zettelkasten/github token.md",
+    "Meal Plan.md",
+    "Bookmarks/2024-12-03-the-machine.md",
+    "Bookmarks/2024-12-03-mr-robot-2015-full-serie-online-myflixer.md",
+    "001 Projects/Tower defense.md",
+    "Bookmarks",
+    "001 Projects/HalalHub.md",
+    "001 Projects",
+    "Youtube.md",
+    "Personal.md",
+    "024-2 University/BBA1004_Essential_Marketing_for_Entrepreneurs.md",
+    "024-2 University/CSX3006_Database_Systems.md",
+    "024-2 University/BG14034_Professional_Ethics_Seminar_IV.md",
+    "024-2 University/CSX2009_Cloud_Computing.md",
+    "024-2 University/ITX2007_Data_Science.md",
+    "Worksheet 10.md",
+    "Wardrobe.md",
+    "Anime List.md",
+    "1.out.png",
+    "villageout.png",
+    "Home.md",
+    "024-2 University/ELE1002_Communicative_English_II.md",
+    "024-2 University/CSX4110_Backend_Application_Development.md",
+    "024-2 University/GE2110_Human_Civilizations_and_Global_Citizen.md",
+    "ELE1002 (641) - Communicative English II.md",
+    "024-2 University/CSX4110 (543) - Backend Application Development",
+    "024-2 University/BG14034 (480) - Professional Ethics Seminar IV",
+    "024-2 University/ITX2007 (543) - Data Science",
+    "024-2 University/CSX2009 (542) - Cloud Computing",
+    "024-2 University/GE2110 (402) - Human Civilizations and Global Citizen",
+    "024-2 University/BBA1004 (401) - Essential Marketing for Entrepreneurs",
+    "024-2 University/CSX3006 (542) - Database Systems",
+    "024-2 University/ELE1002 (641) - Communicative English II",
+    "Spicy-Sweet Buffalo Popcorn.md",
+    "Cuisine/Italian.md",
+    "GA.md",
+    "099 University/CSX2008 - MATHEMATICS FOUNDATION FOR COMPUTER SCIENCE.md",
+    "Templates/periodic/Daily Template.md",
+    "villagein.png",
+    "u2out.png",
+    "2in.png",
+    "1in.png",
+    "Reference/Pasted image 20240826093205.png",
+    "Reference/IMG_7501.jpg",
+    "Reference/Screenshot 2567-08-25 at 12.51.51.png",
+    "Reference/IMG_6155.jpeg"
+  ]
+}
