@@ -20,6 +20,16 @@
               "icon": "lucide-file",
               "title": "Meal Plan"
             }
+          },
+          {
+            "id": "1f2e96cc0343d96a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ]
       }
@@ -151,6 +161,7 @@
   },
   "active": "cdd81b96844fa0d9",
   "lastOpenFiles": [
+    "Meal Plan.md",
     "IMG_6155.jpeg",
     "Pasted image 20240702111404.png",
     "000 Zettelkasten/Friends.md",
