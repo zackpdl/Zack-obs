@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "000 Zettelkasten/Address.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Address"
+              "title": "Personal"
             }
           },
           {
@@ -161,6 +161,8 @@
   },
   "active": "cdd81b96844fa0d9",
   "lastOpenFiles": [
+    "Wardrobe.md",
+    "000 Zettelkasten/Address.md",
     "000 Zettelkasten/Friends.md",
     "Meal Plan.md",
     "IMG_6155.jpeg",
