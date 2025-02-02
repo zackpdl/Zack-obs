@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal.md",
+                "file": "000 Zettelkasten/clone.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Personal"
+              "title": "clone"
             }
           },
           {
@@ -161,9 +161,10 @@
   },
   "active": "cdd81b96844fa0d9",
   "lastOpenFiles": [
+    "000 Zettelkasten/Friends.md",
+    "Personal.md",
     "Wardrobe.md",
     "000 Zettelkasten/Address.md",
-    "000 Zettelkasten/Friends.md",
     "Meal Plan.md",
     "IMG_6155.jpeg",
     "Pasted image 20240702111404.png",
