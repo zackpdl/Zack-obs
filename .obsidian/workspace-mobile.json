@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001 Projects/HalalHub.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HalalHub"
+              "title": "Personal"
             }
           },
           {
@@ -46,7 +46,8 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical"
+            "sortOrder": "alphabetical",
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -161,6 +162,7 @@
   },
   "active": "cdd81b96844fa0d9",
   "lastOpenFiles": [
+    "001 Projects/HalalHub.md",
     "000 Zettelkasten/clone.md",
     "000 Zettelkasten/Friends.md",
     "Personal.md",
