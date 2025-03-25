@@ -65,3 +65,8 @@
 - **Single Leg Machine Press**: 2x to failure  
 - **Seated Leg Curls**: 3x15  
 - **Standing Calf Raises**: 4x12  
+
+
+
+
+Morning: NO-Xplode (2 scoops), Slo-Niacin (or timed-release 11niacinamide, 500 mg) Each meal: ChromeMate (chromium polynicotinate, not picolinate, 200 mcg), alpha-lipoic acid (200 mg) Pre-workout: BodyQUICK (2 capsules 30 mins. prior) Post-workout: Micellean (30 g micellar casein protein) Prior to bed: policosanol (23 mg), ChromeMate (200 mcg), alpha-lipoic acid (200 mg), Slo-Niacin (500 mg) 
