@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "000 Zettelkasten/Friends.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Friends"
+              "title": "Personal"
             }
           }
         ]
@@ -163,6 +163,7 @@
   },
   "active": "719e2f4c52b28737",
   "lastOpenFiles": [
+    "000 Zettelkasten/Friends.md",
     "Projects.md",
     "Meal Plan.md",
     "Worksheet 10.md",
@@ -200,7 +201,6 @@
     "Spicy-Sweet Buffalo Popcorn.md",
     "Cuisine/Italian.md",
     "GA.md",
-    "099 University/CSX2008 - MATHEMATICS FOUNDATION FOR COMPUTER SCIENCE.md",
     "villagein.png",
     "u2out.png",
     "2in.png",
