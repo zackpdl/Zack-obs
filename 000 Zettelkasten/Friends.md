@@ -16,6 +16,10 @@ kwanch91 - Abac
 aiiiiiirnn - bang bo
 Rina_uwu - Singapore
 iihxayi - hkt 
+Nong_margie_  - Bkk 
+k___kie - Samut Prakan 
+
+
 
 
 
