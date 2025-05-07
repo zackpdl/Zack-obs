@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily Routine.md",
+                "file": "Uni Progress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Routine"
+              "title": "Uni Progress"
             }
           }
         ],
@@ -178,8 +178,9 @@
   },
   "active": "2b60d3d7984f45b4",
   "lastOpenFiles": [
-    "000 Zettelkasten/Youtube.md",
     "Daily Routine.md",
+    "Uni Progress.md",
+    "000 Zettelkasten/Youtube.md",
     "Anime List.md",
     "Meal Plan.md",
     "Personal.md",
@@ -215,7 +216,6 @@
     "024-2 University/CSX3006 (542) - Database Systems",
     "024-2 University/ELE1002 (641) - Communicative English II",
     "Spicy-Sweet Buffalo Popcorn.md",
-    "Cuisine/Italian.md",
     "villagein.png",
     "u2out.png",
     "2in.png",
