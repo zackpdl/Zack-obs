@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal.md",
+                "file": "Uni Progress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Personal"
+              "title": "Uni Progress"
             }
           },
           {
@@ -191,8 +191,8 @@
   },
   "active": "2d9be969e0fa1de1",
   "lastOpenFiles": [
-    "Uni Progress.md",
     "Personal.md",
+    "Uni Progress.md",
     "Untitled",
     "000 Zettelkasten/Friends.md",
     "6-Day PPL Workout Plan.md",
