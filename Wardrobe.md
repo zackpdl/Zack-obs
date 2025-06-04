@@ -6,15 +6,15 @@
 4. **Dress Shoe:** Black Loafer✔️
 
 ## Pants:
-1. **Denim:** Levis 550 Blue Jeans
+1. **Denim:** Levis 550 Blue Jeans ✔️
 2. **Chino:** Khaki/Navy Chino Pants
-3. **Smart Trousers:** Grey/Navy Trousers
+3. **Smart Trousers:** Grey/Navy Trousers ✔️
 
 ## Tops:
-1. **Fitted Shirt:** White/Black
-2. **Crew Neck Shirt**
+1. **Fitted Shirt:** White/Black ✔️
+2. **Crew Neck Shirt** 
 3. **Button Down Shirt**
-4. **Polo Shirt:** White/Black
+4. **Polo Shirt:** White/Black ✔️
 
 ## Outerwear:
 1. **Jackets:** Trucker/Bomber/Puffer
