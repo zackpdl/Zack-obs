@@ -25,6 +25,10 @@ puranpoudel1@gmail.com
 ATManime@1
 puranpoudelzack@gmail.com
 ATManime
+## Chatgpt
+
+chhivtihong23@gmail.com
+Tihong2324
 
 ### Facebook
 ATMZzack#@1
