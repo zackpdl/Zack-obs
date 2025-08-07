@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Books/Modern Programming Languages.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modern Programming Languages"
+              "title": "Personal"
             }
           }
         ],
@@ -192,8 +192,8 @@
   },
   "active": "55005e5ac33751c3",
   "lastOpenFiles": [
-    "Bookmarks/2024-12-03-the-machine.md",
     "Books/Modern Programming Languages.md",
+    "Bookmarks/2024-12-03-the-machine.md",
     "Books",
     "Bookmarks/2024-12-03-mr-robot-2015-full-serie-online-myflixer.md",
     "PROGRAMMING LANGUAGES MIDTERM CHEAT SHEET (A4 DOUBLE-SIDED).md",
