@@ -67,12 +67,14 @@
             "id": "670d0e33cf46908f",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.9.12"
+                "file": "Personal.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.12"
+              "icon": "lucide-file",
+              "title": "Personal"
             }
           }
         ],
@@ -219,6 +221,8 @@
   },
   "active": "670d0e33cf46908f",
   "lastOpenFiles": [
+    "Meal Plan.md",
+    "Uni Progress.md",
     "Proposal.md",
     "Personal.md",
     "Wardrobe.md",
@@ -231,11 +235,9 @@
     "000 Zettelkasten/Friends.md",
     "000 Zettelkasten/github token.md",
     "000 Zettelkasten/Learning Java.md",
-    "Uni Progress.md",
     "Daily Routine.md",
     "000 Zettelkasten/Youtube.md",
     "Anime List.md",
-    "Meal Plan.md",
     "001 Projects/Projects.md",
     "Worksheet 10.md",
     "001 Projects/Tower defense.md",
