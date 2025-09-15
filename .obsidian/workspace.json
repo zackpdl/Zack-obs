@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "map.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "map"
+              "title": "Personal"
             }
           }
         ],
@@ -235,8 +235,8 @@
   },
   "active": "26bb38ca3317b0da",
   "lastOpenFiles": [
-    "Personal.md",
     "map.md",
+    "Personal.md",
     "Proposal.md",
     "Wardrobe.md",
     "Meal Plan.md",
