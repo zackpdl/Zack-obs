@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Proposal.md",
+                "file": "Wardrobe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Proposal"
+              "title": "Wardrobe"
             }
           }
         ],
@@ -235,8 +235,8 @@
   },
   "active": "26bb38ca3317b0da",
   "lastOpenFiles": [
-    "Personal.md",
     "Proposal.md",
+    "Personal.md",
     "Brain.md",
     "Uni Progress.md",
     "map.md",
