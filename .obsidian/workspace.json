@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wardrobe.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wardrobe"
+              "title": "Personal"
             }
           }
         ],
@@ -235,12 +235,12 @@
   },
   "active": "26bb38ca3317b0da",
   "lastOpenFiles": [
+    "Wardrobe.md",
     "Proposal.md",
     "Personal.md",
     "Brain.md",
     "Uni Progress.md",
     "map.md",
-    "Wardrobe.md",
     "Meal Plan.md",
     "Books/Modern Programming Languages.md",
     "Bookmarks/2024-12-03-the-machine.md",
