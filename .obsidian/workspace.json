@@ -104,9 +104,23 @@
               "icon": "lucide-file",
               "title": "Web Dev Final"
             }
+          },
+          {
+            "id": "99f6f061f1c32fee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CRUD Data Model.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CRUD Data Model"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -247,11 +261,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d6031637347a0718",
+  "active": "99f6f061f1c32fee",
   "lastOpenFiles": [
-    "Brain.md",
     "Web Dev Final.md",
+    "CRUD Data Model.md",
     "Personal.md",
+    "Brain.md",
     "Wardrobe.md",
     "Proposal.md",
     "Uni Progress.md",
@@ -277,7 +292,6 @@
     "001 Projects",
     "024-2 University/BBA1004_Essential_Marketing_for_Entrepreneurs.md",
     "024-2 University/CSX3006_Database_Systems.md",
-    "024-2 University/BG14034_Professional_Ethics_Seminar_IV.md",
     "1.out.png",
     "villageout.png",
     "024-2 University/CSX4110 (543) - Backend Application Development",
