@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CRUD Data Model.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CRUD Data Model"
+              "title": "Personal"
             }
           }
         ],
@@ -263,8 +263,8 @@
   },
   "active": "99f6f061f1c32fee",
   "lastOpenFiles": [
-    "Web Dev Final.md",
     "CRUD Data Model.md",
+    "Web Dev Final.md",
     "Personal.md",
     "Brain.md",
     "Wardrobe.md",
