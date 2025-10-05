@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal.md",
+                "file": "Uni Progress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Personal"
+              "title": "Uni Progress"
             }
           }
         ],
@@ -263,9 +263,9 @@
   },
   "active": "99f6f061f1c32fee",
   "lastOpenFiles": [
+    "Personal.md",
     "CRUD Data Model.md",
     "Web Dev Final.md",
-    "Personal.md",
     "Brain.md",
     "Wardrobe.md",
     "Proposal.md",
