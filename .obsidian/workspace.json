@@ -118,9 +118,23 @@
               "icon": "lucide-file",
               "title": "Proposal"
             }
+          },
+          {
+            "id": "92bbda29285943e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UI-UX Final Exam Revision Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "UI-UX Final Exam Revision Guide"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -261,15 +275,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d6de3109bf9562dd",
+  "active": "92bbda29285943e4",
   "lastOpenFiles": [
-    "Proposal.md",
+    "Brain.md",
+    "UI-UX Final Exam Revision Guide.md",
     "Java and Prolog Study Guide.md",
+    "Proposal.md",
     "Uni Progress.md",
     "Personal.md",
     "CRUD Data Model.md",
     "Web Dev Final.md",
-    "Brain.md",
     "Wardrobe.md",
     "map.md",
     "Meal Plan.md",
@@ -291,7 +306,6 @@
     "Bookmarks",
     "001 Projects/HalalHub.md",
     "001 Projects",
-    "024-2 University/BBA1004_Essential_Marketing_for_Entrepreneurs.md",
     "1.out.png",
     "villageout.png",
     "024-2 University/CSX4110 (543) - Backend Application Development",
