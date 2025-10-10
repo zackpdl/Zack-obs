@@ -4,137 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "0778592c15449c8f",
+        "id": "8f60c89f03632408",
         "type": "tabs",
         "children": [
           {
-            "id": "719e2f4c52b28737",
+            "id": "ce1cf6a0134c4521",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "000 Zettelkasten/Youtube.md",
+                "file": "099 University/Java Operators.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Youtube"
-            }
-          },
-          {
-            "id": "2b60d3d7984f45b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Personal.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Personal"
-            }
-          },
-          {
-            "id": "55005e5ac33751c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Personal.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Personal"
-            }
-          },
-          {
-            "id": "8db964c733d92b0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Personal.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Personal"
-            }
-          },
-          {
-            "id": "670d0e33cf46908f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Personal.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Personal"
-            }
-          },
-          {
-            "id": "26bb38ca3317b0da",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Brain.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Brain"
-            }
-          },
-          {
-            "id": "d6031637347a0718",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Dev Final.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Web Dev Final"
-            }
-          },
-          {
-            "id": "99f6f061f1c32fee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Proposal.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Proposal"
-            }
-          },
-          {
-            "id": "92bbda29285943e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UI-UX Final Exam Revision Guide.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "UI-UX Final Exam Revision Guide"
+              "title": "Java Operators"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -275,36 +162,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "92bbda29285943e4",
+  "active": "ce1cf6a0134c4521",
   "lastOpenFiles": [
-    "Brain.md",
-    "UI-UX Final Exam Revision Guide.md",
-    "Java and Prolog Study Guide.md",
-    "Proposal.md",
-    "Uni Progress.md",
-    "Personal.md",
-    "CRUD Data Model.md",
-    "Web Dev Final.md",
-    "Wardrobe.md",
+    "099 University/Logical Form and Logical Equivalence.md",
+    "099 University/Uni Schedule.md",
+    "099 University/Uni Courses.md",
+    "099 University/Stacks and Queues.md",
+    "099 University/Skip explain.md",
+    "099 University/CSX3002 - OBJECT-ORIENTED CONCEPTS AND PROGRAMMING Outline.md",
+    "099 University/GE1411.md",
+    "099 University/Graph Definitions and Representations.md",
+    "099 University/Data Types & Control Structures.md",
+    "099 University/Mark Allocation.md",
+    "099 University/Mathematical Sentences and Statements.md",
+    "099 University/Quiz 1.md",
+    "099 University/Relations.md",
+    "099 University/ITX2005 - DESIGN THINKING.md",
+    "099 University/Itx project.md",
     "map.md",
+    "UI-UX Final Exam Revision Guide.md",
+    "Proposal.md",
+    "Web Dev Final.md",
+    "Brain.md",
+    "Personal.md",
+    "Java and Prolog Study Guide.md",
+    "Uni Progress.md",
+    "CRUD Data Model.md",
+    "Wardrobe.md",
     "Meal Plan.md",
-    "Books/Modern Programming Languages.md",
-    "Bookmarks/2024-12-03-the-machine.md",
     "Books",
-    "Bookmarks/2024-12-03-mr-robot-2015-full-serie-online-myflixer.md",
-    "PROGRAMMING LANGUAGES MIDTERM CHEAT SHEET (A4 DOUBLE-SIDED).md",
-    "000 Zettelkasten/How to do things you don't know how to do.md",
-    "000 Zettelkasten/Friends.md",
-    "000 Zettelkasten/github token.md",
-    "000 Zettelkasten/Learning Java.md",
-    "Daily Routine.md",
-    "000 Zettelkasten/Youtube.md",
-    "Anime List.md",
-    "001 Projects/Projects.md",
-    "Worksheet 10.md",
-    "001 Projects/Tower defense.md",
     "Bookmarks",
-    "001 Projects/HalalHub.md",
     "001 Projects",
     "1.out.png",
     "villageout.png",
