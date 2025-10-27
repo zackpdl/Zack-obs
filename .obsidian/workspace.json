@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni Progress.md",
+                "file": "000 Zettelkasten/Friends.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Uni Progress"
+              "title": "Friends"
             }
           }
         ],
@@ -191,6 +191,7 @@
   },
   "active": "54097c0297009a3a",
   "lastOpenFiles": [
+    "Uni Progress.md",
     "Proposal.md",
     "Personal.md",
     "Anime List.md",
@@ -216,7 +217,6 @@
     "Web Dev Final.md",
     "Brain.md",
     "Java and Prolog Study Guide.md",
-    "Uni Progress.md",
     "Books",
     "Bookmarks",
     "001 Projects",
