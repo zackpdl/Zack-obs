@@ -1,4 +1,16 @@
 
+----
+Sec. 401 (VMES student-only)
+
+https://lms.msme.au.edu
+
+Login -→> My Courses --> BBA1007 Business Data Analysis for Entrepreneurs (2/2025)
+
+https://tinyunl.com/BDAE20252401
+
+----
+
+
 
 ssh app02
 	 ssh -i ~/.ssh/app02_key.pem azureuser@20.197.21.63
