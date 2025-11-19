@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brain.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Brain"
+              "title": "Personal"
             }
           }
         ],
@@ -191,8 +191,8 @@
   },
   "active": "54097c0297009a3a",
   "lastOpenFiles": [
-    "Personal.md",
     "Brain.md",
+    "Personal.md",
     "Proposal.md",
     "000 Zettelkasten/Friends.md",
     "Debloat.md",
