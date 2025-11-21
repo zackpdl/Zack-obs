@@ -3,7 +3,7 @@
     "pageSize": "A4",
     "landscape": false,
     "margin": "1",
-    "downscalePercent": 38
+    "downscalePercent": 30
   },
   "promptDelete": false,
   "alwaysUpdateLinks": true
