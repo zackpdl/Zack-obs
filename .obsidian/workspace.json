@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HW.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HW"
+              "title": "Personal"
             }
           }
         ],
@@ -205,8 +205,8 @@
   },
   "active": "0b8db100f0b68159",
   "lastOpenFiles": [
-    "Personal.md",
     "HW.md",
+    "Personal.md",
     "Brain.md",
     "Proposal.md",
     "000 Zettelkasten/Friends.md",

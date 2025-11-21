@@ -1,5 +1,5 @@
 
-### Puran Paodensakul (6611140)
+### Humam Khurram 6611680
 
 # CSX3007 Home Assignment 1 
 
@@ -96,7 +96,7 @@ Second pair: overflow
 AB + 3E = E9 (no overflow)  
 8F + AD = overflow
 
-  
+
 
 ## 13. BCD
 
@@ -107,13 +107,13 @@ AB + 3E = E9 (no overflow)
 38 + 22 → 60 BCD  
 78 + 32 → 110 BCD
 
-  
+
 
 ## 14. Number of truth tables for N variables
 
 2^(2^N)
 
-  
+
 
 ## 15. NAND gate implementations
 
@@ -124,12 +124,12 @@ NOR: OR output NAND with itself
 XOR: Standard NAND-only XOR structure  
 XNOR: NOT(XOR)
 
-  
+
 
 ## 16. Three-input XOR truth table
 
 |A|B|C|XOR|
-|  |  |  |  |
+|---|---|---|---|
 |0|0|0|0|
 |0|0|1|1|
 |0|1|0|1|
@@ -139,7 +139,6 @@ XNOR: NOT(XOR)
 |1|1|0|0|
 |1|1|1|1|
 
-  
 
 ## 17. XOR as NOT and buffer
 
