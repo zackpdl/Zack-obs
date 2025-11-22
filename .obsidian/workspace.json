@@ -60,9 +60,21 @@
               "icon": "lucide-file",
               "title": "Personal"
             }
+          },
+          {
+            "id": "82bb9b8c930e4df0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -203,7 +215,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0b8db100f0b68159",
+  "active": "82bb9b8c930e4df0",
   "lastOpenFiles": [
     "HW.md",
     "Personal.md",
