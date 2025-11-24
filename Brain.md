@@ -12,8 +12,7 @@ Login -→> My Courses --> BBA1007 Business Data Analysis for Entrepreneurs (2/2
 
 https://tinyunl.com/BDAE20252401
 
-https://drive.go
-ogle.com/drive/folders/14ETMBjKsRhHaLtnP9Vtk6m60pebl4lI5
+https://drive.google.com/drive/folders/14ETMBjKsRhHaLtnP9Vtk6m60pebl4lI5
 
 ----
 
