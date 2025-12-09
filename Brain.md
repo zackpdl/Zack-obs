@@ -15,6 +15,30 @@ https://tinyunl.com/BDAE20252401
 https://drive.google.com/drive/folders/14ETMBjKsRhHaLtnP9Vtk6m60pebl4lI5
 
 ----
+## Alias
+- ad     # CSX3009(541) AD
+- os     # CSX3008(542) OS
+- ca     # CSX3007(542) CA
+- bba    # BBA
+
+
+## OS (Raycast + Onlyswitch)
+| **Alias**              | **Hotkey**        | **What It Does**                    |
+| ---------------------- | ----------------- | ----------------------------------- |
+| *Activity Monitor*     | ⇧ Esc             | Open Activity Monitor               |
+| *Brave Browser*        | ^1                | Open Brave Browser                  |
+| *ChatGPT*              | ⌥B                | Open ChatGPT                        |
+| *Ghostty*              | ^3                | Open Ghostty Terminal               |
+| *Microsoft Teams*      | ^4                | Open Microsoft Teams                |
+| *Obsidian*             | ^2                | Open Obsidian                       |
+| **vpn** (ProtonVPN)    | (Recorded hotkey) | Launch ProtonVPN using alias `vpn`  |
+| Clipboard History      | ⌥C                | Open Clipboard History              |
+| Search Menu Items      | ⌥N                | Trigger “Search Menu Items” command |
+| Search Files           | ⌥S                | Trigger “Search Files” search       |
+| Start Screen Saver     | ⌥Space            | Start the macOS screen saver        |
+| type (Typing Practice) | (Recorded hotkey) | Start Typing Practice               |
+
+
 
 
 
