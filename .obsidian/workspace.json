@@ -81,12 +81,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brain.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Brain"
+              "title": "Personal"
             }
           }
         ],
@@ -233,9 +233,9 @@
   },
   "active": "ae49480b44339781",
   "lastOpenFiles": [
+    "Brain.md",
     "Daily Routine.md",
     "Personal.md",
-    "Brain.md",
     "Report.md",
     "HW.md",
     "Proposal.md",
