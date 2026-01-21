@@ -55,7 +55,7 @@ Abacus
 Khaolak
 >  71-113 หมู่ 3 คึกคัก ตะกั่วป่า พังงา ประเทศไทย
 
-2240
+82240
 
 4/17, moo 2, lamkean, thai mueang, phang
 
