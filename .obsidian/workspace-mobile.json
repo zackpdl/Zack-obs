@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "000 Zettelkasten/Friends.md",
+                "file": "Personal.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Friends"
+              "title": "Personal"
             }
           },
           {
@@ -192,8 +192,8 @@
   },
   "active": "2d9be969e0fa1de1",
   "lastOpenFiles": [
-    "Personal.md",
     "000 Zettelkasten/Friends.md",
+    "Personal.md",
     "Uni Progress.md",
     "Untitled",
     "6-Day PPL Workout Plan.md",
