@@ -44,6 +44,8 @@ Phone Number : 095-127-2240
 
 Abacus 
 
+1281, Fl 8 , Abacus, 155 หมู่ 7 ถนนบางนาตราด (กิโลเมตรที่ 26 Bang Bo District, Samut Prakan 10560
+
 
 Khaolak
 >  71-113 หมู่ 3 คึกคัก ตะกั่วป่า พังงา ประเทศไทย
