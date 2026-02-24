@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brain.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Brain"
+              "title": "Untitled"
             }
           }
         ],
@@ -300,10 +300,10 @@
   },
   "active": "fba57983393bcf85",
   "lastOpenFiles": [
+    "Brain.md",
     "Untitled.md",
     "Proposal.md",
     "Personal.md",
-    "Brain.md",
     "PROGRAMMING LANGUAGES MIDTERM CHEAT SHEET (A4 DOUBLE-SIDED).md",
     "Meal Plan.md",
     "Debloat.md",

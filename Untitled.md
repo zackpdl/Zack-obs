@@ -129,3 +129,46 @@ ringwcwevmntajlnffhb = project ID
 calories ninja api key =  QtKzLpl8PXY0Ya4M2gfudw==QREnzBVimcpEaMIz
 
 
+
+
+
+
+1) Due Dates
+
+- Add a date picker
+    
+- Highlight overdue tasks in red
+    
+
+  
+
+2) Priority Levels
+
+- Low / Medium / High
+    
+- Show with colors or icons
+    
+
+  
+
+3) Mark as Complete (with animation)
+
+- Strike-through text
+    
+- Small fade or slide effect
+    
+
+  
+
+4) Task Categories / Tags
+
+Examples:
+
+- Study
+    
+- Work
+    
+- Personal
+    
+- Gym
+
