@@ -100,15 +100,7 @@ Include:
 - 500 for server errors
 
 ========================================
-SUPABASE SETUP
-========================================
 
-Provide:
-- SQL to create daily_logs table
-- Instructions to enable Row Level Security
-- Example policy to allow public insert/select/delete
-
-========================================
 UI REQUIREMENTS
 ========================================
 
