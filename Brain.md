@@ -38,6 +38,19 @@ https://drive.google.com/drive/folders/14ETMBjKsRhHaLtnP9Vtk6m60pebl4lI5
 | Start Screen Saver     | ⌥Space            | Start the macOS screen saver        |
 | type (Typing Practice) | (Recorded hotkey) | Start Typing Practice               |
 
+| Workspace | Purpose           |
+| --------- | ----------------- |
+| 4         | Zed (Code)        |
+| T         | Warp (Terminal)   |
+| B         | Browser           |
+| E         | Finder            |
+| N         | Notes             |
+| O         | Obsidian          |
+| P         | Photos / RapidRAW |
+| M         | Mail              |
+| A         | Activity Monitor  |
+| 6         | Teams             |
+| I         | iPhone Mirror     |
 
 
 
