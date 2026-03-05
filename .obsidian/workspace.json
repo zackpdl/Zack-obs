@@ -151,12 +151,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brain.md",
+                "file": "Personal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Brain"
+              "title": "Personal"
             }
           }
         ],
@@ -314,19 +314,19 @@
   },
   "active": "f6f1d8a024861b5b",
   "lastOpenFiles": [
-    "Proposal.md",
-    "Untitled.md",
     "Brain.md",
     "Personal.md",
-    "PROGRAMMING LANGUAGES MIDTERM CHEAT SHEET (A4 DOUBLE-SIDED).md",
     "Meal Plan.md",
+    "Anime List.md",
+    "Proposal.md",
+    "Untitled.md",
+    "PROGRAMMING LANGUAGES MIDTERM CHEAT SHEET (A4 DOUBLE-SIDED).md",
     "Debloat.md",
     "Daily Routine.md",
     "Report.md",
     "HW.md",
     "000 Zettelkasten/Friends.md",
     "Uni Progress.md",
-    "Anime List.md",
     "Aesthetic  Minimalist Routine.md",
     "099 University/Java Operators.md",
     "099 University/Logical Form and Logical Equivalence.md",
