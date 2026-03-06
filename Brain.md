@@ -37,7 +37,7 @@ https://drive.google.com/drive/folders/14ETMBjKsRhHaLtnP9Vtk6m60pebl4lI5
 | Search Files           | ⌥S                | Trigger “Search Files” search       |
 | Start Screen Saver     | ⌥Space            | Start the macOS screen saver        |
 | type (Typing Practice) | (Recorded hotkey) | Start Typing Practice               |
-Handy tts option + space
+Handy tts option + spaceIt may have been moved, edited, or deleted.
 
 | Workspace | Purpose           |
 | --------- | ----------------- |
