@@ -1,0 +1,36 @@
+Puran Paodensakul
+6611140
+541
+Edit Distance Problem
+Step 1
+
+If A[i] == B[j] and we do nothing → next state is (i+1, j+1).
+
+If A[i] != B[j] and we insert B[j] before A[i] → next state is (i, j+1).
+
+If A[i] != B[j] and we delete A[i] → next state is (i+1, j).
+
+If A[i] != B[j] and we change A[i] to B[j] → next state is (i+1, j+1).
+
+Step 2
+
+The starting state is (0, 0), meaning we begin comparing both strings from the first character.
+
+Step 3
+
+If A finishes first (i == len(A)) but B still has characters left (j < len(B)),
+we must insert all remaining characters of B.
+Extra cost = len(B) – j.
+
+Step 4
+
+If B finishes first (j == len(B)) but A still has characters left (i < len(A)),
+we must delete all remaining characters of A.
+Extra cost = len(A) – i.
+
+Minimum Coin Change Problem
+Step 1
+
+1.1. The call to mincoin(v2) happens first because recursion must reach the smallest possible v (like v = 0) before computing anything larger.
+1.2. The function mincoin(v2) also returns first, since the stack unwinds from the deepest point.
+1.3. The entry mm[v2] gets its final value first because memoization fills bottom-up from the base cases.

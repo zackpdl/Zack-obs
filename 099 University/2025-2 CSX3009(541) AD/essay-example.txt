@@ -1,0 +1,324 @@
+Below are clear, exam-ready explanations for each question, aligned with the given key points and written in simple academic language.
+
+---
+
+## **Category: Limitations and Failure of Brute Force**
+
+### **Question 1**
+
+**Why does a naïve recursive brute-force approach fail for Rod Cutting or Fibonacci as input size L increases?**
+
+The primary reason is **exponential re-computation**.
+In naïve recursion, the algorithm repeatedly solves the **same subproblems** many times. For example, in Fibonacci or rod cutting of length 4, functions like `F(2)` or `maxRev(2)` are called multiple times in different branches of the recursion tree.
+
+As the input size grows, the number of recursive calls grows **exponentially**, leading to a *recursive explosion*. This results in extremely slow performance and makes the brute-force approach impractical for large inputs.
+
+---
+
+### **Question 2**
+
+**Why is a single-variable state insufficient for memoization in the 0-1 Knapsack problem? What second variable is required, and why?**
+
+A single variable (such as the current item index) is insufficient because **earlier decisions affect future possibilities**.
+
+In the 0-1 Knapsack problem, whether an item can be chosen depends not only on which item we are considering but also on the **remaining capacity of the knapsack**. Therefore, the state must be defined using **two variables**:
+
+* Current item index `i`
+* Remaining capacity `W`
+
+Without tracking capacity, the algorithm cannot determine whether a previously computed result is valid for the current situation. Hence, effective memoization requires a **2-D state (i, W)**.
+
+---
+
+### **Question 3**
+
+**What is the recursion limit, and when does it become a critical failure point?**
+
+The recursion limit is a **physical constraint** imposed by programming environments on the maximum depth of the call stack (e.g., ~1000 in Python).
+
+Even if a recursive algorithm is optimized with memoization, very large inputs (such as tiling a 3×L grid with large L) can still cause the recursion depth to exceed this limit. When this happens, the program crashes before reaching the base case.
+
+This is where **Bottom-Up Dynamic Programming** becomes superior, as it uses iterative loops instead of recursive calls and completely avoids stack overflow issues.
+
+---
+
+## **Category: Strategic Failure and Algorithm Selection**
+
+### **Question 4**
+
+**Why is a greedy approach not reliable for the Minimum Coin Change problem?**
+
+A greedy algorithm makes **locally optimal choices**, such as always selecting the largest coin first. However, local optimality does not guarantee a global optimal solution.
+
+For example, with coin set `{1, 3, 4, 5}` and target `7`:
+
+* Greedy solution: `5 + 1 + 1` → 3 coins
+* Optimal solution: `4 + 3` → 2 coins
+
+Since greedy fails for certain coin systems, it cannot guarantee correctness. In such cases, **brute-force search or dynamic programming** is required to ensure the optimal solution is found.
+
+---
+
+### **Question 5**
+
+**Why is the O(n³) approach to Maximum Subsequence Sum considered a failure, and how does Kadane’s Algorithm solve it?**
+
+The O(n³) solution uses three nested loops to consider all possible subsequences and re-compute their sums from scratch. This leads to excessive and redundant calculations, making it impractical for large datasets.
+
+Kadane’s Algorithm solves this problem in **O(n) time** by maintaining a running sum. At each step, it decides whether to:
+
+* Extend the current subsequence, or
+* Start a new subsequence from the current element
+
+This approach avoids re-summing overlapping subsequences and efficiently finds the maximum sum in a single pass.
+
+---
+
+## **Category: Computational Geometry and Problem States**
+
+### **Question 6**
+
+**Why does a “flat” state fail in the Tiling a 3×L Grid problem, and what are the state transition challenges?**
+
+In a 3×L grid, tiles can be placed in ways that create **uneven or jagged boundaries**, where different rows are filled to different depths. A simple “flat” state (all rows filled equally) cannot represent these intermediate configurations.
+
+Valid states include patterns such as:
+
+* Top two rows filled deeper (`Upper2`)
+* Bottom two rows filled deeper (`Lower2`)
+
+A brute-force approach must explore transitions between all these complex states, leading to an enormous number of repeated calculations. Without **Dynamic Programming** to store results for each *(state, depth)* combination, the brute-force solution becomes extremely slow and impractical.
+
+---
+
+If you want, I can also:
+
+* Shorten these into **exam-length answers**
+* Add **diagrams or recursion trees**
+* Convert them into **DP state equations**
+
+Below are **clear, structured, exam-ready answers** written in simple academic language and closely aligned with your key points.
+
+---
+
+## **Category 1: Algorithm Analysis and Efficiency (Weeks 1–2)**
+
+### **Question 1**
+
+**What are the criteria for a well-defined computational procedure to be classified as an algorithm? How does an algorithm differ from a computational procedure?**
+
+An algorithm is a **well-defined computational procedure** that must satisfy **five essential criteria**:
+
+1. **Finiteness** – The algorithm must terminate after a finite number of steps.
+2. **Definiteness** – Each step must be clear, precise, and unambiguous.
+3. **Input** – The algorithm may take zero or more inputs.
+4. **Output** – The algorithm must produce at least one output.
+5. **Effectiveness** – Each step must be simple and executable in a finite amount of time (in principle, doable by hand).
+
+**Distinction:**
+A **computational procedure** does not require termination. For example, an operating system that continuously waits for user input is a procedure, but not an algorithm, because it may run indefinitely.
+
+---
+
+### **Question 2**
+
+**How do different algorithmic approaches change the order of growth in the Maximum Subsequence Sum problem?**
+
+Different approaches dramatically affect time complexity:
+
+1. **Straightforward Approach (O(n³))**
+   Uses three nested loops to check all possible subsequences and re-sum elements repeatedly, resulting in very poor performance for large inputs.
+
+2. **Accumulation Technique (O(n²))**
+   Uses a prefix-sum array so that each subsequence sum can be computed in constant time, reducing one loop and improving efficiency.
+
+3. **Kadane’s Algorithm (O(n))**
+   Uses a single pass through the array, maintaining the current maximum sum and deciding whether to extend the current subsequence or start a new one.
+
+This demonstrates how better algorithm design can reduce running time from **cubic to linear**.
+
+---
+
+## **Category 2: Recursion and State Space Search (Weeks 2–3)**
+
+### **Question 3**
+
+**What is pruning in recursive algorithms, and how does passing extra arguments improve efficiency?**
+
+**Pruning** is the technique of stopping a recursive branch early when it is guaranteed that continuing will not produce a valid solution.
+
+By passing additional arguments such as the **current sum**, the algorithm can detect failure or success sooner:
+
+* If the current sum `s` already equals the target `k`, recursion can stop and return success.
+* If `s` plus the maximum possible sum from remaining items is still less than `k`, recursion can stop because a solution is impossible.
+
+This reduces the search space significantly and improves efficiency in brute-force combination searches.
+
+---
+
+## **Category 3: Memoization and Inefficiency (Weeks 4–5)**
+
+### **Question 4**
+
+**Why is a naïve recursive solution for Minimum Coin Change or Rod Cutting considered extremely inefficient?**
+
+Naïve recursion is inefficient because it **recomputes the same subproblems repeatedly**.
+
+The recursion tree grows **exponentially (O(2ⁿ))**, as seen in problems like Fibonacci, where the same values are recalculated many times. As a result, the number of steps grows much faster than the input size.
+
+**Solution:**
+**Memoization** stores the result of each subproblem in a table (e.g., `mm[]`) so that each state is computed only once, reducing time complexity drastically.
+
+---
+
+### **Question 5**
+
+**Explain the two-state-variable concept in the recursive solution of the 0-1 Knapsack problem.**
+
+The 0-1 Knapsack problem cannot be solved using only a “pick or skip” decision because earlier choices affect future possibilities.
+
+A valid state requires **two variables**:
+
+1. **Item index (i)** – which item is being considered.
+2. **Remaining capacity (C)** – how much space is left in the knapsack.
+
+The recursive relation is:
+
+* **Skip item:** `maxVal(i+1, C)`
+* **Pick item:** `maxVal(i+1, C − weight[i])`
+
+Without tracking both variables, memoization would be incorrect.
+
+---
+
+## **Category 4: Dynamic Programming (Weeks 6–7)**
+
+### **Question 6**
+
+**Compare Top-Down Memoization and Bottom-Up Dynamic Programming. What are the advantages of the bottom-up approach?**
+
+* **Top-Down Memoization:**
+  Uses recursion and stores results as they are discovered. The table is filled “accidentally” during recursive calls.
+
+* **Bottom-Up Dynamic Programming:**
+  Uses loops to fill the table systematically from base cases up to the final solution.
+
+**Advantages of Bottom-Up DP:**
+
+* Avoids recursion depth limits (no stack overflow).
+* Eliminates function call overhead.
+* More predictable memory access and often faster in practice.
+
+---
+
+### **Question 7**
+
+**Describe the recursive logic of Edit Distance and its base cases.**
+
+At any state `(i, j)`, the algorithm considers three operations:
+
+1. **Insert** → move to `(i, j+1)`
+2. **Delete** → move to `(i+1, j)`
+3. **Replace (Change)** → move to `(i+1, j+1)`
+
+**Base Cases:**
+
+* If string A is exhausted (`i = len(A)`), the cost is inserting all remaining characters of B:
+  `len(B) − j`
+* If string B is exhausted (`j = len(B)`), the cost is deleting all remaining characters of A:
+  `len(A) − i`
+
+These base cases ensure the recursion terminates correctly.
+
+1. Differences Between Brute Force, Memoization (Top-Down DP), and Bottom-Up DP
+
+Brute Force:
+ 
+Explores all possible solutions recursively without remembering previous results.
+ 
+Time complexity is usually exponential due to repeated work. Usually exponential, e.g., O(2^n)
+ 
+Simple but very inefficient for large inputs.
+ 
+Memoization (Top-Down DP):
+ 
+Recursive approach with a cache (memo) to store results of subproblems.
+ 
+Avoids recomputation by returning cached results when available.
+ 
+Time complexity reduces to polynomial (depends on problem).  often O(n), O(n^2)
+ 
+Keeps recursive structure, easier to implement if you already have brute force.
+ 
+Bottom-Up DP:
+ 
+Iterative approach that solves subproblems in increasing order, storing results in a table (array or matrix).
+ 
+Builds up solutions from base cases to the final answer.
+ 
+Often uses less overhead than recursion (no call stack). O(n), O(n^2)
+ 
+Sometimes more efficient in space and speed. cause no recursion
+ 
+2. Designing a DP Solution for a Problem (e.g., Coin Change)
+
+State Definition: Define what your DP array or function parameters represent.
+
+Example: dp[i] = minimum coins to make amount i.
+ 
+Base Case: Identify trivial cases to start from.
+
+Example: dp[0] = 0 since no coins needed to make 0.
+ 
+Recurrence Relation: Define how to compute dp[i] using smaller subproblems.
+
+Example: dp[i] = min(dp[i - coin] + 1) for all coins where i - coin >= 0.
+ 
+Implementation Approach:
+ 
+For top-down: implement recursion with memo dictionary to cache results.
+ 
+For bottom-up: iterate from 1 to amount, fill dp array using recurrence.
+ 
+Result: Return dp[amount] if not infinity; else -1 (no solution).
+ 
+3. Overlapping Subproblems and Optimal Substructure
+
+Overlapping Subproblems: The problem can be broken down into subproblems which repeat multiple times during the computation.
+
+Example: Fibonacci numbers, coin change for amounts less than current.
+ 
+Optimal Substructure: The optimal solution of the problem can be composed from optimal solutions of its subproblems.
+
+Example: The minimum coins needed for amount i depends on minimum coins needed for smaller amounts.
+ 
+Both properties must hold for dynamic programming to apply effectively.
+ 
+4. Time and Space Complexity Analysis of DP
+
+Brute Force Time Complexity: Usually exponential, due to recomputing subproblems many times.
+ 
+Memoized DP Time Complexity:
+ 
+Each distinct subproblem solved once.
+ 
+Complexity is number of states × cost per state (often polynomial).
+ 
+Space Complexity:
+ 
+Memoization uses space for cache and recursion stack (O(depth)).
+ 
+Bottom-up DP usually uses a table of size equal to the number of states (O(n) or O(m*n)).
+ 
+Trade-offs: Memoization is easier to write but uses recursion stack; bottom-up avoids stack overhead but may be harder to design.
+ 
+5. Converting Recursive Memoized to Bottom-Up DP
+
+Identify the order in which subproblems are solved recursively.
+ 
+Create a DP table/array and fill it iteratively starting from base cases moving toward the final solution.
+ 
+Replace recursive calls with table lookups.
+ 
+Ensure dependencies are resolved before calculating each DP state.
+ 

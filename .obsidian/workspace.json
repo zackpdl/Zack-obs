@@ -217,7 +217,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7b341addf9dc0474",
@@ -296,7 +297,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -314,6 +316,17 @@
   },
   "active": "f6f1d8a024861b5b",
   "lastOpenFiles": [
+    "099 University/2025-2 CSX3008(542) OS/CSX3008-OS-Quiz2-2-2025-SOLUTION.pdf",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balanceSplit/5.in",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balanceSplit/4.in",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balanceSplit/3.in",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balanceSplit/2.in",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balanceSplit/1.in",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/task2.py",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/task1.py",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/input.txt",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balance_split.py",
+    "099 University/2025-2 CSX3009(541) AD/Week 02/balanceSplit.zip",
     "Brain.md",
     "Personal.md",
     "Meal Plan.md",
@@ -339,19 +352,8 @@
     "099 University/Graph Definitions and Representations.md",
     "099 University/Data Types & Control Structures.md",
     "099 University/Mark Allocation.md",
-    "099 University/Mathematical Sentences and Statements.md",
-    "Books",
-    "Bookmarks",
-    "001 Projects",
     "1.out.png",
     "villageout.png",
-    "024-2 University/CSX4110 (543) - Backend Application Development",
-    "024-2 University/BG14034 (480) - Professional Ethics Seminar IV",
-    "024-2 University/ITX2007 (543) - Data Science",
-    "024-2 University/CSX2009 (542) - Cloud Computing",
-    "024-2 University/GE2110 (402) - Human Civilizations and Global Citizen",
-    "024-2 University/BBA1004 (401) - Essential Marketing for Entrepreneurs",
-    "024-2 University/CSX3006 (542) - Database Systems",
     "villagein.png",
     "u2out.png",
     "2in.png",

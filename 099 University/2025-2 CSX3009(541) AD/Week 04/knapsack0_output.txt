@@ -1,0 +1,3 @@
+Maximum value in Knapsack =  18
+Recursive calls = 63
+Execution time: 0.000106

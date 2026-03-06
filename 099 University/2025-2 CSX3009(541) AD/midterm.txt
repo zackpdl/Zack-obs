@@ -1,0 +1,250 @@
+Midterm Study Report: Algorithm Design (Weeks 1-7)
+
+1.0 Week 1: Introduction to Algorithms and Complexity Analysis
+
+1.1 Introduction
+
+An algorithm is a precise description of a computational procedure designed to solve a well-specified problem. The study of algorithms is a fundamental concept in computer science, crucial for developing efficient solutions to a vast range of computational challenges. This first week establishes the foundational principles of the course. It defines what constitutes an algorithm and, more importantly, introduces the formal methods we use to analyze their performance. By establishing a framework for comparing algorithms, we gain the tools necessary to evaluate and design efficient code.
+
+1.2 Defining and Analyzing Algorithms
+
+Formally, an algorithm is a precisely specified computational procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. The core of algorithm analysis is predicting the resources an algorithm requires, primarily its running time and memory (space) requirements.
+
+As argued by Horowitz and Sahni, a course on algorithm design and analysis is essential for computer science students for several key reasons. First, the algorithm is a foundational concept of the discipline, meriting its own dedicated study. Second, mastering the skills of algorithm synthesis and analysis enhances a student's fundamental knowledge and their capacity to understand more advanced algorithms in subsequent courses. Finally, the field contains significant theoretical results that are a critical part of a comprehensive computer science education.
+
+1.3 Asymptotic Notation (Big-O, Theta)
+
+To analyze an algorithm's efficiency, we focus on its "order of magnitude," or asymptotic complexity. This approach allows us to understand how an algorithm's resource requirements scale as the input size (n) grows, ignoring constant factors and lower-order terms that become insignificant for large inputs.
+
+* Big-O (O) Notation: Big-O notation provides an asymptotic upper bound on the growth rate of a function. It describes the worst-case behavior. For example, consider two algorithms for the same task, one with a computing time of O(n) and another with O(n^2). For sufficiently large values of n, the O(n) algorithm will always be superior.
+  * Example: If the actual computing times are 2n and n^2, the first algorithm is faster for all n > 2. If the times are 10^4n and n^2, the second algorithm is faster for n < 10^4, but the first is decisively faster for all n > 10^4. This illustrates that linear-time algorithms inevitably outperform quadratic-time algorithms as the input size grows.
+  * (TA Tip: Remember that Big-O describes the worst-case scenario. While an algorithm might be O(n^2), it could perform much better on average. That's why we also analyze average-case and best-case performance, as we'll see with Quicksort.)
+* Theta (Θ) Notation: Theta notation provides an asymptotically tight bound. Informally, this corresponds to "throwing away lower-order terms and ignoring the leading coefficient" of the function describing the running time. For example, a running time of (1/2)n^2 - 3n would be expressed as Θ(n^2).
+
+1.4 Case Study: Analyzing Insertion Sort
+
+Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is an incremental algorithm that works the way many people sort a hand of playing cards.
+
+Pseudocode:
+
+INSERTION-SORT(A)
+1 for j = 2 to A.length
+2     key = A[j]
+3     // Insert A[j] into the sorted sequence A[1..j-1].
+4     i = j - 1
+5     while i > 0 and A[i] > key
+6         A[i+1] = A[i]
+7         i = i - 1
+8     A[i+1] = key
+
+
+In its worst-case scenario (e.g., when sorting an array in reverse order), the inner while loop (lines 5-7) must shift every element in the sorted portion A[1..j-1] for each new element A[j]. This leads to a total number of steps that is a quadratic function of n, resulting in a worst-case running time of Θ(n^2). This analysis serves as our first concrete application of asymptotic notation to a practical algorithm.
+
+1.5 Conclusion and Transition
+
+Week 1 establishes the "why" and "how" of algorithm analysis, providing the essential vocabulary and mathematical tools for the rest of the course. With this analytical framework in place, we are equipped to move beyond simply analyzing existing procedures and can begin to explore powerful strategies for designing new, efficient algorithms, starting with the recursive approach of Divide and Conquer.
+
+2.0 Week 2: The Divide and Conquer Strategy
+
+2.1 Introduction
+
+The Divide and Conquer paradigm is a powerful, recursive technique for designing efficient algorithms. It involves breaking a problem down into smaller, more manageable subproblems, solving them recursively, and then combining their solutions to solve the original problem. The process consists of three core steps:
+
+1. Divide: The problem is divided into several smaller subproblems that are smaller instances of the same problem.
+2. Conquer: The subproblems are solved by recursively calling the algorithm. If the subproblems are small enough, they are solved directly.
+3. Combine: The solutions to the subproblems are combined to produce the solution to the original problem.
+
+2.2 Mergesort: A Classic Example
+
+Mergesort is a classic sorting algorithm that perfectly embodies the Divide and Conquer strategy.
+
+* Process: The algorithm splits an n-element sequence into two halves of n/2 elements each. It then recursively calls itself to sort the two halves. Finally, it merges the two sorted halves to produce a single, sorted sequence. The merging step is the key "combine" operation.
+* Complexity: The worst-case running time of Mergesort is O(n log n). This can be described by the recurrence relation T(n) = 2T(n/2) + O(n), where 2T(n/2) represents the time for the two recursive calls and O(n) is the time required to merge the two sorted halves.
+
+2.3 Quicksort
+
+Quicksort is another highly effective sorting algorithm based on the Divide and Conquer paradigm. It often outperforms Mergesort in practice due to smaller constant factors in its implementation.
+
+* Process:
+  1. Divide: The array is partitioned around a chosen element called a pivot. The array is rearranged so that all elements to the left of the pivot are less than or equal to it, and all elements to the right are greater than or equal to it. The core of this step is what Horowitz and Sahni call "Hoare's clever method of partitioning."
+  2. Conquer: The subarrays to the left and right of the pivot are sorted recursively.
+  3. Combine: This step is trivial, as the sorting happens in place during the partitioning step.
+* Complexity: Quicksort's worst-case running time is O(n^2). This occurs because an unbalanced partition—for instance, always picking the smallest element as the pivot—fails to meaningfully reduce the problem size, leading to a recurrence of T(n) = T(n-1) + O(n), which solves to Θ(n^2). However, its expected-case running time is O(n log n), which makes it a practical and efficient choice for general-purpose sorting.
+
+2.4 Solving Recurrences: The Master Theorem
+
+The Master Theorem provides a "cookbook" method for solving divide-and-conquer recurrence relations of the form T(n) = aT(n/b) + f(n), where a ≥ 1 and b > 1 are constants. This recurrence describes an algorithm that divides a problem of size n into a subproblems, each of size n/b, with f(n) being the cost of dividing and combining. The theorem has three primary cases based on the relationship between f(n) and n^(log_b a):
+
+1. If f(n) = O(n^(log_b a - ε)) for some constant ε > 0, then T(n) = Θ(n^(log_b a)).
+2. If f(n) = Θ(n^(log_b a)), then T(n) = Θ(n^(log_b a) log n).
+3. If f(n) = Ω(n^(log_b a + ε)) for some constant ε > 0, and if a * f(n/b) ≤ c * f(n) for some constant c < 1 and sufficiently large n, then T(n) = Θ(f(n)).
+
+This theorem allows for rapid analysis of many divide-and-conquer algorithms without resorting to more complex methods.
+
+2.5 Conclusion and Transition
+
+Divide and Conquer is a fundamental design strategy that often leads to highly efficient, recursive algorithms. However, the elegance of a recursive strategy is only as effective as its implementation. The efficiency of these algorithms often hinges on the underlying data structures used to store and manage information, which we will explore next.
+
+3.0 Week 3: Fundamental Data Structures
+
+3.1 Introduction
+
+Algorithms and data structures share a symbiotic relationship; the choice of one profoundly impacts the efficiency of the other. An algorithm operates on data, and the way that data is organized—the data structure—can be the key to designing an efficient solution. This week revisits several structures that are crucial for advanced algorithm design, including trees, heaps, and disjoint sets.
+
+3.2 Binary Trees and Binary Search Trees (BSTs)
+
+* Binary Tree: As formally defined by Horowitz and Sahni, a binary tree is a finite set of nodes that is either empty or consists of a root and two disjoint binary trees called the left and right subtrees. A key distinction is that the order of the subtrees (left vs. right) matters.
+* Binary Search Tree (BST): A BST is a binary tree with an additional core property: for any given node x, all keys in its left subtree are less than or equal to x.key, and all keys in its right subtree are greater than or equal to x.key.
+  * Performance: Basic operations like SEARCH, INSERT, and DELETE on a BST take time proportional to the height of the tree. For a randomly built tree with n nodes, the expected height is O(log n). However, in the worst case (e.g., if elements are inserted in sorted order), the tree can degenerate into a linear chain with a height of n, leading to O(n) performance for these operations.
+
+3.3 Heaps and Priority Queues
+
+A heap is a specialized tree-based data structure that satisfies the heap property. In a max-heap, the value in every node is at least as large as the values in its children. This ensures the maximum element is always at the root.
+
+* Implementation: Heaps are typically implemented efficiently using an array, where parent-child relationships can be calculated using array indices.
+* Operations: The key operations, INSERT and DELETE-MAX, both take O(log n) time. This efficiency makes the heap an ideal data structure for implementing a Priority Queue, which is a dynamic set that needs to efficiently find and extract the element with the highest priority (or maximum value).
+* Heapsort: The heap data structure is the basis for the Heapsort algorithm, which can sort an array in-place in O(n log n) worst-case time.
+
+3.4 Disjoint Set Union
+
+The Disjoint Set Union (or Union-Find) data structure maintains a collection of disjoint dynamic sets. It is particularly useful for problems involving partitioning elements into groups.
+
+* Operations:
+  * UNION(i, j): Merges the sets containing elements i and j.
+  * FIND(i): Returns the representative (or root) of the set containing element i.
+* Representation: A simple implementation uses a tree-based representation, where an array PARENT stores the parent of each node. A node j is a root if PARENT(j) is zero or a similar sentinel value. While this simple implementation is not optimally efficient, advanced versions that use heuristics like union-by-rank and path compression are highly effective, with operations taking near-constant time on average.
+
+3.5 Conclusion and Transition
+
+These data structures are not just theoretical constructs but are the essential building blocks for many advanced algorithms. With these powerful tools for organizing data in hand, we can now examine a new algorithmic paradigm—the greedy method—that leverages such structures to solve optimization problems with remarkable efficiency.
+
+4.0 Week 4: The Greedy Method
+
+4.1 Introduction
+
+The Greedy Method is an algorithmic paradigm for solving optimization problems. A greedy algorithm builds up a solution piece by piece, at each step making the choice that appears to be the best at that moment. It makes a locally optimal choice in the hope that this choice will lead to a globally optimal solution. This strategy works for problems that exhibit the greedy-choice property, where a locally optimal choice can be extended to a globally optimal solution without reconsidering past choices.
+
+4.2 Core Concepts and Representative Problems
+
+The greedy strategy is best understood through its application to classic problems.
+
+* Activity Selection Problem: This problem involves selecting a maximum-size set of mutually compatible activities from a set of activities, each with a start and finish time. The greedy strategy is to repeatedly select the activity that finishes first among those that do not conflict with previously selected activities. This simple approach is proven to yield an optimal solution.
+* Job Sequencing with Deadlines: This problem, from Horowitz and Sahni, involves scheduling a set of jobs, each with a profit and a deadline, to maximize the total profit. All jobs take one unit of time. The greedy approach is to process jobs in decreasing order of profit. A job is added to the schedule if it can be completed by its deadline. Theorem 4.5 in Horowitz & Sahni proves that this method always produces an optimal solution.
+
+4.3 Application: Minimum Spanning Trees (MST)
+
+A major application of the greedy method is in finding a Minimum Spanning Tree (MST) for a connected, undirected, weighted graph.
+
+* Definitions:
+  * A Spanning Tree is a subgraph that connects all the vertices together, without any cycles.
+  * A Minimum Spanning Tree (MST) is a spanning tree with the minimum possible total edge weight.
+* Safe Edges: A central concept in MST algorithms is the idea of a safe edge, which is an edge that can be added to a growing set of edges without violating the property that this set can still be extended to a complete MST.
+* Kruskal's Algorithm: This is a classic greedy algorithm for finding an MST. It operates by sorting all edges by weight and adding the next-cheapest edge if and only if it does not form a cycle with previously selected edges. This works because the algorithm always adds a safe edge. Detecting cycles efficiently is critical, and this is a perfect application of the Disjoint Set Union data structure we analyzed in Week 3. By maintaining sets of connected vertices, a call to FIND can determine in near-constant time if two vertices are already in the same component, which would indicate that adding an edge between them would form a cycle.
+
+4.4 Conclusion and Transition
+
+The greedy method is powerful, but its "myopic" nature—making the best choice now without looking ahead—is its Achilles' heel for many problems. When a globally optimal solution requires making a choice that seems suboptimal in the short term, we need a more powerful strategy. We turn now to Dynamic Programming, a technique that finds the global optimum by exhaustively exploring all decisions, but does so efficiently by remembering and reusing solutions to subproblems.
+
+5.0 Week 5: Dynamic Programming
+
+5.1 Introduction
+
+Dynamic Programming (DP) is a powerful technique for solving optimization problems by breaking them down into simpler subproblems. Unlike Divide and Conquer, DP is designed for situations where the subproblems are not independent but are overlapping. A DP algorithm solves each subproblem just once and saves its result in a table, avoiding the re-computation that would occur in a naive recursive solution. According to CLRS, for dynamic programming to be applicable, an optimization problem must exhibit two key ingredients:
+
+1. Optimal Substructure: An optimal solution to the problem contains within it optimal solutions to subproblems.
+2. Overlapping Subproblems: A recursive algorithm for the problem solves the same subproblems over and over, rather than always generating new ones.
+
+5.2 Rod Cutting: A Canonical DP Problem
+
+(TA Tip: Dynamic Programming problems can seem intimidating. The key is always to identify the subproblem and write down a recurrence relation. The Rod Cutting problem is the classic example to master this thought process.)
+
+The Rod Cutting problem from CLRS provides a clear illustration of dynamic programming.
+
+* Problem Description: Given a rod of length n and a table of prices for all integer lengths up to n, find the maximum revenue obtainable by cutting up the rod and selling the pieces.
+* Naive Recursion (CUT-ROD): A straightforward, top-down recursive solution explores all possible cuts. However, this approach has an exponential running time because it repeatedly solves the same subproblems for smaller rod lengths.
+* Memoization (Top-Down): The performance can be dramatically improved by storing, or memoizing, the result of each subproblem in a table. When a subproblem is encountered again, its solution is retrieved from the table in constant time.
+* Bottom-Up Method (BOTTOM-UP-CUT-ROD): The standard DP approach is a bottom-up method. It solves subproblems for smaller rod lengths first, storing their solutions in an array. It then uses these stored solutions to build up solutions for progressively larger rod lengths until it solves the original problem. This method efficiently populates the solution table and avoids recursion overhead.
+
+5.3 The 0/1 Knapsack Problem
+
+The 0/1 Knapsack problem is another classic application of dynamic programming.
+
+* Problem Description: A thief must decide which items to steal to maximize total profit, given a set of n items, each with a weight and profit, and a knapsack of fixed capacity. Each item must either be taken entirely or left behind (hence "0/1").
+* DP Solution: The principle of optimality applies here. The optimal solution for a knapsack of capacity M can be derived from the optimal solutions for subproblems involving fewer items and/or smaller capacities. This relationship leads to a DP recurrence relation that can be solved by filling a two-dimensional table.
+
+5.4 Longest Common Subsequence (LCS)
+
+The Longest Common Subsequence (LCS) problem is a fundamental problem with applications in bioinformatics and data comparison.
+
+* Problem Description: Given two sequences, find the longest subsequence that is present in both. A subsequence is formed by deleting zero or more characters from a sequence. For example, "ACE" is a subsequence of "ABCDE".
+* DP Solution: The problem has optimal substructure. The LCS of two sequences can be determined by examining the LCS of their prefixes. This property allows us to derive a recurrence relation that forms the basis of a dynamic programming algorithm, which computes the length of the LCS by filling in a table.
+
+5.5 Conclusion and Transition
+
+Dynamic Programming is a versatile and powerful technique for optimization problems with optimal substructure and overlapping subproblems. It effectively trades space (for the solution table) for a significant gain in time efficiency. Having covered general design strategies like Greedy and DP, we now shift our focus to algorithms specifically designed to operate on data represented as graphs.
+
+6.0 Week 6: Graph Search and Traversal
+
+6.1 Introduction
+
+Graphs are ubiquitous models for representing networks and relationships, from social networks to transportation systems. The ability to systematically explore the vertices and edges of a graph is a prerequisite for solving many complex graph problems. This week covers the two fundamental traversal techniques: Breadth-First Search (BFS) and Depth-First Search (DFS).
+
+6.2 Breadth-First Search (BFS)
+
+Breadth-First Search (BFS) is an algorithm for traversing a graph by exploring vertices in layers.
+
+* Process: Starting from a source vertex s, BFS explores all of its immediate neighbors first. Then, for each of those neighbors, it explores their unvisited neighbors, and so on. In essence, it visits all vertices at distance k from s before visiting any vertices at distance k+1.
+* Data Structure: BFS uses a queue (First-In, First-Out) to manage the set of discovered vertices whose neighbors have not yet been fully explored.
+* Primary Application: As stated in CLRS, the primary application of BFS is finding the shortest path (in terms of the number of edges) from a source vertex s to all other reachable vertices in an unweighted graph.
+* Spanning Tree: The set of edges discovered during a BFS forms a breadth-first spanning tree. Note that while this is a valid spanning tree, it is not necessarily a minimum spanning tree, as BFS does not consider edge weights—it only minimizes the number of edges from the source.
+
+6.3 Depth-First Search (DFS)
+
+Depth-First Search (DFS) follows a different strategy for exploring a graph.
+
+* Process: DFS explores as deeply as possible along each branch before backtracking. It starts at a source vertex, explores an edge leading out of it to a new vertex, and then immediately starts a new search from that new vertex.
+* Data Structure: DFS is naturally recursive and implicitly uses a stack (Last-In, First-Out) to keep track of the path of vertices it has visited.
+* Applications: DFS has numerous applications, including cycle detection, finding connected components, and as a subroutine in more advanced algorithms like topological sort.
+* Spanning Tree: The edges traversed to discover new vertices during a DFS form a depth-first spanning tree. Like the BFS tree, this is a valid spanning tree for a connected graph, but it is not guaranteed to be a minimum spanning tree.
+
+6.4 Application: Topological Sort
+
+Topological sort is a key application of Depth-First Search on a specific type of graph.
+
+* Definition: A topological sort is a linear ordering of the vertices of a Directed Acyclic Graph (DAG) such that for every directed edge from vertex u to vertex v, u comes before v in the ordering. This is often used to model task scheduling with prerequisites.
+* Algorithm: The algorithm is simple: run DFS on the graph and then output the vertices in decreasing order of their finish times. A common way to implement this is to insert each vertex onto the front of a linked list as it is finished.
+
+6.5 Conclusion and Transition
+
+BFS and DFS are fundamental graph traversal algorithms with distinct properties and applications that form the basis for many other graph algorithms. But what about problems for which no efficient polynomial-time algorithm is known? We now transition to our final week, which covers exhaustive search strategies that are often our only resort for these computationally hard problems.
+
+7.0 Week 7: Exhaustive Search Techniques
+
+7.1 Introduction
+
+For many computationally difficult problems, no efficient polynomial-time algorithm is known. In such cases, we often turn to exhaustive search strategies like Backtracking and Branch-and-Bound. These methods systematically search the entire space of possible solutions. However, they are not simple brute-force approaches; they are intelligent, structured techniques designed to "prune" large portions of the search space, thereby avoiding unnecessary computation and making the search feasible for moderately sized problems.
+
+7.2 Backtracking
+
+Backtracking is a refined depth-first search of a problem's state-space tree, which represents all possible sequences of choices that can be made to construct a solution.
+
+* Process: The algorithm explores a path in the tree, building a partial solution. At each step, it checks if the current partial solution can be extended to a complete, valid solution. If it cannot, the algorithm "backtracks" by undoing the last choice and trying the next available option. It proceeds until it either finds a solution or has exhausted all possibilities.
+* Example: The n-Queens Problem: The goal is to place n queens on an n x n chessboard so that no two queens can attack each other. The backtracking algorithm places queens one by one in successive columns. A bounding function (such as the PLACE procedure in Horowitz & Sahni) is used to check if placing a queen in a particular square is "promising"—i.e., it is not attacked by any previously placed queens. If a placement is not promising, that entire branch of the state-space tree is pruned.
+
+7.3 Branch-and-Bound
+
+Branch-and-Bound is an enhancement to exhaustive search that is specifically designed for optimization problems (i.e., finding a minimum or maximum value).
+
+* Process: Like backtracking, it explores a state-space tree. Its key feature is that for each node representing a partial solution, it calculates a bound on the best possible solution that could be obtained by extending that partial solution.
+* Pruning: The algorithm maintains the value of the best complete solution found so far (the "incumbent"). If the bound for a node (and its entire subtree) is worse than the incumbent, that entire subtree is pruned from the search.
+* Search Strategies: The state-space tree can be explored using different strategies, including FIFO (breadth-first), LIFO (depth-first), and Least-Cost (LC), which always explores the node with the most promising bound next.
+
+7.4 Application: 0/1 Knapsack Problem Revisited
+
+While the dynamic programming solution from Week 5 solves the 0/1 Knapsack problem in pseudo-polynomial time by systematically filling a table of solutions to all subproblems, Branch-and-Bound attacks it by exploring the state-space tree of choices. The state-space tree represents the decisions to include or exclude each item. A bound can be calculated for each node by, for example, relaxing the "0/1" constraint and allowing fractions of remaining items to be taken. This bound provides an optimistic estimate of the best possible profit. If this optimistic estimate is less than the profit of the best solution found so far, the branch can be pruned.
+
+The DP approach's runtime is dependent on the knapsack's capacity, making it pseudo-polynomial. In contrast, the B&B approach has an exponential worst-case runtime but may perform much faster in practice if its bounding function can prune large sections of the search tree, especially on instances where the capacity is very large.
+
+7.5 Conclusion
+
+Backtracking and Branch-and-Bound provide systematic frameworks for solving computationally hard problems. While they may have exponential worst-case complexity, their power lies in their pruning strategies, which can dramatically reduce the search space and often make them feasible for reasonably sized problem instances in practice. This concludes the material for the midterm examination.

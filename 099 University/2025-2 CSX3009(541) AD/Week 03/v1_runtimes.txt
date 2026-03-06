@@ -1,0 +1,7 @@
+Task 1 (mincoin) v1 with mincoin1.in:
+Output: 4
+Time: 0.54s real
+
+Task 2 (cutrod) v1 with 1.in:
+Output: 29
+Time: 0m0.027s real
