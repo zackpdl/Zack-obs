@@ -64,6 +64,8 @@ JT-shop ฟิล์มกระจก ราคาส่ง ›
 
 
 
+Yes
+
 
 ___
 Created:: <%tp.date.now("YYYY-MM-DD HH:mm") %>
