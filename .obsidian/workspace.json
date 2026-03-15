@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bookmarks/861-my-opencode-workflow-as-a-senior-engineer-youtube.md",
+                "file": "Bookmarks/861-macbook-neo-a18-pro-10-games-tested-youtube.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "861-my-opencode-workflow-as-a-senior-engineer-youtube"
+              "title": "861-macbook-neo-a18-pro-10-games-tested-youtube"
             }
           }
         ],
@@ -178,7 +178,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#cs",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -301,14 +301,17 @@
   },
   "active": "fba57983393bcf85",
   "lastOpenFiles": [
-    "Bookmarks/859-1000x-faster-than-your-database-spacetimedb-20-youtube.md",
     "Bookmarks/830-i-automated-my-mac-dev-setup-in-9-minutes-2025-neovim-tmux-aerospace-zapzsh-youtube.md",
+    "Bookmarks/861-macbook-neo-a18-pro-10-games-tested-youtube.md",
+    "Bookmarks/2024-12-03-mr-robot-2015-full-serie-online-myflixer.md",
+    "Bookmarks/2024-12-03-the-machine.md",
+    "Bookmarks/861-my-opencode-workflow-as-a-senior-engineer-youtube.md",
+    "Untitled.canvas",
+    "Untitled.base",
+    "Bookmarks/859-1000x-faster-than-your-database-spacetimedb-20-youtube.md",
     "Personal.md",
     "000 Zettelkasten/Friends.md",
-    "Bookmarks/861-my-opencode-workflow-as-a-senior-engineer-youtube.md",
     "Bookmarks/861-this-app-fixed-my-morning-routine-youtube.md",
-    "Bookmarks/2024-12-03-the-machine.md",
-    "Bookmarks/2024-12-03-mr-robot-2015-full-serie-online-myflixer.md",
     "Brain.md",
     "099 University/2025-2 CSX3008(542) OS/CSX3008-OS-Quiz2-Study-Guide.md",
     "099 University/2025-2 CSX3008(542) OS/CSX3008-OS-Quiz2-study.md",
@@ -321,7 +324,6 @@
     "099 University/2025-2 CSX3009(541) AD/Week 02/task2.py",
     "099 University/2025-2 CSX3009(541) AD/Week 02/task1.py",
     "099 University/2025-2 CSX3009(541) AD/Week 02/input.txt",
-    "099 University/2025-2 CSX3009(541) AD/Week 02/balance_split.py",
     "Meal Plan.md",
     "Anime List.md",
     "Proposal.md",
@@ -336,7 +338,6 @@
     "099 University/Java Operators.md",
     "099 University/Logical Form and Logical Equivalence.md",
     "099 University/Uni Schedule.md",
-    "099 University/Uni Courses.md",
     "1.out.png",
     "villageout.png",
     "villagein.png",
