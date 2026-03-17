@@ -5,6 +5,8 @@ source: https://www.youtube.com/watch?v=eShQ0PuUS1o
 publisher: www.youtube.com
 read: false
 tags:
+  - Self-Imp
+  - Youtube
 ---
 
 # [(861) This App Fixed My Morning Routine. - YouTube](https://www.youtube.com/watch?v=eShQ0PuUS1o)
