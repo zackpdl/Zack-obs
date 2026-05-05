@@ -2,5 +2,8 @@
   "quick-latex",
   "obsidian-pandoc",
   "obsidian-git",
-  "terminal"
+  "terminal",
+  "obsidian-tracker",
+  "dataview",
+  "macros"
 ]
