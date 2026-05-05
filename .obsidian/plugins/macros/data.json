@@ -1,0 +1,41 @@
+{
+  "storageFolder": "Nutrition",
+  "proteinColor": "#4caf50",
+  "fatColor": "#f44336",
+  "carbsColor": "#2196f3",
+  "mealTemplates": [],
+  "fatSecretApiKey": "",
+  "fatSecretApiSecret": "",
+  "fatSecretEnabled": false,
+  "usdaEnabled": false,
+  "usdaApiKey": "",
+  "openFoodFactsEnabled": true,
+  "openFoodFactsLanguage": "auto",
+  "openFoodFactsDataQualityFilter": "medium",
+  "dailyCaloriesTarget": 2000,
+  "dailyProteinTarget": 150,
+  "dailyFatTarget": 65,
+  "dailyCarbsTarget": 250,
+  "showSummaryRows": false,
+  "disableTooltips": false,
+  "showCellPercentages": false,
+  "developerModeEnabled": false,
+  "uiCollapseStates": {
+    "macros:calc:<%*:dashboard": false,
+    "macros:dashboard:2026-05-05:dashboard": false,
+    "macros:dashboard:today:dashboard": false
+  },
+  "energyUnit": "kcal",
+  "addToMacrosTabOrder": [
+    "meals",
+    "foods",
+    "group"
+  ],
+  "followRenamesEnabled": true,
+  "autoConfirmRenames": false,
+  "backupOnRename": true,
+  "caseSensitiveFoodMatch": true,
+  "includeAliasesOnRename": false,
+  "macroscalcMetricsConfigs": [],
+  "foodTolerances": {}
+}

@@ -17,6 +17,8 @@ Notes:
 > [!info] End-of-day targets: 3000 kcal | 160 g protein | 400 g carbs | 80 g fat | 7+ hours sleep
 
 ## Meals
+> [!tip] Use [[020 Health/Meals|Reusable Meals]] for quick entry.
+
 ```macros
 id: {{date}}
 

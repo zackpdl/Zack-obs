@@ -17,6 +17,20 @@ The `Nutrition/` folder is your food database for the Obsidian `macros` plugin.
 - Carbs: 400 g
 - Fat: 80 g
 
+## ⚡ Fast Logging Format (for API results)
+
+When you search from FatSecret or anywhere, paste like this:
+
+```md
+- Thai Pork Bun  
+  Calories: 180 kcal  
+  Protein: 6g  
+  Carbs: 28g  
+  Fat: 5g  
+```
+
+Then drop it into a table row in your Daily Log.
+
 ## Current Food Notes
 ```dataview
 TABLE calories, protein, carbs, fat, serving_size

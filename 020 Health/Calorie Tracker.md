@@ -4,13 +4,19 @@ area: nutrition
 ---
 # Macro & Calorie Tracker
 
-This is the nutrition control center. Log meals in the daily note template, use the `macros` block for food entries, and use this page to review totals.
+This is the main calorie dashboard. Log meals in today's daily fitness note and this page will update from that log.
 
 ## Daily Workflow
-1. Create a new daily log from [[Templates/Daily Fitness Log]].
-2. Add meals inside the `macros` block using food names from the `Nutrition/` folder.
-3. Update the frontmatter totals at the end of the day so Dataview and Tracker stay accurate.
-4. Review this page once per day, not after every meal.
+1. Open [[Templates/Daily Nutrition Log|Daily Nutrition Log Template]] (Manual) or [[Templates/Daily Fitness Log|Daily Fitness Log Template]] (Auto).
+2. Create or update today's note in `020 Health/Fitness/YYYY-MM-DD.md`.
+3. Add meals (use [[020 Health/Meals|Reusable Meals]] for speed).
+4. Update frontmatter totals at the end of the day.
+5. Review this page or [[020 Health/Weekly Progress|Weekly Progress]] for trends.
+
+## Navigation
+- [[020 Health/Weekly Progress|📊 Weekly Progress Summary]]
+- [[020 Health/Meals|🍱 Reusable Meals Library]]
+- [[020 Health/Nutrition|📖 Nutrition Guide & Food DB]]
 
 ## Targets
 - Calories: 3000 kcal
@@ -18,14 +24,28 @@ This is the nutrition control center. Log meals in the daily note template, use 
 - Carbs: 400 g
 - Fat: 80 g
 
-## Today's Entry
+## Today's Macros
+```macros
+id: today
+```
+
+### Today's Pie Chart
+```macrospc
+id: today
+```
+
+## Today's Log
 ```dataview
 TABLE WITHOUT ID
+    file.link as "Log",
     Calories,
     Protein,
     Carbs,
     Fat,
     Weight,
+    SleepHours,
+    Workout,
+    Run,
     Notes
 FROM "020 Health/Fitness"
 WHERE date = date(today)
@@ -33,39 +53,85 @@ SORT date DESC
 LIMIT 1
 ```
 
-## Macro Split Today
-```macrospc
-id: today
-```
-
-## Recent Nutrition Logs
+## Last 7 Days
 ```dataview
 TABLE date as "Date", Calories, Protein, Carbs, Fat, Weight
 FROM "020 Health/Fitness"
+WHERE date >= date(today) - dur(7 days)
 SORT date DESC
-LIMIT 14
 ```
 
-## Weekly Average
+## Weekly Averages
 ```dataview
 TABLE WITHOUT ID
     round(average(rows.Calories), 0) as "Avg Calories",
     round(average(rows.Protein), 0) as "Avg Protein",
     round(average(rows.Carbs), 0) as "Avg Carbs",
-    round(average(rows.Fat), 0) as "Avg Fat"
+    round(average(rows.Fat), 0) as "Avg Fat",
+    round(average(rows.Weight), 1) as "Avg Weight"
 FROM "020 Health/Fitness"
 WHERE date >= date(today) - dur(7 days)
 GROUP BY true
 ```
 
+## Graphs
+```tracker
+searchType: frontmatter
+searchTarget: Calories
+folder: 020 Health/Fitness
+startDate: 2026-05-01
+endDate: 2026-05-31
+line:
+    title: Daily Calories
+    yAxisLabel: kcal
+    lineColor: "#4da6ff"
+```
+
+```tracker
+searchType: frontmatter
+searchTarget: Protein
+folder: 020 Health/Fitness
+startDate: 2026-05-01
+endDate: 2026-05-31
+line:
+    title: Protein Intake
+    yAxisLabel: grams
+    lineColor: "#ffd11a"
+```
+
+```tracker
+searchType: frontmatter
+searchTarget: Carbs
+folder: 020 Health/Fitness
+startDate: 2026-05-01
+endDate: 2026-05-31
+line:
+    title: Carb Intake
+    yAxisLabel: grams
+    lineColor: "#33cc99"
+```
+
+```tracker
+searchType: frontmatter
+searchTarget: Fat
+folder: 020 Health/Fitness
+startDate: 2026-05-01
+endDate: 2026-05-31
+line:
+    title: Fat Intake
+    yAxisLabel: grams
+    lineColor: "#ff884d"
+```
+
 ## Food Library
-- [[Nutrition/Impact Whey Protein]]
-- [[Nutrition/Oat Milk]]
-- [[Nutrition/PB + J Sammich]]
-- [[Nutrition/Rolled Oats]]
-- [[Nutrition/Steamed Pork Buns]]
-- [[020 Health/Nutrition|Nutrition Guide]]
+```dataview
+TABLE WITHOUT ID file.link as "Food", calories as "Kcal", protein as "Protein", carbs as "Carbs", fat as "Fat"
+FROM "Nutrition"
+SORT file.name ASC
+LIMIT 12
+```
 
 ## Notes
-- Use exact food note titles inside the `macros` block or the plugin will not match them.
-- For meals not in the library yet, create a new note in `Nutrition/` with calories, protein, carbs, fat, and serving size in frontmatter.
+- `macros` and `macrospc` above track today's daily log through `id: today`.
+- Keep the actual meal entries in the daily fitness note, not in this dashboard.
+- Food names in the `macros` block must exactly match note titles in `Nutrition/`.
