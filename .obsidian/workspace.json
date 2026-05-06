@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8f60c89f03632408",
+        "id": "7cb25bd87e313735",
         "type": "tabs",
         "children": [
           {
-            "id": "c54b2e3dbfc45722",
+            "id": "5f06bc98f7e0f75e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
+                "file": "040 University/Uni Progress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "Uni Progress"
             }
           }
         ]
@@ -178,8 +178,12 @@
       "macros:Add food item (search or manual entry)": false
     }
   },
-  "active": "d6de3109bf9562dd",
+  "active": "5f06bc98f7e0f75e",
   "lastOpenFiles": [
+    "Dashboard.md",
+    "010 Personal/Brain.md",
+    "Active Projects.md",
+    "010 Personal/Personal.md",
     "070 Archive/Trackers/Fitness/2026-05-05.md",
     "070 Archive/Trackers/Fitness",
     "070 Archive/Trackers/Weekly Progress.md",
@@ -193,7 +197,6 @@
     "070 Archive/Trackers/Calorie Tracker.md",
     "070 Archive/Trackers",
     "050 Knowledge.md",
-    "Dashboard.md",
     "020 Health/Calorie Tracker.md",
     "020 Health/Debloat.md",
     "020 Health/Health & Fitness Hub.md",
@@ -206,9 +209,6 @@
     "020 Health/Sleep & Recovery Tracker.md",
     "020 Health/6-Day PPL Workout Plan.md",
     "020 Health/Weekly Progress.md",
-    "020 Health/Meals/Chicken Rice.md",
-    "Templates/Daily Nutrition Log.md",
-    "Templates/Meal Template.md",
     "020 Health/Meals",
     "020 Health/Fitness",
     "020 Health/Macro Dashboards",

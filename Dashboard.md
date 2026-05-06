@@ -3,12 +3,12 @@
 > [!quote] "The soul becomes dyed with the color of its thoughts." — Marcus Aurelius
 
 ## Command Center
-| Focus | Link | Use |
-| --- | --- | --- |
-| Brain | [[Brain]] | Ideas, terminal, hotkeys, prompts |
-| Personal | [[010 Personal/Personal|Personal Info]] | IDs, accounts, addresses |
-| University | [[040 University/Uni Progress|Academic Progress]] | Degree tracking and current semester |
-| Projects | [[060 Projects/Projects|Active Projects]] | Build and ship work |
+| Focus      | Link                            | Use                               |                                      |
+| ---------- | ------------------------------- | --------------------------------- | ------------------------------------ |
+| Brain      | [[Brain]]                       | Ideas, terminal, hotkeys, prompts |                                      |
+| Personal   | [[010 Personal/Personal]]       | Personal Info]]                   | IDs, accounts, addresses             |
+| University | [[040 University/Uni Progress]] | Academic Progress]]               | Degree tracking and current semester |
+| Projects   | [[060 Projects/Projects]]       | Active Projects                   | Build and ship work                  |
 
 ## Quick Access
 - [[010 Personal/Daily Routine|Daily Routine]]
