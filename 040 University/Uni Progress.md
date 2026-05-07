@@ -6,12 +6,13 @@
 | Free Electives                         | 12       | 0         | 12        |
 | **Total**                              | **132**  | **~88**   | **~44**   |
 
-| Category              | Required | Completed  | Remaining  |
-| --------------------- | -------- | ---------- | ---------- |
-| Core/Foundation       | ~18      | ✅ Done     | 0          |
-| Major Required        | 39       | ~30        | 9          |
-| Major Electives       | 33       | 18         | 15         |
-| **Total Specialized** | **90**   | **~60–64** | **~26–30** |
+| Category | Required | Completed | Remaining |
+|----------|--------|-----------|-----------|
+| Core/Foundation | ~18 | ✅ Done | 0 |
+| Major Required | 39 | ~27 | 12 |
+| Major Electives | 33 | 18 | 15 |
+| **Total Specialized** | **90** | **~57–60** | **~30–33** |
+
 
 ---
 
