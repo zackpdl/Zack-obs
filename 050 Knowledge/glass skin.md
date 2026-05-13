@@ -1,7 +1,7 @@
 
 Author: [[Teachingmensfashion]]
 
-Type: [[Youtube]]
+Type: [[050 Knowledge/Youtube]]
 Topics:[[Self-improvement]] 
 
 

@@ -1,7 +1,7 @@
 
 Author: [[ADHDVision]]
 
-Type: [[Youtube]] 
+Type: [[050 Knowledge/Youtube]] 
 
 Topics: [[Sleep]] 
 

@@ -1,7 +1,7 @@
 
 Author: [[Stirling Cooper]]
 
-Type: [[Youtube]]
+Type: [[050 Knowledge/Youtube]]
 
 Topics: [[Relationship]] 
 

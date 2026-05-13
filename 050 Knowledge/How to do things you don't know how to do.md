@@ -1,7 +1,7 @@
 
 Author:
 
-Type: [[Youtube]]
+Type: [[050 Knowledge/Youtube]]
 
 Topics: [[Self-improvement]] [[Productivity]]
 

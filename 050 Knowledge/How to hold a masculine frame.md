@@ -1,7 +1,7 @@
 
 Author: [[Jack Hopkins]] 
 
-Type: [[Youtube]]
+Type: [[050 Knowledge/Youtube]]
 
 Topics: [[Self-improvement]] [[Relationship]]
 
