@@ -10,5 +10,5 @@ tags:
 ---
 
 # [(859) 1000x faster than your database - SpacetimeDB 2.0 - YouTube](https://www.youtube.com/watch?v=C7gJ_UxVnSk)
-#CS
+
 
