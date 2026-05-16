@@ -13,6 +13,62 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dashboard"
+            }
+          },
+          {
+            "id": "7f7c2264c9435748",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bookmarks/bookmark-dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "bookmark-dashboard"
+            }
+          },
+          {
+            "id": "7ba915b281d87b71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube"
+            }
+          },
+          {
+            "id": "da2ad9fad4352009",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "3fbfc7c6540b5bb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "060 Projects/Goal in 6 months monk mode.md",
                 "mode": "source",
                 "source": false
@@ -21,7 +77,8 @@
               "title": "Goal in 6 months monk mode"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -178,10 +235,14 @@
       "macros:Add food item (search or manual entry)": false
     }
   },
-  "active": "5f06bc98f7e0f75e",
+  "active": "da2ad9fad4352009",
   "lastOpenFiles": [
-    "060 Projects/Youtube.md",
+    "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
+    "Untitled.md",
+    "Bookmarks/bookmark-dashboard.md",
+    "Dashboard.md",
     "060 Projects/Goal in 6 months monk mode.md",
+    "060 Projects/Youtube.md",
     "020 Health/Meals/Chicken Rice.md",
     "Bookmarks/1120-i-tried-the-worlds-hardest-body-transformation-youtube.md",
     "Bookmarks/1131-vibe-coding-has-a-security-problem-and-how-to-fix-it-youtube.md",
@@ -191,8 +252,6 @@
     "020 Health/6-Day PPL Workout Plan.md",
     "060 Projects/Projects.md",
     "Bookmarks/1131-live-mobility-masterclass-with-knees-over-toes-guy-youtube.md",
-    "Bookmarks/bookmark-dashboard.md",
-    "Dashboard.md",
     "Active Projects.md",
     "Migration Notes.md",
     "Bookmarks/2024-12-03-the-machine.md",
@@ -203,9 +262,7 @@
     "Bookmarks/1123-any-model-any-app-build-your-ai-os-to-work-everywhere-youtube.md",
     "Bookmarks/1024-clear-system-data-on-mac-how-i-freed-up-250gb-safely-youtube.md",
     "Bookmarks/992-5-techniques-that-reverse-bodybuilding-effects-youtube.md",
-    "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
     "Bookmarks/990-how-to-organize-your-life-with-a-calendar-youtube.md",
-    "Bookmarks/963-hack-github-achievements-2026-youtube.md",
     "070 Archive/Trackers/Fitness",
     "070 Archive/Trackers/Macro Dashboards",
     "070 Archive/Trackers",
