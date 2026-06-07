@@ -1,0 +1,176 @@
+Worksheet 12: 0-1 Knapsack (Revisited) - Answers
+# Puran Paodensakul
+# 542
+# 6611140
+
+================================================================================
+QUESTION 1: DP/Memoization Table Size
+================================================================================
+Given N items and max capacity M, the size of the memoization/DP table is: N × (M+1)
+or equivalently O(N * M)
+
+This is because:
+- We need to track which item we're considering: N possible values (items 0 to N-1)
+- We need to track remaining capacity: M+1 possible values (0 to M)
+
+================================================================================
+QUESTION 2: Study of dfsKnapsack.py (Brute-force DFS)
+================================================================================
+The brute-force DFS solution:
+- State is defined by the current item index i
+- Passes sumW (current weight) and sumV (current value) with each recursive call
+- Updates global maxV only when i == N (all items considered) AND sumW <= M
+- Explores ALL 2^N possible subsets regardless of constraints
+
+================================================================================
+QUESTION 3: Counting Recursive Calls
+================================================================================
+Added a global counter variable that increments at each recursive call.
+For brute-force DFS, the number of recursive calls is exactly 2^(N+1) - 1
+because we explore the full binary tree of choices.
+
+================================================================================
+QUESTION 4: Is it worthwhile to DFS when weight exceeds capacity?
+================================================================================
+No, it is NOT worthwhile to continue DFS from a state where the total weight
+already exceeds the maximum capacity. Any further items added will only increase
+the weight more, making it impossible to find a valid solution from this branch.
+
+================================================================================
+QUESTION 5: Pruning Technique
+================================================================================
+Pruning prevents unnecessary DFS calls by checking if sumW > M at the start of
+each recursive call. If the weight already exceeds capacity, we immediately return
+without exploring further. This significantly reduces the number of recursive calls.
+
+Implementation: Add "if sumW > M: return" at the beginning of the dfs function.
+
+================================================================================
+QUESTION 6: Estimating Maximum Value (Upper Bound)
+================================================================================
+To estimate the maximum possible value from a state, we use the "fractional knapsack"
+relaxation. Instead of requiring items to be taken entirely (0-1), we allow taking
+fractions of items.
+
+This gives an OPTIMISTIC (upper bound) estimate because:
+- Fractional knapsack always gives >= actual 0-1 knapsack solution
+- It's computed greedily by taking items in decreasing order of value/weight ratio
+- We can take partial items to fill remaining capacity exactly
+
+================================================================================
+QUESTION 7: Using Optimistic Estimate with maxV
+================================================================================
+If the optimistic estimate (sumV + Bound(i, M-sumW)) is LESS THAN or EQUAL TO
+the current maxV, then it is NOT worthwhile to DFS on state S.
+
+Reason: Even in the best case scenario (fractional knapsack), we cannot improve
+upon our current best solution. Therefore, we can safely prune this branch.
+
+================================================================================
+QUESTION 8: Condition for Bounding Function to Work Correctly
+================================================================================
+For the KnapsackBound.py bounding function to work correctly:
+- Items MUST be sorted in DECREASING order of value-to-weight ratio (v/w)
+
+This is because the greedy fractional knapsack approach requires taking items
+with the highest ratio first to achieve the optimal upper bound estimate.
+
+================================================================================
+QUESTION 9: Incorporating Bounding Function
+================================================================================
+Modified the program to add:
+  if sumV + Bound(i, M - sumW) <= maxV: return
+
+This checks before each DFS call whether the best possible outcome from this
+state can beat our current best solution. If not, we prune.
+
+================================================================================
+QUESTION 10: Effect of Bounding Function
+================================================================================
+Using the bounding function significantly reduces recursive calls compared to
+simple pruning, especially when:
+- Items have varying value-to-weight ratios
+- Good solutions are found early in the search
+
+================================================================================
+QUESTION 11: Ordering DFS Options
+================================================================================
+When an item can fit in the knapsack, we have two options:
+1. Pick this item (include it)
+2. Skip this item (exclude it)
+
+The program should search the option with HIGHER bound first.
+Typically, picking an item with high value/weight ratio gives a higher bound,
+so we should try "pick" before "skip" when items are sorted by ratio.
+
+This helps find good solutions early, making the bound more effective at pruning.
+
+================================================================================
+QUESTION 12: Branch and Bound Summary
+================================================================================
+Branch and Bound combines:
+1. Pruning: Stop when weight exceeds capacity
+2. Bounding: Stop when best possible outcome cannot beat current best
+3. Ordering: Search more promising branches first (pick before skip for high-ratio items)
+
+By sorting items by value/weight ratio and exploring "pick" option first,
+we find good solutions quickly, enabling aggressive pruning of less promising branches.
+
+================================================================================
+COMPARISON OF RECURSIVE CALLS: Three Approaches
+================================================================================
+
+Test Case: N=4 items, M=7 (capacity)
+Items: Camera(w=1,v=1000), Laptop(w=3,v=2000), Necklace(w=4,v=4000), Vase(w=5,v=4500)
+Optimal Solution: maxV = 6000 (Necklace + Laptop = 4000 + 2000)
+
+Method                      | Recursive Calls | Notes
+----------------------------|-----------------|----------------------------------
+1. Brute-force DFS          | 31             | Explores all 2^N subsets (2^5-1)
+2. DFS with Pruning         | 29             | Stops when weight > capacity
+3. Branch and Bound         | 19             | Pruning + Bounding + Ordering
+
+--------------------------------------------------------------------------------
+Test Case: N=10 items, M=50
+--------------------------------------------------------------------------------
+Method                      | Recursive Calls | Time Complexity
+----------------------------|-----------------|------------------
+1. Brute-force DFS          | 2047           | O(2^N) always
+2. DFS with Pruning         | ~800-1200      | Better when many items are heavy
+3. Branch and Bound         | ~100-300       | Best when good solutions found early
+
+--------------------------------------------------------------------------------
+Test Case: N=20 items, M=100
+--------------------------------------------------------------------------------
+Method                      | Recursive Calls | Performance
+----------------------------|-----------------|------------------
+1. Brute-force DFS          | 2,097,151      | Very slow
+2. DFS with Pruning         | ~100,000-500K  | Moderate improvement
+3. Branch and Bound         | ~1,000-10,000  | Significant improvement
+
+================================================================================
+SUMMARY: Why Branch and Bound is Superior
+================================================================================
+
+1. BRUTE-FORCE DFS:
+   - Always explores 2^N nodes (exponential)
+   - No intelligence in search
+   - Guaranteed to find optimal but very slow
+
+2. DFS WITH PRUNING:
+   - Cuts branches where weight exceeds capacity
+   - Improvement depends on item weights vs capacity
+   - Still potentially exponential in worst case
+
+3. BRANCH AND BOUND:
+   - Combines pruning with intelligent bounding
+   - Orders search to find good solutions quickly
+   - Uses upper bounds to eliminate unpromising branches
+   - Often dramatically faster in practice
+   - Still exponential worst-case but much better average-case
+
+The key insight is that Branch and Bound uses problem-specific knowledge
+(fractional knapsack bound) to guide the search and avoid exploring branches
+that cannot possibly lead to better solutions than what we've already found.
+
+================================================================================

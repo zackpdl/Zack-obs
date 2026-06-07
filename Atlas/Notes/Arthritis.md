@@ -1,0 +1,1 @@
+Arthritis is the swelling on the joints. 

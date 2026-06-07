@@ -1,0 +1,12 @@
+# Puran Paodensakul
+# 6611140
+# 541
+
+Total number of states before deciding item i:
+    2^i states, because each of the first i items has two choices (pick or skip).
+
+Do earlier choices affect the result of picking item i?
+    Yes. The result depends on which previous items were chosen since the capacity changes.
+
+Can this brute-force solution use memoization?
+    Yes. Memoization can speed it up by saving results that were already calculated so they are not repeated.
