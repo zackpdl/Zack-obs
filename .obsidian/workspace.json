@@ -1,0 +1,289 @@
+{
+  "main": {
+    "id": "6e8587a449d3f912",
+    "type": "split",
+    "children": [
+      {
+        "id": "7cb25bd87e313735",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f06bc98f7e0f75e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dashboard"
+            }
+          },
+          {
+            "id": "7f7c2264c9435748",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bookmarks/bookmark-dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "bookmark-dashboard"
+            }
+          },
+          {
+            "id": "7ba915b281d87b71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube"
+            }
+          },
+          {
+            "id": "da2ad9fad4352009",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "3fbfc7c6540b5bb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "060 Projects/Goal in 6 months monk mode.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Goal in 6 months monk mode"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "45c0268042c85649",
+    "type": "split",
+    "children": [
+      {
+        "id": "0267a7b333a2dbdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6de3109bf9562dd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5a132867c9737ecb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#CS",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fb36fb6ff0e52a16",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7b341addf9dc0474",
+    "type": "split",
+    "children": [
+      {
+        "id": "75b627f22497d62f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e6cfbff39b844ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2af335288fcfdcaf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "867e3f3acc9db858",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "eb6a17394cae7974",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Bookmarks/861-my-opencode-workflow-as-a-senior-engineer-youtube.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 861-my-opencode-workflow-as-a-senior-engineer-youtube"
+            }
+          },
+          {
+            "id": "930f6ae5eac70332",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false,
+      "terminal:Open terminal": false,
+      "macros:Add food item (search or manual entry)": false
+    }
+  },
+  "active": "da2ad9fad4352009",
+  "lastOpenFiles": [
+    "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
+    "Untitled.md",
+    "Bookmarks/bookmark-dashboard.md",
+    "Dashboard.md",
+    "060 Projects/Goal in 6 months monk mode.md",
+    "060 Projects/Youtube.md",
+    "020 Health/Meals/Chicken Rice.md",
+    "Bookmarks/1120-i-tried-the-worlds-hardest-body-transformation-youtube.md",
+    "Bookmarks/1131-vibe-coding-has-a-security-problem-and-how-to-fix-it-youtube.md",
+    "020 Health/Nutrition.md",
+    "020 Health/Debloat.md",
+    "020 Health/Aesthetic  Minimalist Routine.md",
+    "020 Health/6-Day PPL Workout Plan.md",
+    "060 Projects/Projects.md",
+    "Bookmarks/1131-live-mobility-masterclass-with-knees-over-toes-guy-youtube.md",
+    "Active Projects.md",
+    "Migration Notes.md",
+    "Bookmarks/2024-12-03-the-machine.md",
+    "Bookmarks/861-this-app-fixed-my-morning-routine-youtube.md",
+    "Bookmarks/watch-jack-of-all-trades-party-of-none-online-free-on-9anime.md",
+    "Bookmarks/raja-natwarlal-2014-directed-by-kunal-deshmukh-reviews-film-cast-letterboxd.md",
+    "Bookmarks/myflixer-watch-movies-online-free-stream-tv-series-online-free.md",
+    "Bookmarks/1123-any-model-any-app-build-your-ai-os-to-work-everywhere-youtube.md",
+    "Bookmarks/1024-clear-system-data-on-mac-how-i-freed-up-250gb-safely-youtube.md",
+    "Bookmarks/992-5-techniques-that-reverse-bodybuilding-effects-youtube.md",
+    "Bookmarks/990-how-to-organize-your-life-with-a-calendar-youtube.md",
+    "070 Archive/Trackers/Fitness",
+    "070 Archive/Trackers/Macro Dashboards",
+    "070 Archive/Trackers",
+    "020 Health/Meals",
+    "020 Health/Fitness",
+    "020 Health/Macro Dashboards",
+    "Nutrition",
+    "070 Archive",
+    "080 Archive",
+    "050 Knowledge",
+    "000 Inbox/Untitled.canvas",
+    "Untitled.canvas",
+    "1.out.png",
+    "villageout.png",
+    "villagein.png",
+    "u2out.png",
+    "2in.png",
+    "1in.png",
+    "Reference/Pasted image 20240826093205.png",
+    "Reference/IMG_7501.jpg",
+    "Reference/Screenshot 2567-08-25 at 12.51.51.png",
+    "Reference/IMG_6155.jpeg"
+  ]
+}
