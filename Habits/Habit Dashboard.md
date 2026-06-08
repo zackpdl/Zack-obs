@@ -5,7 +5,7 @@ tags:
 entries: []
 ---
 # 🎯 Habit Dashboard
-[[Home]]
+[[Home]] · [[Health/Health Dashboard|🫀 Health Dashboard]]
 
 > Track everything in one place. Click any square to log. Hover for streak info.
 
