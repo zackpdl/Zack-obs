@@ -1,5 +1,5 @@
 ---
-title: "📖 Read / Learn"
+title: 📖 Read / Learn
 entries: []
 maxGap: 2
 color: "#00BCD4"

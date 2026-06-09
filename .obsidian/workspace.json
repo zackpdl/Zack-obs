@@ -4,81 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "7cb25bd87e313735",
+        "id": "6cee7779b049bc3c",
         "type": "tabs",
         "children": [
           {
-            "id": "5f06bc98f7e0f75e",
+            "id": "b9b7347d1c521cd4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
+                "file": "Habits/Habit Dashboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
-            }
-          },
-          {
-            "id": "7f7c2264c9435748",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bookmarks/bookmark-dashboard.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "bookmark-dashboard"
-            }
-          },
-          {
-            "id": "7ba915b281d87b71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube"
-            }
-          },
-          {
-            "id": "da2ad9fad4352009",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "3fbfc7c6540b5bb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "060 Projects/Goal in 6 months monk mode.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Goal in 6 months monk mode"
+              "title": "Habit Dashboard"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -235,34 +178,37 @@
       "macros:Add food item (search or manual entry)": false
     }
   },
-  "active": "da2ad9fad4352009",
+  "active": "b9b7347d1c521cd4",
   "lastOpenFiles": [
-    "Bookmarks/990-i-tried-the-worlds-simplest-productivity-trick-it-worked-youtube.md",
-    "Untitled.md",
-    "Bookmarks/bookmark-dashboard.md",
-    "Dashboard.md",
-    "060 Projects/Goal in 6 months monk mode.md",
-    "060 Projects/Youtube.md",
-    "020 Health/Meals/Chicken Rice.md",
-    "Bookmarks/1120-i-tried-the-worlds-hardest-body-transformation-youtube.md",
-    "Bookmarks/1131-vibe-coding-has-a-security-problem-and-how-to-fix-it-youtube.md",
-    "020 Health/Nutrition.md",
-    "020 Health/Debloat.md",
-    "020 Health/Aesthetic  Minimalist Routine.md",
-    "020 Health/6-Day PPL Workout Plan.md",
-    "060 Projects/Projects.md",
-    "Bookmarks/1131-live-mobility-masterclass-with-knees-over-toes-guy-youtube.md",
-    "Active Projects.md",
-    "Migration Notes.md",
-    "Bookmarks/2024-12-03-the-machine.md",
-    "Bookmarks/861-this-app-fixed-my-morning-routine-youtube.md",
-    "Bookmarks/watch-jack-of-all-trades-party-of-none-online-free-on-9anime.md",
-    "Bookmarks/raja-natwarlal-2014-directed-by-kunal-deshmukh-reviews-film-cast-letterboxd.md",
-    "Bookmarks/myflixer-watch-movies-online-free-stream-tv-series-online-free.md",
-    "Bookmarks/1123-any-model-any-app-build-your-ai-os-to-work-everywhere-youtube.md",
-    "Bookmarks/1024-clear-system-data-on-mac-how-i-freed-up-250gb-safely-youtube.md",
-    "Bookmarks/992-5-techniques-that-reverse-bodybuilding-effects-youtube.md",
-    "Bookmarks/990-how-to-organize-your-life-with-a-calendar-youtube.md",
+    "Health/Health Dashboard.md",
+    "scripts/enrich_health_frontmatter.py",
+    "scripts",
+    "Health/2569-06-08.md",
+    "Health/2569-06-07.md",
+    "Health/2569-06-06.md",
+    "Health/2569-06-05.md",
+    "Health/2569-06-04.md",
+    "Health/2569-06-03.md",
+    "Health/2569-06-02.md",
+    "Health/2569-06-01.md",
+    "Health/2569-05-31.md",
+    "Health/2569-05-30.md",
+    "Health/2569-05-29.md",
+    "Health/2569-05-28.md",
+    "Health/2569-05-27.md",
+    "Health/2569-05-26.md",
+    "Health/2569-05-25.md",
+    "Health/2569-05-24.md",
+    "Health/2569-05-23.md",
+    "Health/2569-05-22.md",
+    "Health/2569-05-21.md",
+    "Health/2569-05-20.md",
+    "Health/2569-05-19.md",
+    "Health/2569-05-18.md",
+    "Health/2569-05-17.md",
+    "Health/2569-05-16.md",
+    "Health/2569-05-15.md",
+    "Health",
     "070 Archive/Trackers/Fitness",
     "070 Archive/Trackers/Macro Dashboards",
     "070 Archive/Trackers",
@@ -270,9 +216,6 @@
     "020 Health/Fitness",
     "020 Health/Macro Dashboards",
     "Nutrition",
-    "070 Archive",
-    "080 Archive",
-    "050 Knowledge",
     "000 Inbox/Untitled.canvas",
     "Untitled.canvas",
     "1.out.png",
