@@ -1,8 +1,7 @@
 # Home
 
-## Trackers
+## Habit Tracker
 - [[Habits/Habit Dashboard|🎯 Habit Dashboard]]
-- [[Health/Health Dashboard|🫀 Health Dashboard]]
 
 ## Quick Capture
 - [[Inbox/Capture|Capture]]
