@@ -1,19 +1,16 @@
 ---
-id: <% tp.file.title.split(" ")[0] %>
-created_date: <% tp.file.creation_date('YYYY-MM-DD') %>
-updated_date: <% tp.file.creation_date('YYYY-MM-DD') %>
-type: book
-year: 
-author: 
-link:
+started: <%tp.date.now("YYYY-MM-DD")%>
+finished:
+rating:
 ---
+Status:: #📥/
+Author:: [[]]
+Medium:: [[MOC - Books]]
+Tags:: #i/books
+Links: [[<%tp.file.title%> Application]]
+___
+# <%tp.file.title%>
+___
+References:
 
-# 📚 <% tp.file.title %>
-- **🏷️Tags** :   #<% tp.file.creation_date('MM-YYYY') %> #book
-## 📝 Notes
-- 
-
-## ❓ Questions
-- 
-
-## 🔗 Related links
+Created:: <%tp.date.now("YYYY-MM-DD HH:MM") %>
