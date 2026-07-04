@@ -34,6 +34,14 @@ Targets:
 
 - 10+ pull-ups
 
+# Lean Weekly Schedule
+
+See [[Efforts/Ongoing/Weekly Lean Schedule]] for the full weekly routine based on the "minimum inputs" philosophy.
+
+> *The bulkier the routine, the slower the results. Keep it lean.*
+
+---
+
 # YouTube Mission
 
 ## Goal

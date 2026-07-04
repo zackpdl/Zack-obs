@@ -106,5 +106,6 @@ Sat  →  Rest / Run / Active Recovery
 
 ## 🔗 Links
 - [[Goal in 6 months monk mode|Monk Mode Goals]]
+- [[Efforts/Ongoing/Weekly Lean Schedule|Lean Weekly Schedule]]
 - [[Atlas/Maps/Semester 1 2026 - Course Schedule|Course Schedule]]
 - [[Efforts/Ongoing/Hybrid Training Plan|Hybrid Training Plan]]
