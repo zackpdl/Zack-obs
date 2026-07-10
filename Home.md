@@ -29,6 +29,7 @@ SORT file.name ASC
 ## 🔄 Areas (Ongoing)
 - [[20 - Areas/Health & Fitness/Health Dashboard|🫀 Health Dashboard]]
 - [[20 - Areas/Health & Fitness/Habits/Habit Dashboard|🎯 Habit Dashboard]]
+- [[20 - Areas/University/Self-Study System|🧠 Self-Study System]]
 - [[20 - Areas/Health & Fitness/Health & Fitness Hub|💪 Health & Fitness Hub]]
 - [[20 - Areas/University/Semester 1 2026 - Course Schedule|📚 Course Schedule]]
 - [[20 - Areas/Self-Improvement/Daily Routine|🌅 Daily Routine]]
