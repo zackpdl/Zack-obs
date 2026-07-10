@@ -8,7 +8,7 @@
 ## Current Efforts
 ```dataview
 LIST
-FROM "Efforts/Active"
+FROM "10 - Projects"
 SORT file.mtime DESC
 LIMIT 10
 ```

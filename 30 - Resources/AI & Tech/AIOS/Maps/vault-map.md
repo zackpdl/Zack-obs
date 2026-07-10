@@ -2,65 +2,62 @@
 
 This vault uses ACE. Do not redesign the core structure. AI should build on top of it.
 
-## Core Structure
-- Atlas: knowledge, ideas, references, learning, synthesis.
-- Calendar: time-bound context, daily notes, weekly notes, meetings, logs.
-- Efforts: action, projects, goals, outcomes, active work.
-- Inbox: fast capture before processing.
-- Templates: reusable note structures.
-- Attachments: files, images, PDFs, and assets.
-- AIOS: portable AI layer for identity, skills, prompts, agents, and templates.
+## Core Structure (PARA Method)
+- `00 - Inbox/`: fast capture before processing.
+- `10 - Projects/`: short-term outcomes with deadlines (e.g., courses this semester).
+- `20 - Areas/`: ongoing responsibilities (health, fitness, relationships, finance).
+- `30 - Resources/`: topics of interest (coding, AI, media, knowledge notes).
+- `40 - Archives/`: completed or inactive items (past courses, old projects).
+- `Calendar/`: time-bound context, daily notes, weekly notes, logs.
+- `Templates/`: reusable note structures.
+- `Attachments/`: files, images, PDFs, and assets.
 
-## Atlas
-Use Atlas for durable knowledge.
+## 10 - Projects
+Use Projects for outcome-oriented work with deadlines.
 
-Put here:
-- Evergreen notes
-- Concepts and ideas
-- Learning notes
-- Research summaries
-- Source notes
-- People notes
-- Maps of Content
+Course structure per semester folder:
+- `{Course Code} {Name}/`
+  - `Notes/` — study guides, lecture notes, summaries
+  - `Materials/` — lecture PDFs, slides, syllabi
+  - `Assignments/` — deliverables (optional)
+  - `index.md` — course overview, schedule, links
+
+## 20 - Areas
+Use Areas for ongoing responsibilities that never end.
 
 Main folders:
-- `Atlas/Maps`: Maps of Content. Use names like `MOC - Coding`.
-- `Atlas/Notes`: atomic or evergreen notes.
-- `Atlas/Sources`: books, articles, videos, bookmarks, external summaries.
-- `Atlas/People`: people, contacts, identity, relationship context.
-- `Atlas/Utilities`: vault reports, helper scripts, system notes.
+- `Health & Fitness/`: workout plans, habits, health logs, nutrition, dashboard
+  - `Habits/` — habit tracker files (Gym, Running, Study, etc.)
+  - `Logs/` — daily Apple Health data export
+  - `Nutrition/` — meal plans, calorie tracking
+  - `Workout Plans/` — training programs
+- `Relationships/`: people notes, contacts, birthdays
+- `Self-Improvement/`: routines, discipline, mindset
+- `University/`: general university resources, course schedule
+- `Finance/`: budgeting, expenses (if applicable)
+
+## 30 - Resources
+Use Resources for durable reference knowledge.
+
+Main folders:
+- `Coding/`: programming notes, concepts, language references
+- `AI & Tech/`: AI tools, AIOS system, NotebookLM Hub, study workflows
+- `Knowledge/`: atomic and evergreen notes (from old Atlas/Notes)
+- `Media/`: bookmarks, book PDFs, source summaries
+  - `Bookmarks/` — YouTube bookmarks, links
+  - `Books/` — book PDFs
+  - `Sources/` — external content summaries
+
+## 40 - Archives
+Use Archives for inactive items from Projects/Areas/Resources.
+
+Main folders:
+- `Past Courses/`: completed course notes from previous semesters
+- `Old Projects/`: finished active projects
+- `Old Health/`: old health data (pre-2568)
 
 ## Calendar
-Use Calendar for time-bound context.
-
-Put here:
-- Daily notes
-- Weekly notes
-- Monthly notes
-- Meetings
-- Logs
-- Reflections tied to a date
-
-Calendar is not long-term storage. If an idea becomes durable, link it to Atlas or move it into Atlas.
-
-## Efforts
-Use Efforts for outcome-oriented work.
-
-Put here:
-- Projects
-- Goals
-- Launches
-- University deliverables
-- Fitness plans
-- Business ideas
-- Coding builds
-- Recurring systems
-
-Main folders:
-- `Efforts/Active`: current focus.
-- `Efforts/Ongoing`: recurring systems, habits, trackers.
-- `Efforts/Someday`: not active, retained for later.
-- `Efforts/Archive`: completed or inactive work.
+Keep for time-bound context only — daily notes, logs.
 
 ## Naming Conventions
 - Use clean human-readable names.
@@ -82,7 +79,7 @@ Main folders:
 Before creating a note:
 - Search for an existing note with the same or similar name.
 - Check relevant MOCs.
-- Decide whether the note belongs in Atlas, Calendar, Efforts, Inbox, or AIOS.
+- Decide whether the note belongs in 00 - Inbox, 10 - Projects, 20 - Areas, 30 - Resources, 40 - Archives, Calendar, or AIOS.
 - Use plain markdown only.
 - Keep metadata minimal.
 - Add useful links to existing notes.
@@ -125,13 +122,12 @@ When retrieving context, check in this order:
 - `AIOS/Maps/me.md`
 - `AIOS/Maps/vault-map.md`
 - `Home.md`
-- `Atlas/Maps`
-- `Efforts/Active`
-- `Efforts/Ongoing`
+- `10 - Projects/Semester 1-2026/`
+- `20 - Areas/`
+- `30 - Resources/`
+- `40 - Archives/`
 - `Calendar/Daily`
-- `Atlas/Notes`
-- `Atlas/Sources`
-- `Inbox/Capture.md`
+- `00 - Inbox/Capture.md`
 
 ## Efficient AI Navigation
 - Start with MOCs, not the entire vault.

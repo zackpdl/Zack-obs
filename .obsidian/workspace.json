@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "30 - Resources/Coding/Brain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "Brain"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - Projects/HalalHub.md",
+                "file": "40 - Archives/Tower defense.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HalalHub"
+              "title": "Tower defense"
             }
           },
           {
@@ -45,8 +45,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,7 +188,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,45 +205,46 @@
       "macros:Add food item (search or manual entry)": false
     }
   },
-  "active": "b0fffafb70f51333",
+  "active": "b9b7347d1c521cd4",
   "lastOpenFiles": [
-    "10 - Projects/HW.md",
-    "10 - Projects/HalalHub.md",
-    "10 - Projects/Tower defense.md",
-    "10 - Projects/YouTube Mission.md",
-    "Atlas/Utilities/Brain.md",
-    "10 - Projects/Semester 1-2026/ITX4518 (541) Blockchain and Digital Currencies/index.md",
-    "10 - Projects/Semester 1-2026/ITX4518 (541) Blockchain and Digital Currencies/Notes",
-    "10 - Projects/Semester 1-2026/ITX4518 (541) Blockchain and Digital Currencies/Materials",
-    "10 - Projects/Semester 1-2026/ITX4518 (541) Blockchain and Digital Currencies",
-    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/index.md",
-    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Notes",
-    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Materials",
-    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization",
-    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/index.md",
-    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Notes",
-    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Materials",
-    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques",
-    "10 - Projects/Semester 1-2026/ITX3004 (541) Information System Analysis and Design/index.md",
-    "10 - Projects/Semester 1-2026/ITX3004 (541) Information System Analysis and Design/Notes",
-    "10 - Projects/Semester 1-2026/GE2102 (406) Human Heritage and Globalization/index.md",
-    "10 - Projects/Semester 1-2026/ITX4213 (542) Artificial Intelligence for Business/index.md",
-    "10 - Projects/Semester 1-2026/BG14036 (482) Professional Ethics Seminar VI/index.md",
-    "30 - Resources/AI & Tech/Study Workflow.md",
-    "30 - Resources/AI & Tech/NotebookLM Hub.md",
-    "10 - Projects/Semester 1-2026/General/index.md",
-    "10 - Projects/Semester 1-2026/BG14036 Ethics Seminar/index.md",
-    "10 - Projects/Semester 1-2026/GE2102 Human Heritage/index.md",
-    "10 - Projects/Semester 1-2026/ITX4518 Blockchain/index.md",
-    "10 - Projects/Semester 1-2026/CSX4615 Business Insights & Viz/index.md",
-    "10 - Projects/Semester 1-2026/CSX4601 Presentation & Data Viz/index.md",
-    "10 - Projects/Semester 1-2026/ITX3004 Info Systems Analysis/index.md",
-    "10 - Projects/Semester 1-2026/ITX4213 AI for Business/index.md",
-    "30 - Resources/Media/Sources/990-how-to-organize-your-life-with-a-calendar-youtube.md",
-    "30 - Resources/Media/Sources/2024-12-03-mr-robot-2015-full-serie-online-myflixer.md",
-    "30 - Resources/Media/Sources/861-this-app-fixed-my-morning-routine-youtube.md",
-    "30 - Resources/Media/Sources/1024-clear-system-data-on-mac-how-i-freed-up-250gb-safely-youtube.md",
+    "10 - Projects/Semester 1-2026/📚 Study Dashboard.md",
+    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Notes/00 - Presentation & Data Viz Study Guide.md",
+    "10 - Projects/Semester 1-2026/GE2102 (406) Human Heritage and Globalization/Notes/00 - Heritage Study Guide.md",
+    "10 - Projects/Semester 1-2026/ITX4518 (541) Blockchain and Digital Currencies/Notes/00 - Blockchain Study Guide.md",
+    "Home.md",
+    "10 - Projects/Semester 1-2026/ITX4213 (542) Artificial Intelligence for Business/Notes/Assignment 2.pdf",
+    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Notes/Assingment 4.pdf",
+    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Notes/Assingment 3.pdf",
+    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Notes/Assignment 6.pdf",
+    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Notes/Assignment 5.pdf",
+    "10 - Projects/Semester 1-2026/CSX4615 (542) Selected Topic in Business Insights and Visualization/Notes/Assignment 1.pdf",
+    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Materials/Chapter2-1 Design principles.pdf",
+    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Materials/Chapter1-1 Introduction to the principles.pdf",
+    "10 - Projects/Semester 1-2026/CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Materials/Chapter3-1 Visual presentation methods and techniques that increase the understanding of complex data and models.pdf",
+    "10 - Projects/Semester 1-2026/GE2102 (406) Human Heritage and Globalization/Materials/GE2102 Slide 7 Ancient Greece (2026-1).pdf",
+    "40 - Archives/HalalHub.md",
+    "40 - Archives/Past Courses/maths class schedule.md",
+    "40 - Archives/Past Courses/Web Dev Final.md",
+    "40 - Archives/Past Courses/Valid and Invalid Arguments.md",
+    "40 - Archives/Past Courses/University Review Stub.md",
+    "40 - Archives/Past Courses/Uni Schedule.md",
+    "40 - Archives/Past Courses/Uni Courses.md",
+    "40 - Archives/Past Courses/UI-UX Final Exam Revision Guide.md",
+    "40 - Archives/Past Courses/Tower defense.md",
+    "40 - Archives/Past Courses/Stacks and Queues.md",
+    "40 - Archives/Past Courses/Skip explain.md",
+    "40 - Archives/Past Courses/SP1.md",
+    "40 - Archives/Past Courses/Report.md",
+    "40 - Archives/Past Courses/Relations.md",
+    "40 - Archives/Past Courses/Quiz 1.md",
+    "40 - Archives/Past Courses/Proposal.md",
+    "40 - Archives/Past Courses/PROGRAMMING LANGUAGES MIDTERM CHEAT SHEET (A4 DOUBLE-SIDED).md",
+    "40 - Archives/Past Courses/Maths.md",
+    "40 - Archives/Past Courses/Mathematical Sentences and Statements.md",
+    "40 - Archives/Past Courses/Mark Allocation.md",
+    "40 - Archives/Past Courses/Logical Form and Logical Equivalence.md",
     "00 - Inbox/Untitled.canvas",
+    "Inbox/Untitled.canvas",
     "000 Inbox/Untitled.canvas",
     "Untitled.canvas",
     "1.out.png",

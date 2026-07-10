@@ -1,5 +1,5 @@
 ---
-title: 🧘 Meditate / Reflect
+title: "🧘 Meditate / Reflect"
 entries: []
 maxGap: 1
 color: "#607D8B"

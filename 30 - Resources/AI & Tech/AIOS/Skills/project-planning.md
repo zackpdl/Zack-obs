@@ -44,7 +44,9 @@ Turn an idea into an executable Effort.
 ```
 
 ## Rules
-- Store active projects in `Efforts/Active`.
+- Store active projects in `10 - Projects`.
+- Store ongoing areas in `20 - Areas`.
+- Store completed items in `40 - Archives`.
 - Keep the first version simple.
 - Make the next action obvious.
 

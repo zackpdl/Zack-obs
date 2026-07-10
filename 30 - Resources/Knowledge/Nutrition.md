@@ -34,7 +34,7 @@ Then drop it into a table row in your Daily Log.
 ## Current Food Notes
 ```dataview
 TABLE calories, protein, carbs, fat, serving_size
-FROM "Atlas/Notes"
+FROM "30 - Resources/Knowledge"
 SORT file.name ASC
 ```
 

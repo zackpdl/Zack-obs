@@ -18,15 +18,15 @@ Study 📝 → Take notes in Obsidian (PARA structure)
 
 Create a separate NotebookLM notebook for each course:
 
-| Course | Materials to Upload | Status |
-|--------|-------------------|--------|
-| ITX4213 AI for Business | Notes, slides, readings | ⏳ |
-| ITX3004 Info Systems | Notes, slides, readings | ⏳ |
-| CSX4601 Presentation & Data Viz | Notes, materials | ⏳ |
-| CSX4615 Business Insights & Viz | Notes, materials | ⏳ |
-| ITX4518 Blockchain | Notes, slides, readings | ⏳ |
-| GE2102 Human Heritage | Notes, readings | ⏳ |
-| BG14036 Ethics Seminar | Notes, readings | ⏳ |
+| Course | Code | Materials in Vault | Study Guide | Status |
+|--------|------|--------------------|-------------|--------|
+| AI for Business | ITX4213 | Assignment PDFs only | ⏳ | ❌ Need lecture PDFs |
+| Info Systems Analysis & Design | ITX3004 | None yet | ⏳ | ❌ Need materials |
+| Presentation & Data Visualization | CSX4601 | Ch. 1–3 Lecture PDFs | ✅ Created | ✅ Ready for NotebookLM |
+| Business Insights & Visualization | CSX4615 | Assignment PDFs only | ⏳ | ❌ Need lecture PDFs |
+| Blockchain & Digital Currencies | ITX4518 | 8 Lesson PDFs + Course Plan | ✅ Created | ✅ Ready for NotebookLM |
+| Human Heritage & Globalization | GE2102 | 7 Civilization Slides + Outline | ✅ Created | ✅ Ready for NotebookLM |
+| Professional Ethics Seminar VI | BG14036 | None yet | ⏳ | ❌ Need materials |
 
 ## What to Upload to NotebookLM
 

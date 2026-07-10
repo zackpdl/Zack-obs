@@ -126,7 +126,7 @@ line:
 ## Food Library
 ```dataview
 TABLE WITHOUT ID file.link as "Food", calories as "Kcal", protein as "Protein", carbs as "Carbs", fat as "Fat"
-FROM "Atlas/Notes"
+FROM "30 - Resources/Knowledge"
 SORT file.name ASC
 LIMIT 12
 ```

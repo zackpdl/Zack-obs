@@ -52,6 +52,7 @@ LIMIT 8
 ## 📖 NotebookLM Study Hub
 - [[30 - Resources/AI & Tech/NotebookLM Hub|NotebookLM Study Hub]]
 - [[30 - Resources/AI & Tech/Study Workflow|Study Workflow Guide]]
+- [[10 - Projects/Semester 1-2026/📚 Study Dashboard|📚 Study Dashboard]]
 
 ---
 

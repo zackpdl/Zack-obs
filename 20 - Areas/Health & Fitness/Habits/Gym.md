@@ -1,7 +1,8 @@
 ---
-title: "🏋️ Gym"
+title: 🏋️ Gym
 entries:
-  - "2025-06-07"
+  - 2025-06-07
+  - 2026-06-21
 maxGap: 2
 color: "#FF6B35"
 ---
