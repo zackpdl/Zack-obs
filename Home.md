@@ -1,56 +1,59 @@
-# Home
-
-## Trackers
-- [[Habits/Habit Dashboard|🎯 Habit Dashboard]]
-- [[Health/Health Dashboard|🫀 Health Dashboard]]
+# 🏠 Home
 
 ## Quick Capture
-- [[Inbox/Capture|Capture]]
-- [[Calendar/Daily/2026-05-16|Today]]
+- [[00 - Inbox/Capture|📝 Capture]]
+- [[Calendar/Daily/2026-07-10|📅 Today's Note]]
 - [[Templates/Daily Note|Daily Note Template]]
 
-## Current Efforts
+---
+
+## 🎯 Active Projects
 ```dataview
-LIST
-FROM "Efforts/Active"
+TABLE file.name AS "Project", file.mtime AS "Modified"
+FROM "10 - Projects"
+WHERE file.name != "index.md"
 SORT file.mtime DESC
 LIMIT 10
 ```
 
-## Today
+## 📂 Semester 1-2026
 ```dataview
-LIST
-FROM "Calendar/Daily"
-SORT file.name DESC
-LIMIT 1
+TABLE file.name AS "Course", file.mtime AS "Modified"
+FROM "10 - Projects/Semester 1-2026"
+WHERE file.name != "index.md"
+SORT file.name ASC
 ```
 
-## Recent Notes
+---
+
+## 🔄 Areas (Ongoing)
+- [[20 - Areas/Health & Fitness/Health Dashboard|🫀 Health Dashboard]]
+- [[20 - Areas/Health & Fitness/Habits/Habit Dashboard|🎯 Habit Dashboard]]
+- [[20 - Areas/Health & Fitness/Health & Fitness Hub|💪 Health & Fitness Hub]]
+- [[20 - Areas/University/Semester 1 2026 - Course Schedule|📚 Course Schedule]]
+- [[20 - Areas/Self-Improvement/Daily Routine|🌅 Daily Routine]]
+
+## 📚 Resources
 ```dataview
 LIST
-FROM "Atlas/Notes" OR "Atlas/Sources"
+FROM "30 - Resources"
+SORT file.name ASC
+LIMIT 15
+```
+
+## 🗄️ Recent Notes
+```dataview
+LIST
+FROM "30 - Resources/Knowledge" OR "30 - Resources/Media/Sources"
 SORT file.mtime DESC
-LIMIT 12
+LIMIT 8
 ```
 
-## Atlas Entry Points
-- [[Brain]]
-- [[Personal]]
-- [[Atlas/Maps/MOC - Atlas]]
-- [[Atlas/Maps/MOC - Health]]
-- [[Atlas/Maps/MOC - University]]
-- [[Atlas/Maps/MOC - Coding]]
-- [[Atlas/Maps/MOC - Self Improvement]]
-- [[Atlas/Maps/MOC - Sources]]
+## 📖 NotebookLM Study Hub
+- [[30 - Resources/AI & Tech/NotebookLM Hub|NotebookLM Study Hub]]
+- [[30 - Resources/AI & Tech/Study Workflow|Study Workflow Guide]]
+
+---
 
 ## Weekly Review
 - [[Templates/Weekly Review|Weekly Review Template]]
-- [[Calendar/Weekly]]
-
-## Key Maps of Content
-```dataview
-LIST
-FROM "Atlas/Maps"
-WHERE startswith(file.name, "MOC - ")
-SORT file.name ASC
-```

@@ -17,7 +17,7 @@ Notes:
 > [!info] End-of-day targets: 3000 kcal | 160 g protein | 400 g carbs | 80 g fat | 7+ hours sleep
 
 ## Meals
-> [!tip] Use [[Atlas/Maps/MOC - Meals|Reusable Meals]] for quick entry.
+> [!tip] Use [Maps/MOC - Meals|Reusable Meals]] for quick entry.
 
 ```macros
 id: {{date}}
@@ -60,4 +60,4 @@ id: {{date}}
 - Update `Weight`, `SleepHours`, `Workout`, `Run`, and `Steps`.
 
 ---
-[[Efforts/Ongoing/Health & Fitness Hub|Back to Hub]] | [[Efforts/Ongoing/Fitness Tracker|Progress Dashboard]]
+[[20 - Areas/Health & Fitness/Health & Fitness Hub|Back to Hub]] | [[20 - Areas/Health & Fitness/Fitness Tracker|Progress Dashboard]]

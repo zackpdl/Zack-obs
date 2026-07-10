@@ -30,12 +30,12 @@ LIMIT 12
 ```
 
 ## Atlas Entry Points
-- [[Atlas/Maps/MOC - Atlas]]
-- [[Atlas/Maps/MOC - Health]]
-- [[Atlas/Maps/MOC - University]]
-- [[Atlas/Maps/MOC - Coding]]
-- [[Atlas/Maps/MOC - Self Improvement]]
-- [[Atlas/Maps/MOC - Sources]]
+- 
+- 
+- 
+- 
+- 
+- 
 
 ## Weekly Review
 - [[Templates/Weekly Review|Weekly Review Template]]

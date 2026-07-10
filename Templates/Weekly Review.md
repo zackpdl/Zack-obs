@@ -9,7 +9,7 @@
 - Finish:
 
 ## Inbox Sweep
-- Move ideas to [[Atlas/Notes]]
+- Move ideas to [Notes]]
 - Move time-bound notes to [[Calendar]]
 - Move outcomes to [[Efforts]]
 
