@@ -1,6 +1,16 @@
 # macOS
 .DS_Store
 
+# Large binaries (keep locally, not in git)
+*.pdf
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.mp4
+*.mov
+*.zip
+
 # Obsidian workspace (user-specific)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
