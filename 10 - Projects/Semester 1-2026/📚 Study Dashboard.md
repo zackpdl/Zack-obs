@@ -13,15 +13,15 @@
 
 ## 📋 Course Status
 
-| Course | Code | Schedule | Study Guide | Materials |
-|--------|------|----------|-------------|-----------|
-| 🟢 **Blockchain** | ITX4518 | Sat 09:00 | ✅ [[ITX4518 (541) Blockchain and Digital Currencies/Notes/00 - Blockchain Study Guide\|Complete]] | 8 PDFs loaded |
-| 🟢 **Heritage** | GE2102 | Tue/Thu 13:30 | ✅ [[GE2102 (406) Human Heritage and Globalization/Notes/00 - Heritage Study Guide\|Complete]] | 8 PDFs loaded |
-| 🟢 **Data Viz** | CSX4601 | Fri 09:00 | ✅ [[CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Notes/00 - Presentation & Data Viz Study Guide\|Complete]] | 3 PDFs loaded |
-| 🟡 **AI for Business** | ITX4213 | Tue 09:00 | ⏳ Pending | ❌ Need lecture slides |
-| 🟡 **Biz Insights** | CSX4615 | Fri 13:30 | ⏳ Pending | ❌ Need lecture slides |
-| 🔴 **Info Systems** | ITX3004 | Wed 13:30 | ⏳ Pending | ❌ Need materials |
-| 🔴 **Ethics** | BG14036 | Mon 13:30 | ⏳ Pending | ❌ Need materials |
+| Course                 | Code    | Schedule      | Study Guide                                                                                                                                   | Materials             |
+| ---------------------- | ------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| 🟢 **Blockchain**      | ITX4518 | Sat 09:00     | ✅ [[ITX4518 (541) Blockchain and Digital Currencies/Notes/00 - Blockchain Study Guide\|Complete]]                                             | 8 PDFs loaded         |
+| 🟢 **Heritage**        | GE2102  | Tue/Thu 13:30 | ✅ [[GE2102 (406) Human Heritage and Globalization/Notes/00 - Heritage Study Guide\|Complete]]                                                 | 8 PDFs loaded         |
+| 🟢 **Data Viz**        | CSX4601 | Fri 09:00     | ✅ [[CSX4601 (541) Selected Topic in Presentation and Data Visualization Techniques/Notes/00 - Presentation & Data Viz Study Guide\|Complete]] | 3 PDFs loaded         |
+| 🟡 **AI for Business** | ITX4213 | Tue 09:00     | ⏳ Pending                                                                                                                                     | ❌ Need lecture slides |
+| 🟡 **Biz Insights**    | CSX4615 | Fri 13:30     | ⏳ Pending                                                                                                                                     | ❌ Need lecture slides |
+| 🔴 **Info Systems**    | ITX3004 | Wed 13:30     | ⏳ Pending                                                                                                                                     | ❌ Need materials      |
+| 🔴 **Ethics**          | BG14036 | Mon 13:30     | ⏳ Pending                                                                                                                                     | ❌ Need materials      |
 
 ---
 
