@@ -14,6 +14,20 @@
 | 4 | — | Lesson 4: Blockchain Components & Types | — | — | ⏳ |
 | 5 | — | Lesson 5: What is Money / Value of Money | — | — | ⏳ |
 
+## 🖥️ ITX3004 — Information System Analysis & Design
+
+| # | Date | Lesson | Duration | Quiz Score | Status |
+|---|------|--------|----------|------------|--------|
+| 1 | — | Ch 1: SA & SDLC + Intro | — | — | ⏳ |
+| 2 | — | Ch 2: Project Selection & Management + PERT | — | — | ⏳ |
+| 3 | — | Ch 3: Requirements Determination | — | — | ⏳ |
+| 4 | — | Ch 4: Use Case Analysis + Diagram | — | — | ⏳ |
+| 5 | — | Ch 5: Process Modeling (DFD) | — | — | ⏳ |
+| 6 | — | Ch 6: Data Modeling (ERD, Normalization) | — | — | ⏳ |
+| 7 | — | OO Concepts (Supplement: Encapsulation, Inheritance, Polymorphism, FSM, UML) | — | — | ⏳ |
+| 8 | — | Ch 7: Moving to Design + Ch 8: Architecture | — | — | ⏳ |
+| 9 | — | Ch 9: User Interface Design | — | — | ⏳ |
+
 ## 🌍 GE2102 — Human Heritage & Globalization
 
 | # | Date | Lesson | Duration | Quiz Score | Status |
@@ -55,5 +69,6 @@
 
 - **Total Sessions:** 0
 - **Blockchain:** 0/5 lessons
+- **Info Systems (ITX3004):** 0/9 sections
 - **Heritage:** 0/5 sessions
 - **Data Viz:** 0/3 chapters

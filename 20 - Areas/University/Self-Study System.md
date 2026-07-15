@@ -25,16 +25,16 @@
 
 | Day | Subject 1 | Subject 2 |
 |-----|-----------|-----------|
-| **Mon** | 🟦 Blockchain (ITX4518) | 🌍 Heritage (GE2102) |
+| **Mon** | 🟦 Blockchain (ITX4518) | 🖥️ Info Systems (ITX3004) |
 | **Tue** | 📊 Data Viz (CSX4601) | 🟦 Blockchain (ITX4518) |
-| **Wed** | 🌍 Heritage (GE2102) | ⏳ *Open slot* |
-| **Thu** | 📊 Data Viz (CSX4601) | 🟦 Blockchain (ITX4518) |
+| **Wed** | 🖥️ Info Systems (ITX3004) | 🌍 Heritage (GE2102) |
+| **Thu** | 📊 Data Viz (CSX4601) | 🖥️ Info Systems (ITX3004) |
 | **Fri** | 🌍 Heritage (GE2102) | 📊 Data Viz (CSX4601) |
-| **Sat** | 🟦 Blockchain deep-dive | Catch-up / Review |
+| **Sat** | 🖥️ Info Systems deep-dive | Catch-up / Review |
 | **Sun** | Review weak spots | Plan next week |
 
 > ⏳ Open slots are for courses you haven't added materials to yet.
-> When you add BG14036, ITX3004, CSX4615, or ITX4213 PDFs, they slot in here.
+> When you add BG14036, CSX4615, or ITX4213 PDFs, they slot in here.
 
 ---
 
@@ -43,6 +43,7 @@
 | Course | Lessons | Study Guide | Total Sessions | Done |
 |--------|---------|-------------|----------------|------|
 | 🔗 **ITX4518 Blockchain** | 5 lessons | ✅ | 3 sessions | 0/3 |
+| 🖥️ **ITX3004 Info System Analysis** | 9 sections | ✅ | 5 sessions | 0/5 |
 | 🌍 **GE2102 Heritage** | 7 civilizations | ✅ | 4 sessions | 0/4 |
 | 📊 **CSX4601 Data Viz** | 3 chapters | ✅ | 2 sessions | 0/2 |
 
