@@ -1,61 +1,113 @@
-# 🏠 Home
+# 🏠 Mission Control
 
-## Quick Capture
-- [[00 - Inbox/Capture|📝 Capture]]
-- [[Calendar/Daily/2026-07-10|📅 Today's Note]]
-- [[Templates/Daily Note|Daily Note Template]]
+> *2026-07-16 • Thursday*
 
 ---
 
-## 🎯 Active Projects
+## 🎯 Daily Focus
+
+| # | Priority | Status |
+|---|----------|--------|
+| 1 | — | ⬜ |
+| 2 | — | ⬜ |
+| 3 | — | ⬜ |
+
+---
+
+## ⚡ Critical Tasks
+
+- [ ] —
+
+---
+
+## 🏋️ Fitness
+
+**Today's Training:**
+- Upper B (Back focus) *(check [[fitness]] for plan)*
+
+**Running:**
+- Rest day *(check [[running]] for schedule)*
+
+**Nutrition:**
+- 🥩 Protein: — / 160g
+- 🔥 Calories: — / 3,000
+
+---
+
+## 📚 Study
+
+**Subject:** Data Viz (CSX4601) + Info Systems (ITX3004)
+**Lesson:** —
+**Duration:** —
+
+*See [[study]] for full schedule*
+
+---
+
+## 🎬 Content
+
+**Today's Mission:**
+- [ ] —
+
+*See [[youtube]] for pipeline*
+
+---
+
+## ✅ Habits
+
+| Habit | Today | Streak |
+|-------|-------|--------|
+| 🏋️ Train | ⬜ | — |
+| 🥩 Protein 160g | ⬜ | — |
+| 📚 Study 45min | ⬜ | — |
+| 🎬 Content 30min | ⬜ | — |
+| 🇹🇭 Thai 15min | ⬜ | — |
+| ⌨️ Typing 10min | ⬜ | — |
+| 😴 Sleep by midnight | ⬜ | — |
+| 🧘 No dopamine escape | ⬜ | — |
+
+**Completion:** 0/8 (0%)
+
+---
+
+## 🧘 Reflection
+
+**Win of the day:**
+—
+
+**Lesson learned:**
+—
+
+**Tomorrow's adjustment:**
+—
+
+---
+
+## 🗺️ Mission Control
+
+| Area | File | Status |
+|------|------|--------|
+| 🏋️ **Fitness** | [[fitness]] | ⏳ |
+| 🏃 **Running** | [[running]] | ⏳ |
+| 📚 **Study** | [[study]] | ⏳ |
+| 🇹🇭 **Thai** | [[thai]] | ⏳ |
+| ⌨️ **Typing** | [[typing]] | ⏳ |
+| 🎬 **YouTube** | [[youtube]] | ⏳ |
+| 🧘 **Monk Mode** | [[monk_mode]] | ⏳ |
+| 📓 **Journal** | [[journal]] | ⏳ |
+
+---
+
+## 📂 Active Projects
+
 ```dataview
 TABLE file.name AS "Project", file.mtime AS "Modified"
 FROM "10 - Projects"
 WHERE file.name != "index.md"
 SORT file.mtime DESC
-LIMIT 10
-```
-
-## 📂 Semester 1-2026
-```dataview
-TABLE file.name AS "Course", file.mtime AS "Modified"
-FROM "10 - Projects/Semester 1-2026"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
-
----
-
-## 🔄 Areas (Ongoing)
-- [[20 - Areas/Health & Fitness/Health Dashboard|🫀 Health Dashboard]]
-- [[20 - Areas/Health & Fitness/Habits/Habit Dashboard|🎯 Habit Dashboard]]
-- [[20 - Areas/University/Self-Study System|🧠 Self-Study System]]
-- [[20 - Areas/Health & Fitness/Health & Fitness Hub|💪 Health & Fitness Hub]]
-- [[20 - Areas/University/Semester 1 2026 - Course Schedule|📚 Course Schedule]]
-- [[20 - Areas/Self-Improvement/Daily Routine|🌅 Daily Routine]]
-
-## 📚 Resources
-```dataview
-LIST
-FROM "30 - Resources"
-SORT file.name ASC
-LIMIT 15
-```
-
-## 🗄️ Recent Notes
-```dataview
-LIST
-FROM "30 - Resources/Knowledge" OR "30 - Resources/Media/Sources"
-SORT file.mtime DESC
 LIMIT 8
 ```
 
-## 📖 NotebookLM Study Hub
-- [[30 - Resources/AI & Tech/NotebookLM Hub|NotebookLM Study Hub]]
-- [[30 - Resources/AI & Tech/Study Workflow|Study Workflow Guide]]
-- [[10 - Projects/Semester 1-2026/📚 Study Dashboard|📚 Study Dashboard]]
-
 ---
 
-## Weekly Review
-- [[Templates/Weekly Review|Weekly Review Template]]
+> *Mission over mood. Consistency creates identity.*
