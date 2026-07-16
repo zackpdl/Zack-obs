@@ -1,0 +1,20 @@
+#!/bin/bash
+# Study Reader Launcher — starts the server and opens your browser
+# Usage: study-reader
+
+SCRIPT_DIR="$HOME/Documents/Obsidian/Zack-obs/scripts"
+cd "$SCRIPT_DIR" || { echo "❌ Vault not found"; exit 1; }
+
+echo "📖 Starting Study Reader..."
+python3 study_reader.py &
+SERVER_PID=$!
+sleep 2
+
+# Open browser
+open "http://localhost:8765" 2>/dev/null || xdg-open "http://localhost:8765" 2>/dev/null
+
+echo "✅ Reader running at http://localhost:8765"
+echo "   PID: $SERVER_PID"
+echo "   Press Ctrl+C to stop"
+
+wait $SERVER_PID

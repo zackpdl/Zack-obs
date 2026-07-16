@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📖 Study Reader</title>
+<style>
+  /* ── Dyslexia-Friendly ── */
+  @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  :root {
+    --bg: #faf8f5;
+    --surface: #fffcf9;
+    --text: #1a1a2e;
+    --text-dim: #666;
+    --accent: #4a6fa5;
+    --accent-light: #e8f0fe;
+    --highlight: #ffe066;
+    --highlight-word: #ff9100;
+    --border: #e0ddd5;
+    --radius: 10px;
+    --font: 'Atkinson Hyperlegible', 'OpenDyslexic', 'Tahoma', sans-serif;
+    --line-h: 1.9;
+    --font-size: 1.25rem;
+    --max-w: 780px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    font-size: var(--font-size);
+    line-height: var(--line-h);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    display: flex; align-items: center; gap: 12px;
+    flex-wrap: wrap;
+  }
+  .header h1 { font-size: 1.15rem; font-weight: 700; white-space: nowrap; }
+  .header select {
+    padding: 7px 10px; border-radius: 8px; border: 1px solid var(--border);
+    font-family: var(--font); font-size: 0.9rem; background: white;
+    flex: 1; min-width: 160px; max-width: 360px;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .controls button {
+    padding: 7px 14px; border-radius: 8px; border: 1px solid var(--border);
+    background: white; font-family: var(--font); font-size: 0.85rem;
+    cursor: pointer; transition: all 0.12s;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .controls button:hover { background: var(--accent-light); border-color: var(--accent); }
+  .controls button:disabled { opacity: 0.35; cursor: not-allowed; }
+  .controls button.primary {
+    background: var(--accent); color: white; border-color: var(--accent);
+  }
+  .controls button.primary:hover { filter: brightness(1.1); }
+  .controls select.small {
+    padding: 4px 6px; border-radius: 6px; border: 1px solid var(--border);
+    font-family: var(--font); font-size: 0.8rem; background: white;
+  }
+
+  .mode-toggle {
+    display: flex; gap: 3px; background: #eee; border-radius: 7px; padding: 2px;
+  }
+  .mode-toggle button {
+    padding: 4px 10px; border-radius: 5px; border: none; background: transparent;
+    font-family: var(--font); font-size: 0.75rem; cursor: pointer;
+    transition: all 0.12s; color: var(--text-dim);
+  }
+  .mode-toggle button.active {
+    background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); color: var(--text);
+  }
+
+  /* ── Reader ── */
+  .reader {
+    max-width: var(--max-w); margin: 0 auto; padding: 28px 24px 130px;
+  }
+
+  .reader h2 {
+    margin-top: 1.6em; margin-bottom: 0.5em; line-height: 1.3;
+    font-size: 1.4rem; color: var(--accent);
+    border-bottom: 2px solid var(--accent-light); padding-bottom: 0.25em;
+  }
+  .reader h3 {
+    margin-top: 1.4em; margin-bottom: 0.4em; line-height: 1.3;
+    font-size: 1.15rem;
+  }
+  .reader p { margin-bottom: 0.8em; }
+
+  /* ── Sentences ── */
+  .sentence {
+    display: inline;
+    padding: 2px 1px;
+    border-radius: 3px;
+    transition: background 0.1s, color 0.1s;
+    cursor: pointer;
+  }
+  .sentence:hover { background: #f0edeb; }
+  .sentence.active {
+    background: var(--highlight-current, var(--highlight)) !important;
+    box-shadow: 0 0 0 2px var(--highlight), 0 2px 8px rgba(255,224,102,0.3);
+    border-radius: 4px;
+  }
+  .sentence.done {
+    background: var(--accent-light);
+  }
+  .word {
+    transition: background 0.08s, color 0.08s;
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+  .word.active {
+    background: var(--highlight-word) !important;
+    color: #000;
+  }
+  .sentence strong { font-weight: 700; }
+  .sentence em { font-style: italic; }
+  .sentence code {
+    background: #f0f0f0; padding: 1px 5px; border-radius: 4px;
+    font-size: 0.85em; font-family: 'Courier New', monospace;
+  }
+
+  /* ── Reading Ruler ── */
+  .ruler {
+    position: fixed;
+    left: 0; right: 0;
+    height: 3.6em;
+    pointer-events: none;
+    z-index: 50;
+    background: linear-gradient(180deg, rgba(250,248,245,0) 0%, rgba(255,224,102,0.12) 40%, rgba(255,224,102,0.12) 60%, rgba(250,248,245,0) 100%);
+    border-top: 1px solid rgba(255,224,102,0.3);
+    border-bottom: 1px solid rgba(255,224,102,0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .ruler.visible { opacity: 1; }
+
+  /* ── Status Bar ── */
+  .status-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 8px 24px; display: flex; align-items: center;
+    justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    font-size: 0.8rem; z-index: 100;
+  }
+  .status-bar .progress {
+    flex: 1; min-width: 80px;
+  }
+  .status-bar .progress-bar {
+    height: 3px; background: var(--border); border-radius: 2px;
+    margin-top: 3px; overflow: hidden;
+  }
+  .status-bar .progress-fill {
+    height: 100%; background: var(--accent); border-radius: 2px;
+    transition: width 0.25s; width: 0%;
+  }
+  .status-bar .right-info {
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  /* ── Loading ── */
+  .loading {
+    text-align: center; padding: 60px 20px; color: var(--text-dim);
+  }
+  .loading .spinner {
+    display: inline-block; width: 28px; height: 28px;
+    border: 3px solid var(--border); border-top-color: var(--accent);
+    border-radius: 50%; animation: spin 0.8s linear infinite;
+    margin-bottom: 10px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Word Mode Badge ── */
+  .badge {
+    font-size: 0.7rem; padding: 2px 8px; border-radius: 10px;
+    background: var(--accent-light); color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .header { padding: 8px 12px; }
+    .reader { padding: 16px 12px 150px; }
+    :root { --font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ruler -->
+<div class="ruler" id="ruler"></div>
+
+<!-- ── Header ── -->
+<header class="header">
+  <h1>📖 Reader</h1>
+  <select id="guide-select" onchange="loadGuide(this.value)">
+    <option value="">— Select guide —</option>
+  </select>
+  <div class="controls">
+    <button onclick="playPause()" id="play-btn" disabled>
+      <span id="play-icon">▶</span> <span id="play-label">Play</span>
+    </button>
+    <button onclick="stopSpeech()" id="stop-btn" disabled>⏹</button>
+    <select class="small" id="speed-select" onchange="updateSpeed()" title="Speed">
+      <option value="0.5">0.5×</option>
+      <option value="0.75">0.75×</option>
+      <option value="1" selected>1×</option>
+      <option value="1.25">1.25×</option>
+      <option value="1.5">1.5×</option>
+      <option value="2">2×</option>
+    </select>
+    <div class="mode-toggle" title="Voice engine">
+      <button onclick="setVoice('browser')" id="voice-browser" class="active">🔊 Browser</button>
+      <button onclick="setVoice('chatterbox')" id="voice-chatterbox">🤖 Chatterbox</button>
+    </div>
+    <div class="mode-toggle" title="Highlight mode">
+      <button onclick="setHighlightMode('sentence')" id="mode-sentence" class="active">Sentence</button>
+      <button onclick="setHighlightMode('word')" id="mode-word">Word</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Reader ── -->
+<main class="reader" id="reader">
+  <div class="loading" id="loading-screen">
+    <div class="spinner"></div>
+    <p>Select a study guide to begin reading...</p>
+  </div>
+</main>
+
+<!-- ── Status ── -->
+<div class="status-bar" id="status-bar" style="display:none;">
+  <div class="progress">
+    <span id="progress-text">0 / 0</span>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+  <div class="right-info">
+    <span id="highlight-badge" class="badge">Sentence</span>
+    <span id="voice-label">🔊 Browser TTS</span>
+  </div>
+</div>
+
+<script>
+// ── State ──
+let sentences = [];
+let currentIdx = -1;
+let isPlaying = false;
+let isPaused = false;
+let utterance = null;
+let highlightMode = 'sentence'; // 'sentence' | 'word'
+let voiceMode = 'browser'; // 'browser' | 'chatterbox'
+
+// ── Voice Mode Toggle ──
+function setVoice(mode) {
+  if (mode === voiceMode) return;
+  if (isPlaying) stopSpeech();
+  voiceMode = mode;
+  document.querySelectorAll('[id^="voice-"]').forEach(b => b.classList.remove('active'));
+  document.getElementById('voice-' + mode).classList.add('active');
+  document.getElementById('voice-label').textContent = mode === 'browser' ? '🔊 Browser TTS' : '🤖 Chatterbox Turbo';
+}
+
+// ── Load Guides ──
+async function loadGuides() {
+  // Detect if opened directly (file:// or no server)
+  if (window.location.protocol === 'file:') {
+    document.getElementById('reader').innerHTML = `
+      <div class="loading" style="color:#c0392b">
+        <p style="font-size:1.1rem">❌ This page must be served by the reader server.</p>
+        <p style="margin-top:20px">Run this in your terminal:</p>
+        <pre style="background:#1a1a2e;color:#e8e8e8;padding:12px 16px;border-radius:8px;margin:10px auto;display:inline-block;text-align:left;font-size:0.9rem">
+cd ~/Documents/Obsidian/Zack-obs/scripts
+python3 study_reader.py</pre>
+        <p style="margin-top:16px">Then open <strong style="font-size:1.2rem">http://localhost:8765</strong></p>
+      </div>`;
+    return;
+  }
+  try {
+    const resp = await fetch('/api/guides');
+    if (!resp.ok) throw new Error('Server not ready');
+    const guides = await resp.json();
+    const select = document.getElementById('guide-select');
+    guides.sort((a, b) => a.display.localeCompare(b.display));
+    guides.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g.path;
+      opt.textContent = g.display;
+      select.appendChild(opt);
+    });
+  } catch(e) {
+    document.getElementById('reader').innerHTML = `
+      <div class="loading" style="color:#c0392b">
+        <p style="font-size:1.1rem">❌ Can't connect to the reader server.</p>
+        <p style="margin-top:20px">Make sure it's running:</p>
+        <pre style="background:#1a1a2e;color:#e8e8e8;padding:12px 16px;border-radius:8px;margin:10px auto;display:inline-block;text-align:left;font-size:0.9rem">
+cd ~/Documents/Obsidian/Zack-obs/scripts
+python3 study_reader.py</pre>
+        <p style="margin-top:16px">Then <strong>refresh this page</strong>.</p>
+      </div>`;
+  }
+}
+
+// ── Load Guide ──
+async function loadGuide(path) {
+  if (!path) return;
+  stopSpeech();
+  currentIdx = -1;
+
+  const reader = document.getElementById('reader');
+  reader.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading...</p></div>';
+
+  try {
+    const resp = await fetch('/api/guide/' + encodeURIComponent(path));
+    const data = await resp.json();
+
+    // Parse HTML and wrap words if word mode is on
+    reader.innerHTML = data.html;
+    sentences = reader.querySelectorAll('.sentence');
+
+    if (highlightMode === 'word') {
+      wrapWords();
+    }
+
+    const playBtn = document.getElementById('play-btn');
+    playBtn.disabled = sentences.length === 0;
+    document.getElementById('stop-btn').disabled = true;
+
+    const bar = document.getElementById('status-bar');
+    bar.style.display = sentences.length > 0 ? 'flex' : 'none';
+    updateProgress();
+  } catch(e) {
+    reader.innerHTML = `<div class="loading"><p>❌ Error: ${e.message}</p></div>`;
+  }
+}
+
+// ── Word Wrapping ──
+function wrapWords() {
+  sentences.forEach(s => {
+    const text = s.innerHTML;
+    // Split by word boundaries but preserve HTML tags
+    s.innerHTML = text.replace(/(<[^>]+>)|(\S+)/g, (match, tag, word) => {
+      if (tag) return tag;
+      return `<span class="word">${word}</span>`;
+    });
+  });
+}
+
+// ── Highlight Mode Toggle ──
+function setHighlightMode(mode) {
+  highlightMode = mode;
+  document.querySelectorAll('.mode-toggle button').forEach(b => b.classList.remove('active'));
+  document.getElementById('mode-' + mode).classList.add('active');
+  document.getElementById('highlight-badge').textContent = mode === 'word' ? 'Word' : 'Sentence';
+}
+
+// ── Speech Control ──
+async function playPause() {
+  if (isPlaying && !isPaused) { pauseSpeech(); return; }
+  if (isPaused) { resumeSpeech(); return; }
+  startSpeech();
+}
+
+function startSpeech() {
+  if (sentences.length === 0) return;
+
+  if (currentIdx < 0 || currentIdx >= sentences.length - 1) {
+    currentIdx = -1;
+    // Reset all highlights
+    sentences.forEach(s => {
+      s.classList.remove('done', 'active');
+      if (highlightMode === 'word') {
+        s.querySelectorAll('.word').forEach(w => w.classList.remove('active'));
+      }
+    });
+  }
+
+  isPlaying = true;
+  isPaused = false;
+  updatePlayButton();
+  document.getElementById('stop-btn').disabled = false;
+  readNextSentence();
+}
+
+function readNextSentence() {
+  if (!isPlaying || isPaused) return;
+  currentIdx++;
+  if (currentIdx >= sentences.length) {
+    finishSpeech();
+    return;
+  }
+
+  highlightSentence(currentIdx);
+  const el = sentences[currentIdx];
+  const text = el.dataset.text || el.textContent;
+
+  speakText(text, currentIdx);
+  updateProgress();
+}
+
+function speakText(text, idx) {
+  if (voiceMode === 'chatterbox') {
+    speakWithChatterbox(text, idx);
+    return;
+  }
+  // ── Browser TTS ──
+  if (!window.speechSynthesis) {
+    document.getElementById('voice-label').textContent = '⚠️ No TTS';
+    setTimeout(readNextSentence, 2000);
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+  utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = parseFloat(document.getElementById('speed-select').value);
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  // Pick best voice
+  const voices = window.speechSynthesis.getVoices();
+  const preferred = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google')) ||
+                    voices.find(v => v.lang.startsWith('en') && v.name.includes('Samantha')) ||
+                    voices.find(v => v.lang.startsWith('en') && v.name.includes('Microsoft')) ||
+                    voices.find(v => v.lang.startsWith('en-US')) ||
+                    voices.find(v => v.lang.startsWith('en')) ||
+                    voices[0];
+  if (preferred) utterance.voice = preferred;
+  document.getElementById('voice-label').textContent = `🔊 ${preferred ? preferred.name : 'Browser TTS'}`;
+
+  // Word-level highlighting via boundary events
+  if (highlightMode === 'word' && text.length > 0) {
+    utterance.onboundary = (e) => {
+      if (e.name !== 'word') return;
+      const charIdx = e.charIndex;
+      const words = sentences[idx]?.querySelectorAll('.word');
+      if (!words) return;
+
+      let cumulativeLen = 0;
+      const textContent = sentences[idx].textContent || '';
+      for (let w = 0; w < words.length; w++) {
+        const wordText = words[w].textContent || '';
+        const wordStart = textContent.indexOf(wordText, cumulativeLen);
+        if (wordStart === -1) { cumulativeLen += wordText.length; continue; }
+        if (charIdx >= wordStart && charIdx < wordStart + wordText.length) {
+          words.forEach(ww => ww.classList.remove('active'));
+          words[w].classList.add('active');
+          break;
+        }
+        cumulativeLen = wordStart + wordText.length;
+      }
+    };
+  }
+
+  utterance.onend = () => {
+    sentences[idx].classList.add('done');
+    sentences[idx].classList.remove('active');
+    if (highlightMode === 'word') {
+      sentences[idx].querySelectorAll('.word').forEach(w => w.classList.remove('active'));
+    }
+    setTimeout(readNextSentence, 120);
+  };
+
+  utterance.onerror = () => {
+    setTimeout(readNextSentence, 300);
+  };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+// ── Chatterbox Turbo TTS ──
+async function speakWithChatterbox(text, idx) {
+  if (!text.trim()) { setTimeout(readNextSentence, 100); return; }
+  try {
+    const resp = await fetch('/api/tts?text=' + encodeURIComponent(text));
+    const data = await resp.json();
+    if (data.audio_url) {
+      audioElement = new Audio(data.audio_url);
+      audioElement.playbackRate = parseFloat(document.getElementById('speed-select').value);
+      document.getElementById('voice-label').textContent = '🤖 Chatterbox Turbo';
+
+      audioElement.onended = () => {
+        sentences[idx].classList.add('done');
+        sentences[idx].classList.remove('active');
+        setTimeout(readNextSentence, 100);
+      };
+      audioElement.onerror = () => {
+        document.getElementById('voice-label').textContent = '⚠️ Falling back to Browser TTS';
+        window.speechSynthesis.cancel();
+        const fallback = new SpeechSynthesisUtterance(text);
+        fallback.rate = parseFloat(document.getElementById('speed-select').value);
+        window.speechSynthesis.speak(fallback);
+        fallback.onend = () => setTimeout(readNextSentence, 100);
+      };
+      audioElement.play().catch(() => setTimeout(readNextSentence, 200));
+    } else {
+      document.getElementById('voice-label').textContent = '⚠️ Chatterbox unavailable';
+      setTimeout(readNextSentence, 500);
+    }
+  } catch(e) {
+    document.getElementById('voice-label').textContent = '⚠️ Chatterbox API error';
+    setTimeout(readNextSentence, 500);
+  }
+}
+
+function pauseSpeech() {
+  isPaused = true;
+  if (utterance && window.speechSynthesis) window.speechSynthesis.pause();
+  updatePlayButton();
+}
+
+function resumeSpeech() {
+  isPaused = false;
+  if (utterance && window.speechSynthesis) {
+    window.speechSynthesis.resume();
+  } else {
+    readNextSentence();
+  }
+  updatePlayButton();
+}
+
+function stopSpeech() {
+  isPlaying = false;
+  isPaused = false;
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+  sentences.forEach(s => {
+    s.classList.remove('active');
+    if (highlightMode === 'word') s.querySelectorAll('.word').forEach(w => w.classList.remove('active'));
+  });
+  document.getElementById('stop-btn').disabled = true;
+  updatePlayButton();
+}
+
+function finishSpeech() {
+  isPlaying = false;
+  isPaused = false;
+  document.getElementById('stop-btn').disabled = true;
+  updatePlayButton();
+  document.getElementById('voice-label').textContent = '✅ Complete';
+}
+
+function highlightSentence(idx) {
+  sentences.forEach(s => s.classList.remove('active'));
+  if (idx >= 0 && idx < sentences.length) {
+    sentences[idx].classList.add('active');
+    sentences[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function updatePlayButton() {
+  const icon = document.getElementById('play-icon');
+  const label = document.getElementById('play-label');
+  if (isPlaying && !isPaused) {
+    icon.textContent = '⏸'; label.textContent = 'Pause';
+  } else if (isPaused) {
+    icon.textContent = '▶'; label.textContent = 'Resume';
+  } else {
+    icon.textContent = '▶'; label.textContent = 'Play';
+  }
+}
+
+function updateProgress() {
+  const total = sentences.length;
+  const done = currentIdx >= 0 ? Math.min(currentIdx + 1, total) : 0;
+  document.getElementById('progress-text').textContent = `${done} / ${total}`;
+  document.getElementById('progress-fill').style.width = total > 0 ? `${(done / total) * 100}%` : '0%';
+}
+
+function updateSpeed() {
+  if (utterance) utterance.rate = parseFloat(document.getElementById('speed-select').value);
+}
+
+// ── Click to jump ──
+document.addEventListener('click', (e) => {
+  const s = e.target.closest('.sentence');
+  if (s && isPlaying) {
+    stopSpeech();
+    const idx = Array.from(sentences).indexOf(s);
+    if (idx >= 0) {
+      currentIdx = idx - 1;
+      highlightSentence(idx);
+      startSpeech();
+    }
+  }
+});
+
+// ── Init ──
+loadGuides();
+if (window.speechSynthesis) {
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+}
+</script>
+</body>
+</html>
