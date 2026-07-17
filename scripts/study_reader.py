@@ -294,6 +294,17 @@ class StudyHandler(http.server.BaseHTTPRequestHandler):
 
 
 def main():
+    # Check Chatterbox availability
+    chatterbox_ok = False
+    try:
+        test_url = "https://resembleai-chatterbox-turbo-demo.hf.space/gradio_api/info"
+        req = urllib.request.Request(test_url)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            if resp.status == 200:
+                chatterbox_ok = True
+    except:
+        pass
+
     print(f"\n{'='*60}")
     print(f"  📖 STUDY READER — Dyslexia-Friendly TTS Reader")
     print(f"{'='*60}")
@@ -301,7 +312,10 @@ def main():
     print(f"\n  📚 Available Guides:")
     for key, guide in sorted(GUIDES.items()):
         print(f"     • {guide['display']}")
-    print(f"\n  🗣️  TTS: Chatterbox Turbo (default voice)")
+    if chatterbox_ok:
+        print(f"\n  🗣️  TTS: Chatterbox Turbo (AI voice)")
+    else:
+        print(f"\n  🗣️  TTS: Browser Speech API (Chatterbox server unavailable)")
     print(f"     Fallback: Browser Speech API")
     print(f"\n  ⏹️  Press Ctrl+C to stop\n{'='*60}\n")
 

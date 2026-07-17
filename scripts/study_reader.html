@@ -506,12 +506,24 @@ async function speakWithChatterbox(text, idx) {
       };
       audioElement.play().catch(() => setTimeout(readNextSentence, 200));
     } else {
-      document.getElementById('voice-label').textContent = '⚠️ Chatterbox unavailable';
-      setTimeout(readNextSentence, 500);
+      // Chatterbox unavailable — fall back to browser TTS
+      document.getElementById('voice-label').textContent = '⚠️ Chatterbox down — using Browser TTS';
+      setTimeout(() => { voiceMode = 'browser'; }, 100);
+      window.speechSynthesis.cancel();
+      const fallback = new SpeechSynthesisUtterance(text);
+      fallback.rate = parseFloat(document.getElementById('speed-select').value);
+      window.speechSynthesis.speak(fallback);
+      fallback.onend = () => setTimeout(readNextSentence, 100);
     }
   } catch(e) {
-    document.getElementById('voice-label').textContent = '⚠️ Chatterbox API error';
-    setTimeout(readNextSentence, 500);
+    // API error — fall back to browser TTS
+    document.getElementById('voice-label').textContent = '⚠️ Chatterbox error — using Browser TTS';
+    setTimeout(() => { voiceMode = 'browser'; }, 100);
+    window.speechSynthesis.cancel();
+    const fallback = new SpeechSynthesisUtterance(text);
+    fallback.rate = parseFloat(document.getElementById('speed-select').value);
+    window.speechSynthesis.speak(fallback);
+    fallback.onend = () => setTimeout(readNextSentence, 100);
   }
 }
 
