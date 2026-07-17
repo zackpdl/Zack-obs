@@ -4,5 +4,10 @@
   "obsidian-git",
   "terminal",
   "dataview",
-  "macros"
+  "macros",
+  "obsidian-annotator",
+  "habit-tracker-21",
+  "google-calendar",
+  "heatmap-tracker",
+  "hermes-agent"
 ]

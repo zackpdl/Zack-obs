@@ -1,16 +1,16 @@
 # 🏠 Mission Control
 
-> *2026-07-16 • Thursday*
+> *2026-07-17 • Friday*
 
 ---
 
 ## 🎯 Daily Focus
 
-| # | Priority | Status |
-|---|----------|--------|
-| 1 | — | ⬜ |
-| 2 | — | ⬜ |
-| 3 | — | ⬜ |
+| #   | Priority | Status |
+| --- | -------- | ------ |
+| 1   | —        | ⬜      |
+| 2   | —        | ⬜      |
+| 3   | —        | ⬜      |
 
 ---
 
@@ -23,10 +23,10 @@
 ## 🏋️ Fitness
 
 **Today's Training:**
-- Upper B (Back focus) *(check [[fitness]] for plan)*
+- Lower B (Posterior chain) *(check [[fitness]] for plan)*
 
 **Running:**
-- Rest day *(check [[running]] for schedule)*
+- Easy / Recovery 2-3km *(check [[running]] for schedule)*
 
 **Nutrition:**
 - 🥩 Protein: — / 160g
@@ -36,7 +36,7 @@
 
 ## 📚 Study
 
-**Subject:** Data Viz (CSX4601) + Info Systems (ITX3004)
+**Subject:** Heritage + Data Viz
 **Lesson:** —
 **Duration:** —
 
@@ -55,16 +55,16 @@
 
 ## ✅ Habits
 
-| Habit | Today | Streak |
-|-------|-------|--------|
-| 🏋️ Train | ⬜ | — |
-| 🥩 Protein 160g | ⬜ | — |
-| 📚 Study 45min | ⬜ | — |
-| 🎬 Content 30min | ⬜ | — |
-| 🇹🇭 Thai 15min | ⬜ | — |
-| ⌨️ Typing 10min | ⬜ | — |
-| 😴 Sleep by midnight | ⬜ | — |
-| 🧘 No dopamine escape | ⬜ | — |
+| Habit                 | Today | Streak |
+| --------------------- | ----- | ------ |
+| 🏋️ Train             | ⬜     | —      |
+| 🥩 Protein 160g       | ⬜     | —      |
+| 📚 Study 45min        | ⬜     | —      |
+| 🎬 Content 30min      | ⬜     | —      |
+| 🇹🇭 Thai 15min       | ⬜     | —      |
+| ⌨️ Typing 10min       | ⬜     | —      |
+| 😴 Sleep by midnight  | ⬜     | —      |
+| 🧘 No dopamine escape | ⬜     | —      |
 
 **Completion:** 0/8 (0%)
 
