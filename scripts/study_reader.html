@@ -223,7 +223,7 @@
     </select>
     <div class="mode-toggle" title="Voice engine">
       <button onclick="setVoice('browser')" id="voice-browser" class="active">🔊 Browser</button>
-      <button onclick="setVoice('chatterbox')" id="voice-chatterbox">🤖 Chatterbox</button>
+      <button onclick="setVoice('ai')" id="voice-ai">🤖 AI Voice</button>
     </div>
     <div class="mode-toggle" title="Highlight mode">
       <button onclick="setHighlightMode('sentence')" id="mode-sentence" class="active">Sentence</button>
@@ -262,7 +262,7 @@ let isPlaying = false;
 let isPaused = false;
 let utterance = null;
 let highlightMode = 'sentence'; // 'sentence' | 'word'
-let voiceMode = 'browser'; // 'browser' | 'chatterbox'
+let voiceMode = 'browser'; // 'browser' | 'chatterbox' | 'ai'
 
 // ── Voice Mode Toggle ──
 function setVoice(mode) {
@@ -271,7 +271,7 @@ function setVoice(mode) {
   voiceMode = mode;
   document.querySelectorAll('[id^="voice-"]').forEach(b => b.classList.remove('active'));
   document.getElementById('voice-' + mode).classList.add('active');
-  document.getElementById('voice-label').textContent = mode === 'browser' ? '🔊 Browser TTS' : '🤖 Chatterbox Turbo';
+  document.getElementById('voice-label').textContent = mode === 'browser' ? '🔊 Browser TTS' : '🤖 AI Voice';
 }
 
 // ── Load Guides ──
@@ -412,7 +412,7 @@ function readNextSentence() {
 }
 
 function speakText(text, idx) {
-  if (voiceMode === 'chatterbox') {
+  if (voiceMode === 'chatterbox' || voiceMode === 'ai') {
     speakWithChatterbox(text, idx);
     return;
   }
@@ -489,7 +489,7 @@ async function speakWithChatterbox(text, idx) {
     if (data.audio_url) {
       audioElement = new Audio(data.audio_url);
       audioElement.playbackRate = parseFloat(document.getElementById('speed-select').value);
-      document.getElementById('voice-label').textContent = '🤖 Chatterbox Turbo';
+      document.getElementById('voice-label').textContent = '🤖 AI Voice';
 
       audioElement.onended = () => {
         sentences[idx].classList.add('done');
@@ -506,8 +506,8 @@ async function speakWithChatterbox(text, idx) {
       };
       audioElement.play().catch(() => setTimeout(readNextSentence, 200));
     } else {
-      // Chatterbox unavailable — fall back to browser TTS
-      document.getElementById('voice-label').textContent = '⚠️ Chatterbox down — using Browser TTS';
+      // AI Voice unavailable — fall back to browser TTS
+      document.getElementById('voice-label').textContent = '⚠️ AI Voice down — using Browser TTS';
       setTimeout(() => { voiceMode = 'browser'; }, 100);
       window.speechSynthesis.cancel();
       const fallback = new SpeechSynthesisUtterance(text);
@@ -517,7 +517,7 @@ async function speakWithChatterbox(text, idx) {
     }
   } catch(e) {
     // API error — fall back to browser TTS
-    document.getElementById('voice-label').textContent = '⚠️ Chatterbox error — using Browser TTS';
+    document.getElementById('voice-label').textContent = '⚠️ Server error — using Browser TTS';
     setTimeout(() => { voiceMode = 'browser'; }, 100);
     window.speechSynthesis.cancel();
     const fallback = new SpeechSynthesisUtterance(text);

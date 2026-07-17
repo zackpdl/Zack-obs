@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6cee7779b049bc3c",
+        "id": "fa365a6608a86c3d",
         "type": "tabs",
         "children": [
           {
-            "id": "b9b7347d1c521cd4",
+            "id": "8b073fe01597c7d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,16 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "Home"
-            }
-          },
-          {
-            "id": "b0fffafb70f51333",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
             }
           }
         ]
@@ -179,6 +169,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-kanban:Create new board": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -193,15 +184,20 @@
       "hermes-agent:Open Hermes smart graph": false
     }
   },
-  "active": "b9b7347d1c521cd4",
+  "active": "8b073fe01597c7d3",
   "lastOpenFiles": [
+    "scripts/tts_cache/tts_0008cccd.mp3",
+    "scripts/tts_cache/tts_849d2ea6.mp3",
+    "scripts/tts_cache",
+    "Kanban/Mission Control.md",
+    "Home.md",
+    "Kanban/Semester 1-2026.md",
+    "00-Inbox/Capture.md",
+    "00-Inbox",
     "scripts/kanban_bridge.py",
     "Kanban/HOWTO.md",
-    "Kanban/Semester 1-2026.md",
-    "Kanban/Mission Control.md",
     "Kanban",
     "AGENTS.md",
-    "Home.md",
     "scripts/deadline_monitor.py",
     "Pillars/journal.md",
     "Pillars/monk_mode.md",
@@ -223,14 +219,9 @@
     "30 - Resources/AI & Tech/NotebookLM Hub.md",
     "30 - AI Outputs/README.md",
     "20 - Areas/Self-Improvement/Daily Routine.md",
-    "20 - Areas/University/University Progress.md",
     "30 - AI Outputs",
     "scripts/study-reader",
     "scripts/study_reader.html",
-    "scripts/study_reader.py",
-    "scripts/weekly_review.py",
-    "scripts/daily_dashboard.py",
-    "scripts",
     "00 - Inbox/Untitled.canvas",
     "Inbox/Untitled.canvas",
     "000 Inbox/Untitled.canvas",

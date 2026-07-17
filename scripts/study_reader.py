@@ -177,6 +177,28 @@ def call_chatterbox_tts(text):
     return None
 
 
+# ─── gTTS (Google TTS) — reliable fallback ─────────────────
+def call_gtts(text):
+    """Generate TTS audio via Google TTS. Returns a local WAV URL."""
+    try:
+        from gtts import gTTS
+        import io, base64, uuid
+        
+        # Generate unique filename
+        audio_id = str(uuid.uuid4())[:8]
+        output_dir = os.path.join(os.path.dirname(__file__), "tts_cache")
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, f"tts_{audio_id}.mp3")
+        
+        tts = gTTS(text=text, lang='en', slow=False)
+        tts.save(output_path)
+        
+        return output_path
+    except Exception as e:
+        print(f"gTTS error: {e}")
+        return None
+
+
 # ─── HTTP Server ────────────────────────────────────────────────
 HTML_PAGE = None
 
@@ -248,7 +270,7 @@ class StudyHandler(http.server.BaseHTTPRequestHandler):
                 self._send_json({"error": "Guide not found"}, 404)
 
         elif path == "/api/tts":
-            # Proxy to Chatterbox Turbo
+            # Try Chatterbox first, fall back to gTTS
             text = parsed.query.split('=')[1] if '=' in parsed.query else ''
             text = urllib.parse.unquote(text)
             if not text or len(text) > 300:
@@ -258,11 +280,57 @@ class StudyHandler(http.server.BaseHTTPRequestHandler):
             try:
                 audio_url = call_chatterbox_tts(text)
                 if audio_url:
+                    self._send_json({"audio_url": audio_url, "source": "chatterbox"})
+                    return
+            except Exception as e:
+                print(f"Chatterbox failed: {e}")
+
+            # Fallback: gTTS
+            audio_path = call_gtts(text)
+            if audio_path:
+                self._send_json({"audio_url": audio_path, "source": "gtts"})
+            else:
+                self._send_json({"error": "All TTS backends failed"}, 502)
+
+        elif path == "/api/tts-chatterbox":
+            # Pure Chatterbox (no fallback)
+            text = parsed.query.split('=')[1] if '=' in parsed.query else ''
+            text = urllib.parse.unquote(text)
+            if not text or len(text) > 300:
+                self._send_json({"error": "Text must be 1-300 chars"}, 400)
+                return
+            try:
+                audio_url = call_chatterbox_tts(text)
+                if audio_url:
                     self._send_json({"audio_url": audio_url})
                 else:
-                    self._send_json({"error": "TTS API returned no audio"}, 502)
+                    self._send_json({"error": "Chatterbox returned no audio"}, 502)
             except Exception as e:
                 self._send_json({"error": str(e)}, 502)
+
+        elif path == "/api/tts-gtts":
+            # Pure gTTS (Google TTS)
+            text = parsed.query.split('=')[1] if '=' in parsed.query else ''
+            text = urllib.parse.unquote(text)
+            if not text or len(text) > 300:
+                self._send_json({"error": "Text must be 1-300 chars"}, 400)
+                return
+            try:
+                audio_path = call_gtts(text)
+                if audio_path:
+                    self._send_json({"audio_url": audio_path})
+                else:
+                    self._send_json({"error": "gTTS failed"}, 502)
+            except Exception as e:
+                self._send_json({"error": str(e)}, 502)
+
+        elif path.startswith("/tts_cache/"):
+            # Serve locally-generated TTS files (gTTS)
+            filepath = os.path.join(os.path.dirname(__file__), path.lstrip('/'))
+            if os.path.exists(filepath):
+                self._send_file(filepath)
+            else:
+                self._send_json({"error": "File not found"}, 404)
 
         elif path.startswith("/gradio_api/file/"):
             # Proxy static audio files from Gradio
