@@ -1,124 +1,92 @@
 # 🏠 Mission Control
 
-> *2026-07-17 • Friday — Week 29*
-
-> *"Mission over mood. Consistency creates identity."*
+> *Week 29 • Friday • 2026-07-17*
 
 ---
 
-## 🧠 Two Hemispheres
+## 🚀 Quick Actions
 
-| Hemisphere | Location | Status |
-|-----------|----------|--------|
-| 🧑 Human | Inbox, Projects, Areas, Pillars, Daily Notes | 🟢 |
-| 🤖 AI | [[30 - AI Outputs/README\|30 - AI Outputs]] | 🟢 Active |
+| [▶ Start Day](https:///) | [⏹ Close Day](https:///) | [🔬 Research Task](https:///) | [📋 Plan Something](https:///) | [📖 TTS Study Reader](http://localhost:8765) |
+|---|---|---|---|---|
 
 ---
 
-## 🎯 Daily Focus
+## 🎯 Today's Focus
 
-| # | Priority | Status |
-|---| -------- | ------ |
-| 1 | — | ⬜ |
-| 2 | — | ⬜ |
-| 3 | — | ⬜ |
+| # | Priority | ⏱ |
+|---|---|---|
+| 1 | — | — |
+| 2 | — | — |
+| 3 | — | — |
 
-### ⚡ Critical
+### ⚡ One Critical Task
 - [ ] —
 
 ---
 
-## 🏋️ Fitness
+## 📊 Key Metrics
 
-\1 Lower B (Posterior chain) *([[fitness]])**
-\1 Easy / Recovery 2-3km *([[running]])**
-**Nutrition:** 🥩 Protein — / 160g • 🔥 Calories — / 3,000
+| 🏋️ Training | 🏃 Run | 📚 Study Focus | 🎯 Discipline | ✅ Habits |
+|---|---|---|---|---|
+| [[Pillars/fitness\|Lower B (Posterior chain)]] | [[Pillars/running\|Easy / Recovery 2-3km]] | [[Pillars/study\|Heritage + Data Viz]] | — / 10 | ▰▰▰▰▰▰▰▰▰▰ 0% |
 
 ---
 
-## 📚 Study
+## 📈 Last 7 Days — Correlation Intelligence
 
-\1 Heritage + Data Viz *([[study]])**
-**ITX3004 Quiz:** Jul 22 ← **5 days**
-**Midterms:** Aug 4-10
+```dataview
+TABLE
+  workout AS "💪",
+  run_km AS "🏃 km",
+  study_hours AS "📚 h",
+  discipline_score AS "🎯",
+  energy AS "⚡",
+  mood AS "😊",
+  sleep_hours AS "😴",
+  protein_g AS "🥩"
+FROM "Calendar/Daily"
+WHERE date >= date(today) - dur(7 days)
+SORT date DESC
+```
+
+> *Track these daily → find the 20% that drives 80% of your results.*
 
 ---
 
 ## 📥 Inbox
 
 ```dataview
-TABLE rows.file.link AS "Items"
+TABLE file.name AS "Item", file.mtime AS "When"
 FROM "00 - Inbox"
 WHERE file.name != "Capture.md"
 SORT file.mtime DESC
-LIMIT 8
+LIMIT 5
 ```
 
-> [!tip] Capture anything here → [[00 - Inbox/Capture|Inbox Capture]]
-
----
-
-## 📊 Correlation Intelligence
-
-```dataview
-TABLE
-  workout AS "💪 Workout",
-  study_hours AS "📚 Study",
-  run_km AS "🏃 Run (km)",
-  discipline_score AS "🎯 Disc.",
-  energy AS "⚡",
-  mood AS "😊",
-  youtube_work AS "🎬"
-FROM "Calendar/Daily"
-WHERE date >= date(today) - dur(7 days)
-SORT date DESC
-```
-
-> *"Identify the 20% of actions that give 80% of results." — Eric*
-
----
-
-## ✅ Daily Habits
-
-| Habit | Today | Streak |
-| ----- | ----- | ------ |
-| 🏋️ Train | ⬜ | — |
-| 🥩 Protein 160g | ⬜ | — |
-| 📚 Study 45min | ⬜ | — |
-| 🎬 Content 30min | ⬜ | — |
-| 🇹🇭 Thai 15min | ⬜ | — |
-| ⌨️ Typing 10min | ⬜ | — |
-| 😴 Sleep by midnight | ⬜ | — |
-| 🧘 No dopamine escape | ⬜ | — |
-
-**Completion:** 0/8 (0%)
+> [!tip] [[00 - Inbox/Capture|➕ Capture something]] — then process during review
 
 ---
 
 ## 🤖 AI Hemisphere
 
 | Task | Status |
-|-----|--------|
-| Study guides | ✅ 4 guides created |
-| TTS Reader | ✅ Active at [[../scripts/study_reader\|localhost:8765]] |
-| Upcoming | — |
+|---|---|
+| Study guides | ✅ 4 |
+| TTS Reader | ✅ Active |
+| — | ⬜ |
 
-> [!info] AI outputs are in [[30 - AI Outputs/README\|30 - AI Outputs]] — kept separate from your thoughts.
+> [!info] AI lives in [[30 - AI Outputs/README\|30 - AI Outputs]] — always separate from your thoughts
 
 ---
 
 ## 🗺️ Pillars
 
-| Area | File | Status |
-|------|------|--------|
-| 🏋️ Fitness | [[fitness]] | ⏳ |
-| 🏃 Running | [[running]] | ⏳ |
-| 📚 Study | [[study]] | ⏳ |
-| 🇹🇭 Thai | [[thai]] | ⏳ |
-| ⌨️ Typing | [[typing]] | ⏳ |
-| 🎬 YouTube | [[youtube]] | ⏳ |
-| 🧘 Monk Mode | [[monk_mode]] | ⏳ |
-| 📓 Journal | [[journal]] | ⏳ |
+| Pillar | Status | Pillar | Status |
+|---|---|---|---|
+| 🏋️ [[Pillars/fitness\|Lower B (Posterior chain)]] | ⏳ | 🇹🇭 [[Pillars/thai\|Thai]] | ⏳ |
+| 🏃 [[Pillars/running\|Easy / Recovery 2-3km]] | ⏳ | ⌨️ [[Pillars/typing\|Typing]] | ⏳ |
+| 📚 [[Pillars/study\|Heritage + Data Viz]] | ⏳ | 🎬 [[Pillars/youtube\|YouTube]] | ⏳ |
+| 🧘 [[Pillars/monk_mode\|Monk Mode]] | ⏳ | 📓 [[Pillars/journal\|Journal]] | ⏳ |
 
 ---
 
@@ -129,17 +97,19 @@ TABLE file.name AS "Project", file.mtime AS "Modified"
 FROM "10 - Projects"
 WHERE file.name != "index.md"
 SORT file.mtime DESC
-LIMIT 8
+LIMIT 6
 ```
 
 ---
 
-## 📖 Study Reader
+## 📅 Deadlines
 
-🎧 **TTS Reader** → `study-reader` in terminal or http://localhost:8765
-- Toggle between 🔊 Browser TTS and 🤖 Chatterbox Turbo
-- Sentence / word highlighting with dyslexia-friendly design
+| Date | Event |
+|---|---|
+| Jul 22 | ITX3004 Quiz 1 (5%) |
+| Aug 4-10 | Midterms |
+| Sep 30 - Oct 12 | Finals |
 
 ---
 
-*Last auto-updated: {{date:YYYY-MM-DD HH:mm}}*
+> *Mission over mood. Consistency creates identity.*

@@ -10,14 +10,15 @@ You are interacting with **Zack Pdl's** personal knowledge management vault. Thi
 / (root) — ...
 ├── AGENTS.md           ← You are here (instruction file)
 ├── Home.md             ← Daily Mission Control Dashboard
-├── fitness.md          ← Body metrics & training logs
-├── running.md          ← 5K → 10K → Half marathon goals
-├── study.md            ← University semester overview & progress
-├── typing.md           ← 80+ WPM accuracy goals
-├── thai.md             ← Thai language learning
-├── youtube.md          ← Content creation pillar (100 uploads)
-├── monk_mode.md        ← Discipline system & dopamine management
-├── journal.md          ← Daily reflection template
+├── Pillars/            ← Your 8 transformation pillars
+│   ├── fitness.md      ← Body metrics & training logs
+│   ├── running.md      ← 5K → 10K → Half marathon goals
+│   ├── study.md        ← University semester overview & progress
+│   ├── typing.md       ← 80+ WPM accuracy goals
+│   ├── thai.md         ← Thai language learning
+│   ├── youtube.md      ← Content creation pillar (100 uploads)
+│   ├── monk_mode.md    ← Discipline system & dopamine management
+│   └── journal.md      ← Daily reflection template
 │
 ├── 00 - Inbox/         ← HUMAN CAPTURE: raw ideas, quick notes (GTD)
 ├── 10 - Projects/      ← Active projects (uni courses, etc.)
@@ -41,7 +42,7 @@ This vault is a **second brain with two hemispheres**:
 - `10 - Projects/` — Your active university projects
 - `20 - Areas/` — Your knowledge areas and notes
 - `Calendar/Daily/` — Your daily logs
-- Root files (fitness.md, study.md, etc.) — Your personal pillars
+- Root files in `Pillars/` (fitness.md, study.md, etc.) — Your personal pillars
 - `Templates/` — Your note templates
 - `journal.md` — Your private reflections
 
