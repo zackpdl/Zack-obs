@@ -5,6 +5,7 @@
 ---
 
 ## 🚀 Quick Actions
+[[Brain]] [[Personal]]
 
 | [[Kanban/Mission Control\|🎯 Mission Ctrl]] | [[Kanban/Semester 1-2026\|📚 Semester]] | [⏹ Close Day](https:///) | [📖 Study Reader](http://localhost:8765) | [📥 Inbox](00-Inbox/Capture.md) |
 |---|---|---|---|---|

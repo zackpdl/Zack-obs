@@ -199,6 +199,33 @@ def call_gtts(text):
         return None
 
 
+# ─── Edge TTS (Microsoft Neural) — premium, free, always works ──
+async def _edge_tts_async(text, output_path):
+    """Async helper to generate Edge TTS audio."""
+    import edge_tts
+    communicate = edge_tts.Communicate(text, voice="en-US-JennyNeural")
+    await communicate.save(output_path)
+
+
+def call_edge_tts(text):
+    """Generate TTS audio via Microsoft Edge Neural TTS. Returns local path."""
+    try:
+        import asyncio, uuid
+        audio_id = str(uuid.uuid4())[:8]
+        output_dir = os.path.join(os.path.dirname(__file__), "tts_cache")
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, f"edge_{audio_id}.mp3")
+        
+        asyncio.run(_edge_tts_async(text, output_path))
+        
+        if os.path.exists(output_path) and os.path.getsize(output_path) > 1000:
+            return output_path
+        return None
+    except Exception as e:
+        print(f"Edge TTS error: {e}")
+        return None
+
+
 # ─── HTTP Server ────────────────────────────────────────────────
 HTML_PAGE = None
 
@@ -285,7 +312,13 @@ class StudyHandler(http.server.BaseHTTPRequestHandler):
             except Exception as e:
                 print(f"Chatterbox failed: {e}")
 
-            # Fallback: gTTS
+            # Fallback 1: Edge TTS (premium, always works)
+            edge_path = call_edge_tts(text)
+            if edge_path:
+                self._send_json({"audio_url": edge_path, "source": "edge-tts"})
+                return
+
+            # Fallback 2: gTTS 
             audio_path = call_gtts(text)
             if audio_path:
                 self._send_json({"audio_url": audio_path, "source": "gtts"})
@@ -321,6 +354,22 @@ class StudyHandler(http.server.BaseHTTPRequestHandler):
                     self._send_json({"audio_url": audio_path})
                 else:
                     self._send_json({"error": "gTTS failed"}, 502)
+            except Exception as e:
+                self._send_json({"error": str(e)}, 502)
+
+        elif path == "/api/tts-edge":
+            # Pure Edge TTS (Microsoft Neural)
+            text = parsed.query.split('=')[1] if '=' in parsed.query else ''
+            text = urllib.parse.unquote(text)
+            if not text or len(text) > 300:
+                self._send_json({"error": "Text must be 1-300 chars"}, 400)
+                return
+            try:
+                audio_path = call_edge_tts(text)
+                if audio_path:
+                    self._send_json({"audio_url": audio_path})
+                else:
+                    self._send_json({"error": "Edge TTS failed"}, 502)
             except Exception as e:
                 self._send_json({"error": str(e)}, 502)
 

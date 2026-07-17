@@ -223,7 +223,8 @@
     </select>
     <div class="mode-toggle" title="Voice engine">
       <button onclick="setVoice('browser')" id="voice-browser" class="active">🔊 Browser</button>
-      <button onclick="setVoice('ai')" id="voice-ai">🤖 AI Voice</button>
+      <button onclick="setVoice('edge')" id="voice-edge">🤖 Edge</button>
+      <button onclick="setVoice('chatterbox')" id="voice-chatterbox">🧠 Chatterbox</button>
     </div>
     <div class="mode-toggle" title="Highlight mode">
       <button onclick="setHighlightMode('sentence')" id="mode-sentence" class="active">Sentence</button>
@@ -262,7 +263,7 @@ let isPlaying = false;
 let isPaused = false;
 let utterance = null;
 let highlightMode = 'sentence'; // 'sentence' | 'word'
-let voiceMode = 'browser'; // 'browser' | 'chatterbox' | 'ai'
+let voiceMode = 'browser'; // 'browser' | 'edge' | 'chatterbox'
 
 // ── Voice Mode Toggle ──
 function setVoice(mode) {
@@ -271,7 +272,8 @@ function setVoice(mode) {
   voiceMode = mode;
   document.querySelectorAll('[id^="voice-"]').forEach(b => b.classList.remove('active'));
   document.getElementById('voice-' + mode).classList.add('active');
-  document.getElementById('voice-label').textContent = mode === 'browser' ? '🔊 Browser TTS' : '🤖 AI Voice';
+  const labels = {'browser': '🔊 Browser TTS', 'edge': '🤖 Edge Neural', 'chatterbox': '🧠 Chatterbox'};
+  document.getElementById('voice-label').textContent = labels[mode] || '🔊 Browser TTS';
 }
 
 // ── Load Guides ──
@@ -412,8 +414,12 @@ function readNextSentence() {
 }
 
 function speakText(text, idx) {
-  if (voiceMode === 'chatterbox' || voiceMode === 'ai') {
-    speakWithChatterbox(text, idx);
+  if (voiceMode === 'edge') {
+    callTtsEndpoint('/api/tts-edge', text, idx);
+    return;
+  }
+  if (voiceMode === 'chatterbox') {
+    callTtsEndpoint('/api/tts-chatterbox', text, idx);
     return;
   }
   // ── Browser TTS ──
@@ -480,50 +486,50 @@ function speakText(text, idx) {
   window.speechSynthesis.speak(utterance);
 }
 
-// ── Chatterbox Turbo TTS ──
-async function speakWithChatterbox(text, idx) {
+// ── Server TTS (generic endpoint caller) ──
+async function callTtsEndpoint(endpoint, text, idx) {
   if (!text.trim()) { setTimeout(readNextSentence, 100); return; }
   try {
-    const resp = await fetch('/api/tts?text=' + encodeURIComponent(text));
+    const resp = await fetch(endpoint + '?text=' + encodeURIComponent(text));
     const data = await resp.json();
     if (data.audio_url) {
+      const label = {'/api/tts-edge': '🤖 Edge Neural', '/api/tts-chatterbox': '🧠 Chatterbox'};
+      document.getElementById('voice-label').textContent = label[endpoint] || '🤖 TTS';
       audioElement = new Audio(data.audio_url);
       audioElement.playbackRate = parseFloat(document.getElementById('speed-select').value);
-      document.getElementById('voice-label').textContent = '🤖 AI Voice';
-
       audioElement.onended = () => {
         sentences[idx].classList.add('done');
         sentences[idx].classList.remove('active');
         setTimeout(readNextSentence, 100);
       };
       audioElement.onerror = () => {
-        document.getElementById('voice-label').textContent = '⚠️ Falling back to Browser TTS';
+        // Fall back to browser TTS
+        document.getElementById('voice-label').textContent = '⚠️ Server error — Browser TTS';
         window.speechSynthesis.cancel();
-        const fallback = new SpeechSynthesisUtterance(text);
-        fallback.rate = parseFloat(document.getElementById('speed-select').value);
-        window.speechSynthesis.speak(fallback);
-        fallback.onend = () => setTimeout(readNextSentence, 100);
+        const fb = new SpeechSynthesisUtterance(text);
+        fb.rate = parseFloat(document.getElementById('speed-select').value);
+        window.speechSynthesis.speak(fb);
+        fb.onend = () => setTimeout(readNextSentence, 100);
       };
       audioElement.play().catch(() => setTimeout(readNextSentence, 200));
     } else {
-      // AI Voice unavailable — fall back to browser TTS
-      document.getElementById('voice-label').textContent = '⚠️ AI Voice down — using Browser TTS';
+      // API returned no audio — fall back to browser TTS
+      document.getElementById('voice-label').textContent = '⚠️ Server down — Browser TTS';
       setTimeout(() => { voiceMode = 'browser'; }, 100);
       window.speechSynthesis.cancel();
-      const fallback = new SpeechSynthesisUtterance(text);
-      fallback.rate = parseFloat(document.getElementById('speed-select').value);
-      window.speechSynthesis.speak(fallback);
-      fallback.onend = () => setTimeout(readNextSentence, 100);
+      const fb = new SpeechSynthesisUtterance(text);
+      fb.rate = parseFloat(document.getElementById('speed-select').value);
+      window.speechSynthesis.speak(fb);
+      fb.onend = () => setTimeout(readNextSentence, 100);
     }
   } catch(e) {
-    // API error — fall back to browser TTS
-    document.getElementById('voice-label').textContent = '⚠️ Server error — using Browser TTS';
+    document.getElementById('voice-label').textContent = '⚠️ Connection error — Browser TTS';
     setTimeout(() => { voiceMode = 'browser'; }, 100);
     window.speechSynthesis.cancel();
-    const fallback = new SpeechSynthesisUtterance(text);
-    fallback.rate = parseFloat(document.getElementById('speed-select').value);
-    window.speechSynthesis.speak(fallback);
-    fallback.onend = () => setTimeout(readNextSentence, 100);
+    const fb = new SpeechSynthesisUtterance(text);
+    fb.rate = parseFloat(document.getElementById('speed-select').value);
+    window.speechSynthesis.speak(fb);
+    fb.onend = () => setTimeout(readNextSentence, 100);
   }
 }
 
