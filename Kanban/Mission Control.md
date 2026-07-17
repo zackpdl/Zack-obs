@@ -113,9 +113,3 @@ kanban-plugin: board
 - [ ] AGENTS.md with full rules
 - [ ] Daily dashboard cron jobs
 - [ ] Study reader running
-
-
-%% === KANBAN SETTINGS === %%
-```json
-{"kanban-plugin":"board","show-checkboxes":true,"lane-width":280,"full-list-lane-width":true,"date-display-format":"YYYY-MM-DD","date-format":"YYYY-MM-DD","meta":"metadata","show-relative-date":true,"move-tags":true,"archive-with-date":true,"hide-date-in-title":true,"hide-tags-in-title":false}
-```
