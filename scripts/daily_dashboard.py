@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Daily Mission Control Dashboard updater.
-Idempotent — safe to run daily. Replaces date, training, run, and study fields."""
+Idempotent — safe to run daily. Replaces date, training, run, and study fields.
+Compatible with EMAI-system Home.md format (two hemispheres + correlation)."""
 
 import os, re
 from datetime import datetime
@@ -11,6 +12,7 @@ HOME_PATH = os.path.join(VAULT, "Home.md")
 today = datetime.now()
 day_name = today.strftime("%A")
 date_str = today.strftime("%Y-%m-%d")
+week_num = today.isocalendar()[1]
 
 training_map = {
     "Monday":    "Upper A (Chest focus)",
@@ -44,40 +46,40 @@ today_study = study_map.get(day_name, "Review")
 with open(HOME_PATH, "r") as f:
     content = f.read()
 
-# Replace date line: > *anything*
+# Replace header line: > *2026-07-17 • Friday — Week 28*
 content = re.sub(
     r"^> \*[^*]+\*$",
-    f"> *{date_str} • {day_name}*",
+    f"> *{date_str} • {day_name} — Week {week_num}*",
     content,
     count=1,
     flags=re.MULTILINE,
 )
 
-# Replace: **Today's Training:** \n - anything
+# Replace: **Training:** anything *([[fitness]])*
 content = re.sub(
-    r"(\*\*Today's Training:\*\*)\n- .*",
-    f"\\1\n- {today_training} *(check [[fitness]] for plan)*",
+    r"(\*\*Training:\*\*) .*?\(\[\[fitness\]\]\)",
+    f"\\\\1 {today_training} *([[fitness]])*",
     content,
 )
 
-# Replace: **Running:** \n - anything
+# Replace: **Run:** anything *([[running]])*
 content = re.sub(
-    r"(\*\*Running:\*\*)\n- .*",
-    f"\\1\n- {today_run} *(check [[running]] for schedule)*",
+    r"(\*\*Run:\*\*) .*?\(\[\[running\]\]\)",
+    f"\\\\1 {today_run} *([[running]])*",
     content,
 )
 
-# Replace: **Subject:** anything
+# Replace: **Focus:** anything *([[study]])*
 content = re.sub(
-    r"(\*\*Subject:\*\*) .*",
-    f"\\1 {today_study}",
+    r"(\*\*Focus:\*\*) .*?\(\[\[study\]\]\)",
+    f"\\\\1 {today_study} *([[study]])*",
     content,
 )
 
 with open(HOME_PATH, "w") as f:
     f.write(content)
 
-print(f"✅ DASHBOARD UPDATED: {date_str} ({day_name})")
+print(f"✅ DASHBOARD UPDATED: {date_str} ({day_name} — Week {week_num})")
 print(f"   Training: {today_training}")
 print(f"   Run: {today_run}")
 print(f"   Study: {today_study}")

@@ -1,11 +1,16 @@
-# Capture
+# 📥 Inbox — Capture Zone
 
-Use this note for rough capture only. During daily or weekly review, move each item to one of:
+**Dump everything here.** Ideas, reminders, tasks, questions, random thoughts. 
+Don't organize — just capture. Process during daily/weekly review.
 
-- [[30 - Resources/Knowledge/]] for ideas and learning
-- [[Calendar/Daily]] for time context
-- [[10 - Projects/]] for current outcomes
-- ]] for not-now possibilities
+## 🧠 Raw Capture
+-
 
-## Inbox
-- 
+## 📌 Quick Tasks
+-
+
+## 💡 Ideas
+-
+
+## 📎 Follow-ups
+-
