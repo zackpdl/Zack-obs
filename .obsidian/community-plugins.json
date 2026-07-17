@@ -1,13 +1,14 @@
 [
-  "quick-latex",
-  "obsidian-pandoc",
-  "obsidian-git",
-  "terminal",
-  "dataview",
-  "macros",
-  "obsidian-annotator",
-  "habit-tracker-21",
-  "google-calendar",
-  "heatmap-tracker",
-  "hermes-agent"
+    "quick-latex",
+    "obsidian-pandoc",
+    "obsidian-git",
+    "terminal",
+    "dataview",
+    "macros",
+    "obsidian-annotator",
+    "habit-tracker-21",
+    "google-calendar",
+    "heatmap-tracker",
+    "hermes-agent",
+    "obsidian-kanban"
 ]

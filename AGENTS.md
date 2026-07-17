@@ -25,10 +25,14 @@ You are interacting with **Zack Pdl's** personal knowledge management vault. Thi
 ├── 20 - Areas/         ← Health, University, Thai, etc.
 ├── 30 - AI Outputs/    ← AI-GENERATED: everything AI creates lives here
 ├── 40 - Archives/      ← Past projects & courses
-├── Calendar/           ← Daily notes & logs
-├── Templates/          ← Note templates
+├── Calendar/Daily/     ← Daily notes (correlation-ready frontmatter)
+├── Kanban/             ← Visual Kanban boards (obsidian-kanban plugin)
+│   ├── Mission Control.md
+│   ├── Semester 1-2026.md
+│   └── HOWTO.md
+├── Templates/          ← Note templates (use "Daily Note" for correlation tracking)
 ├── Attachments/        ← Images, PDFs, binaries
-└── scripts/            ← Automation (Hermes cron scripts)
+└── scripts/            ← Automation (Hermes cron scripts, kanban_bridge.py)
 ```
 
 ---
