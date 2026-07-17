@@ -57,19 +57,44 @@ This vault is a **second brain with two hemispheres**:
 
 ---
 
-## 🎯 Zack's Goals & Priorities (Decision Framework)
+## 🎯 Priority Framework (Hard Rules)
 
-**1. Health** — 75-78 kg, visible abs, sub-30 min 5K, 10K comfortably
-**2. Education** — University semester (Jun 4 - Oct 12), midterms Aug 4-10, finals Sep 30-Oct 12
-**3. Content Creation** — 100 YouTube uploads before judging
-**4. Skill Development** — 80+ WPM typing, conversational Thai
-**5. Everything Else**
+**UNIVERSITY IS NON-NEGOTIABLE.** 
 
-When helping plan time or prioritize, always use this framework.
+This framework is enforced by every AI interaction. Never deviate from it.
 
----
+### Priority Order
+1. **👑 University** — Assignments, exams, quizzes, coursework, presentations
+2. **💪 Health & Fitness** — Training, running, nutrition, sleep, recovery
+3. **📋 Life Responsibilities** — Admin, chores, finances, family
+4. **🧠 Skill Development** — Typing (80+ WPM), Thai, programming
+5. **🎬 YouTube / Content** — Long-term project, never blocks higher priorities
 
-## 📅 Current Semester (Sem 1/2026)
+### Deadline Rules
+| Condition | Action |
+|-----------|--------|
+| Assignment due **within 14 days** | Display on dashboard — mark as UPCOMING |
+| Assignment due **within 7 days** | HIGH PRIORITY — elevate to Critical Tasks |
+| Assignment due **within 3 days** | **CRITICAL** — top of Home.md + generate completion plan |
+| Exam due **within 30 days** | Display on dashboard with countdown |
+| Course **at risk** (no guide, no notes, missing materials) | Flag on dashboard |
+
+### Daily Decision Rule
+When creating priorities, ask:
+> *"What are the 3 highest-leverage actions Zack can take today to improve his degree, health, and future?"*
+
+Use the answer to generate the daily mission. Avoid overwhelming lists. Focus on execution.
+
+### Content Creation Guardrails
+- YouTube is a **long-term project** — never blocks assignments, exams, sleep, or training
+- Use YouTube to **document** the journey, not become the journey
+- Only surface YouTube tasks after higher-priority responsibilities are addressed
+- Generate content ideas from: fitness progress, running, university experiences, monk mode
+
+### Fitness Rules
+- Track: weight, measurements, workout completion, running progress, recovery
+- Auto-recommend next workout based on training split
+- Generate weekly fitness summaries (Sunday)
 
 | Course | Day | Time | Room |
 |--------|-----|------|------|

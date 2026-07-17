@@ -11,16 +11,24 @@
 
 ---
 
+## 🔴 CRITICAL — No Items
+
+> *No assignments due within 3 days.* ✅
+
+## 🟠 HIGH PRIORITY
+
+- **⚠️ ITX3004 Quiz 1 (5%)** — Due in 5 days. Elevate to Critical if not started.
+
 ## 🎯 Today's Focus
 
 | # | Priority | ⏱ |
 |---|---|---|
-| 1 | — | — |
-| 2 | — | — |
+| 1 | 📚 ITX3004 Quiz prep — requirements analysis | — |
+| 2 | 🏋️ Lower B (Posterior chain) + Easy run 2-3km | — |
 | 3 | — | — |
 
 ### ⚡ One Critical Task
-- [ ] —
+- [ ] Review use case diagram symbols for ITX3004 Quiz
 
 ---
 
@@ -53,6 +61,15 @@ SORT date DESC
 
 ---
 
+## 📅 Deadlines
+
+| Date | Event | Priority | Days Left |
+|---|---|---|---|
+| Jul 22 | **ITX3004 Quiz 1 (5%)** | 🟠 HIGH | 5 |
+| Aug 04 | **Midterms (Aug 4-10)** | 🔵 Exam soon | 18 |
+| Sep 30 | **Finals (Sep 30 - Oct 12)** | — | 75 |
+---
+
 ## 📥 Inbox
 
 ```dataview
@@ -71,9 +88,9 @@ LIMIT 5
 
 | Task | Status |
 |---|---|
-| Study guides | ✅ 4 |
+| Study guides | ✅ 4 created |
 | TTS Reader | ✅ Active |
-| — | ⬜ |
+| ITX3004 Quiz prep | 🟠 In progress |
 
 > [!info] AI lives in [[30 - AI Outputs/README\|30 - AI Outputs]] — always separate from your thoughts
 
@@ -83,9 +100,9 @@ LIMIT 5
 
 | Pillar | Status | Pillar | Status |
 |---|---|---|---|
-| 🏋️ [[Pillars/fitness\|Lower B (Posterior chain)]] | ⏳ | 🇹🇭 [[Pillars/thai\|Thai]] | ⏳ |
-| 🏃 [[Pillars/running\|Easy / Recovery 2-3km]] | ⏳ | ⌨️ [[Pillars/typing\|Typing]] | ⏳ |
-| 📚 [[Pillars/study\|Heritage + Data Viz]] | ⏳ | 🎬 [[Pillars/youtube\|YouTube]] | ⏳ |
+| 🏋️ [[Pillars/fitness\|Fitness]] | ⏳ | 🇹🇭 [[Pillars/thai\|Thai]] | ⏳ |
+| 🏃 [[Pillars/running\|Running]] | ⏳ | ⌨️ [[Pillars/typing\|Typing]] | ⏳ |
+| 📚 [[Pillars/study\|Study]] | ⏳ | 🎬 [[Pillars/youtube\|YouTube]] | ⏳ |
 | 🧘 [[Pillars/monk_mode\|Monk Mode]] | ⏳ | 📓 [[Pillars/journal\|Journal]] | ⏳ |
 
 ---
@@ -102,14 +119,6 @@ LIMIT 6
 
 ---
 
-## 📅 Deadlines
-
-| Date | Event |
-|---|---|
-| Jul 22 | ITX3004 Quiz 1 (5%) |
-| Aug 4-10 | Midterms |
-| Sep 30 - Oct 12 | Finals |
-
----
-
-> *Mission over mood. Consistency creates identity.*
+> *"What are the 3 highest-leverage actions Zack can take today to improve his degree, health, and future?"*
+>
+> *University is non-negotiable. Consistency creates identity.*
