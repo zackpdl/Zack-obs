@@ -84,6 +84,14 @@
   .mode-toggle button.active {
     background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); color: var(--text);
   }
+  .mode-toggle button.premium {
+    color: #7c3aed !important;
+    font-weight: 600;
+  }
+  .mode-toggle button.premium.active {
+    background: #f5f3ff;
+    box-shadow: 0 1px 3px rgba(124,58,237,0.2), inset 0 0 0 1px #8b5cf6;
+  }
 
   /* ── Reader ── */
   .reader {
@@ -222,9 +230,9 @@
       <option value="2">2×</option>
     </select>
     <div class="mode-toggle" title="Voice engine">
-      <button onclick="setVoice('browser')" id="voice-browser" class="active">🔊 Browser</button>
+      <button onclick="setVoice('browser')" id="voice-browser">🔊 Browser</button>
+      <button onclick="setVoice('elevenlabs')" id="voice-elevenlabs" class="active premium">🤖 ElevenLabs</button>
       <button onclick="setVoice('edge')" id="voice-edge">🤖 Edge</button>
-      <button onclick="setVoice('chatterbox')" id="voice-chatterbox">🧠 Chatterbox</button>
     </div>
     <div class="mode-toggle" title="Highlight mode">
       <button onclick="setHighlightMode('sentence')" id="mode-sentence" class="active">Sentence</button>
@@ -251,7 +259,7 @@
   </div>
   <div class="right-info">
     <span id="highlight-badge" class="badge">Sentence</span>
-    <span id="voice-label">🔊 Browser TTS</span>
+    <span id="voice-label">🤖 ElevenLabs</span>
   </div>
 </div>
 
@@ -263,7 +271,7 @@ let isPlaying = false;
 let isPaused = false;
 let utterance = null;
 let highlightMode = 'sentence'; // 'sentence' | 'word'
-let voiceMode = 'browser'; // 'browser' | 'edge' | 'chatterbox'
+let voiceMode = 'elevenlabs'; // 'browser' | 'elevenlabs' | 'edge'
 
 // ── Voice Mode Toggle ──
 function setVoice(mode) {
@@ -272,8 +280,14 @@ function setVoice(mode) {
   voiceMode = mode;
   document.querySelectorAll('[id^="voice-"]').forEach(b => b.classList.remove('active'));
   document.getElementById('voice-' + mode).classList.add('active');
-  const labels = {'browser': '🔊 Browser TTS', 'edge': '🤖 Edge Neural', 'chatterbox': '🧠 Chatterbox'};
+  const labels = {'browser': '🔊 Browser TTS', 'elevenlabs': '🤖 ElevenLabs', 'edge': '🤖 Edge Neural'};
   document.getElementById('voice-label').textContent = labels[mode] || '🔊 Browser TTS';
+  // Set ElevenLabs as default — make premium button glow
+  if (mode === 'elevenlabs') {
+    document.getElementById('voice-elevenlabs').style.boxShadow = 'inset 0 0 0 1px #8b5cf6';
+  } else {
+    document.getElementById('voice-elevenlabs').style.boxShadow = '';
+  }
 }
 
 // ── Load Guides ──
@@ -414,12 +428,13 @@ function readNextSentence() {
 }
 
 function speakText(text, idx) {
-  if (voiceMode === 'edge') {
-    callTtsEndpoint('/api/tts-edge', text, idx);
+  if (voiceMode === 'elevenlabs') {
+    // /api/tts = tries ElevenLabs first, falls back to Edge on failure
+    callTtsEndpoint('/api/tts', text, idx);
     return;
   }
-  if (voiceMode === 'chatterbox') {
-    callTtsEndpoint('/api/tts-chatterbox', text, idx);
+  if (voiceMode === 'edge') {
+    callTtsEndpoint('/api/tts-edge', text, idx);
     return;
   }
   // ── Browser TTS ──
@@ -493,8 +508,8 @@ async function callTtsEndpoint(endpoint, text, idx) {
     const resp = await fetch(endpoint + '?text=' + encodeURIComponent(text));
     const data = await resp.json();
     if (data.audio_url) {
-      const label = {'/api/tts-edge': '🤖 Edge Neural', '/api/tts-chatterbox': '🧠 Chatterbox'};
-      document.getElementById('voice-label').textContent = label[endpoint] || '🤖 TTS';
+      const sourceLabels = {'elevenlabs': '🤖 ElevenLabs', 'edge-tts': '🤖 Edge Neural'};
+      document.getElementById('voice-label').textContent = sourceLabels[data.source] || '🤖 TTS';
       audioElement = new Audio(data.audio_url);
       audioElement.playbackRate = parseFloat(document.getElementById('speed-select').value);
       audioElement.onended = () => {
