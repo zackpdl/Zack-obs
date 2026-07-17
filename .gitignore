@@ -35,5 +35,16 @@
 # # Everything — vault is private; git is for backup/sync only
 # /*
 # !.gitignore
-#
 # ──────────────────────────────────────
+# NOTE: Uncomment the line below ONLY if this repo will be public.
+# This Obsidian vault contains university materials, personal notes,
+# and book PDFs that you may not want publicly searchable.
+# 
+# # Everything — vault is private; git is for backup/sync only
+# /*
+# !.gitignore
+# 
+# ──────────────────────────────────────
+# Generated TTS audio cache
+scripts/tts_cache/
+

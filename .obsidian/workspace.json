@@ -11,14 +11,16 @@
             "id": "8b073fe01597c7d3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Home.md",
-                "mode": "source",
-                "source": false
+                "file": "Kanban/Mission Control.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": []
+                }
               },
-              "icon": "lucide-file",
-              "title": "Home"
+              "icon": "lucide-trello",
+              "title": "Mission Control"
             }
           }
         ]
@@ -186,19 +188,26 @@
   },
   "active": "8b073fe01597c7d3",
   "lastOpenFiles": [
+    "Home.md",
+    "scripts/tts_cache/tts_4bb9f0c8.mp3",
+    "00 - Inbox/Untitled.base",
+    "20 - Areas/Health & Fitness/Logs/2565-09-23.md",
+    "10 - Projects/Semester 1-2026/ITX4518 (541) Blockchain and Digital Currencies/Notes/00 - Blockchain Study Guide.md",
+    "00 - Inbox/Untitled.canvas",
+    "10 - Projects/Semester 1-2026/📚 Study Dashboard.md",
+    "Kanban/Semester 1-2026.md",
+    "Kanban/Mission Control.md",
+    "scripts/tts_cache/tts_4594214d.mp3",
+    "scripts/tts_cache/tts_e71f9749.mp3",
+    "scripts/tts_cache/tts_9009227f.mp3",
+    "scripts/tts_cache/tts_cc4934d9.mp3",
+    "scripts/tts_cache/tts_47b317d3.mp3",
     "scripts/tts_cache/tts_0008cccd.mp3",
     "scripts/tts_cache/tts_849d2ea6.mp3",
     "scripts/tts_cache",
-    "Kanban/Mission Control.md",
-    "Home.md",
-    "Kanban/Semester 1-2026.md",
     "00-Inbox/Capture.md",
-    "00-Inbox",
-    "scripts/kanban_bridge.py",
     "Kanban/HOWTO.md",
-    "Kanban",
     "AGENTS.md",
-    "scripts/deadline_monitor.py",
     "Pillars/journal.md",
     "Pillars/monk_mode.md",
     "Pillars/youtube.md",
@@ -207,7 +216,6 @@
     "Pillars/study.md",
     "Pillars/running.md",
     "Pillars/fitness.md",
-    "Pillars",
     "30 - Resources/Knowledge/Italian.md",
     "30 - Resources/Knowledge/How To Use Condoms Without Losing Your Boner.md",
     "30 - Resources/Knowledge/How to do things you don't know how to do.md",
@@ -216,13 +224,6 @@
     "30 - Resources/Knowledge/Chicken Rice.md",
     "30 - Resources/AI & Tech/AIOS/Agents/chief-of-staff-agent.md",
     "30 - Resources/AI & Tech/Study Workflow.md",
-    "30 - Resources/AI & Tech/NotebookLM Hub.md",
-    "30 - AI Outputs/README.md",
-    "20 - Areas/Self-Improvement/Daily Routine.md",
-    "30 - AI Outputs",
-    "scripts/study-reader",
-    "scripts/study_reader.html",
-    "00 - Inbox/Untitled.canvas",
     "Inbox/Untitled.canvas",
     "000 Inbox/Untitled.canvas",
     "Untitled.canvas",
